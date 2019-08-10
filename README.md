@@ -1,5 +1,7 @@
 # Contentos Python SDK
 
+[![Build Status](https://travis-ci.org/brickgao/cos-python-sdk.svg?branch=master)](https://travis-ci.org/brickgao/cos-python-sdk)
+
 **Notice: it's still under development**
 
 Python library of the client for Contentos blockchain.
