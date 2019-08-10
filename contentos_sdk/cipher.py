@@ -20,7 +20,7 @@ class AESCipher(object):
     def encrypt(self, key, buf):
         buf = self._pad(buf)
         cipher = AES.new(key, AES.MODE_ECB)
-        return cipher.encrypt(buf).encode("hex")
+        return cipher.encrypt(buf)
 
     def decrypt(self, key, buf):
         cipher = AES.new(key, AES.MODE_ECB)
