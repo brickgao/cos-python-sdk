@@ -3,22 +3,19 @@
 # source: grpc.proto
 
 import sys
-
+_b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-
-from prototype import multi_id_pb2 as prototype_dot_multi__id__pb2
-from prototype import transaction_pb2 as prototype_dot_transaction__pb2
-from prototype import type_pb2 as prototype_dot_type__pb2
-
-_b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
 
 
+from prototype import type_pb2 as prototype_dot_type__pb2
+from prototype import multi_id_pb2 as prototype_dot_multi__id__pb2
+from prototype import transaction_pb2 as prototype_dot_transaction__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
