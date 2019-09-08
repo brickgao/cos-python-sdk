@@ -3,8 +3,7 @@
 
 
 from contentos_sdk.cipher import Secp256k1Cipher
-from contentos_sdk.grpc_pb2.prototype import transaction_pb2
-from contentos_sdk.grpc_pb2.prototype import type as _type
+from contentos_sdk.grpc_pb2.prototype import transaction_pb2, type_pb2
 
 
 class Transaction(object):
@@ -26,7 +25,7 @@ class Transaction(object):
 
     @expiration.setter
     def expiration_setter(self, expiration):
-        self._transaction.expiration = _type.time_point_sec(expiration)
+        self._transaction.expiration = type_pb2.time_point_sec(expiration)
 
     @property
     def ref_block_num(self):
@@ -52,10 +51,10 @@ class Transaction(object):
     def from_dynamic_properties(self, dynamic_properties):
         expiration = dynamic_properties.time.utc_seconds + 30
         self.from_block_id(dynamic_properties.head_block_id.hash)
-        self._transaction.expiration = _type.time_point_sec(expiration)
+        self._transaction.expiration = type_pb2.time_point_sec(expiration)
 
     def sign(self, private_key, chain_id):
-        if isinstance(private_key, _type.private_key_type):
+        if isinstance(private_key, type_pb2.private_key_type):
             private_key = Secp256k1Cipher.get_private_key_from_raw(
                 private_key.data
             )
@@ -63,7 +62,7 @@ class Transaction(object):
             private_key = Secp256k1Cipher.get_private_key_from_wif(private_key)
         serialized_transcation = self._transaction.SerializeToString()
         serialized_len = len(serialized_transcation).to_bytes(4, "big")
-        sign_transaction = _type.signed_transaction(
+        sign_transaction = type_pb2.signed_transaction(
             self._transaction,
             private_key.ecdsa_sign(serialized_len + serialized_transcation)
         )
