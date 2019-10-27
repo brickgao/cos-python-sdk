@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='prototype',
   syntax='proto3',
   serialized_options=_b('\n\"io.contentos.android.sdk.prototypeZ*github.com/coschain/contentos-go/prototype'),
-  serialized_pb=_b('\n\x14prototype/type.proto\x12\tprototype\"\x1d\n\x0c\x61\x63\x63ount_name\x12\r\n\x05value\x18\x01 \x01(\t\"\x19\n\x08\x63hain_id\x12\r\n\x05value\x18\x01 \x01(\r\"\x19\n\x04\x63oin\x12\x11\n\x05value\x18\x01 \x01(\x04\x42\x02\x30\x01\"\x19\n\x04vest\x12\x11\n\x05value\x18\x01 \x01(\x04\x42\x02\x30\x01\"\x1f\n\x0fpublic_key_type\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\" \n\x10private_key_type\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\"%\n\x0etime_point_sec\x12\x13\n\x0butc_seconds\x18\x01 \x01(\r\"\x1d\n\x0esignature_type\x12\x0b\n\x03sig\x18\x01 \x01(\x0c\"\x16\n\x06sha256\x12\x0c\n\x04hash\x18\x01 \x01(\x0c\"\x89\x01\n\x10\x63hain_properties\x12-\n\x14\x61\x63\x63ount_creation_fee\x18\x01 \x01(\x0b\x32\x0f.prototype.coin\x12\x1a\n\x12maximum_block_size\x18\x02 \x01(\r\x12\x14\n\x0cstamina_free\x18\x03 \x01(\x04\x12\x14\n\x0ctps_expected\x18\x04 \x01(\x04\"\xf7\x08\n\x12\x64ynamic_properties\x12(\n\rhead_block_id\x18\x02 \x01(\x0b\x32\x11.prototype.sha256\x12\x19\n\x11head_block_number\x18\x03 \x01(\x04\x12\x1a\n\x12maximum_block_size\x18\x04 \x01(\r\x12\"\n\ttotal_cos\x18\x05 \x01(\x0b\x32\x0f.prototype.coin\x12\'\n\x04time\x18\x06 \x01(\x0b\x32\x19.prototype.time_point_sec\x12\x30\n\x0f\x63urrent_witness\x18\x07 \x01(\x0b\x32\x17.prototype.account_name\x12\x0b\n\x03tps\x18\t \x01(\r\x12-\n\x14total_vesting_shares\x18\n \x01(\x0b\x32\x0f.prototype.vest\x12\'\n\x0e\x63urrent_supply\x18\x0b \x01(\x0b\x32\x0f.prototype.coin\x12\x19\n\x11post_weighted_vps\x18\r \x01(\t\x12%\n\x0cpost_rewards\x18\x0e \x01(\x0b\x32\x0f.prototype.vest\x12\x15\n\rtotal_trx_cnt\x18\x0f \x01(\x04\x12\x16\n\x0etotal_post_cnt\x18\x10 \x01(\x04\x12\x16\n\x0etotal_user_cnt\x18\x11 \x01(\x04\x12\x0f\n\x07max_tps\x18\x12 \x01(\r\x12\x1d\n\x11max_tps_block_num\x18\x13 \x01(\x04\x42\x02\x30\x01\x12\x19\n\x11head_block_prefix\x18\x14 \x01(\r\x12\'\n\x0ereport_rewards\x18\x15 \x01(\x0b\x32\x0f.prototype.vest\x12\x10\n\x08ith_year\x18\x16 \x01(\r\x12&\n\rannual_budget\x18\x17 \x01(\x0b\x32\x0f.prototype.vest\x12&\n\rannual_minted\x18\x18 \x01(\x0b\x32\x0f.prototype.vest\x12*\n\x11post_dapp_rewards\x18\x19 \x01(\x0b\x32\x0f.prototype.vest\x12&\n\rvoter_rewards\x18\x1a \x01(\x0b\x32\x0f.prototype.vest\x12&\n\rreply_rewards\x18\x1b \x01(\x0b\x32\x0f.prototype.vest\x12\x1a\n\x12reply_weighted_vps\x18\x1c \x01(\t\x12+\n\x12reply_dapp_rewards\x18\x1d \x01(\x0b\x32\x0f.prototype.vest\x12-\n\x14stake_vesting_shares\x18\x1e \x01(\x0b\x32\x0f.prototype.vest\x12\x1e\n\x16witness_boot_completed\x18\x1f \x01(\x08\x12\x14\n\x0cstamina_free\x18  \x01(\x04\x12\x14\n\x0ctps_expected\x18! \x01(\x04\x12\x1c\n\x14\x61vg_tps_update_block\x18\" \x01(\x04\x12\x19\n\x11\x61vg_tps_in_window\x18# \x01(\x04\x12\x17\n\x0fone_day_stamina\x18$ \x01(\x04\x12+\n\x12\x61\x63\x63ount_create_fee\x18% \x01(\x0b\x32\x0f.prototype.coin\"O\n\x16\x62\x65neficiary_route_type\x12%\n\x04name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x0e\n\x06weight\x18\x02 \x01(\rBP\n\"io.contentos.android.sdk.prototypeZ*github.com/coschain/contentos-go/prototypeb\x06proto3')
+  serialized_pb=_b('\n\x14prototype/type.proto\x12\tprototype\"\x1d\n\x0c\x61\x63\x63ount_name\x12\r\n\x05value\x18\x01 \x01(\t\"\x19\n\x08\x63hain_id\x12\r\n\x05value\x18\x01 \x01(\r\"\x19\n\x04\x63oin\x12\x11\n\x05value\x18\x01 \x01(\x04\x42\x02\x30\x01\"\x19\n\x04vest\x12\x11\n\x05value\x18\x01 \x01(\x04\x42\x02\x30\x01\"\x1f\n\x0fpublic_key_type\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\" \n\x10private_key_type\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\"%\n\x0etime_point_sec\x12\x13\n\x0butc_seconds\x18\x01 \x01(\r\"\x1d\n\x0esignature_type\x12\x0b\n\x03sig\x18\x01 \x01(\x0c\"\x16\n\x06sha256\x12\x0c\n\x04hash\x18\x01 \x01(\x0c\"T\n\x14gift_ticket_key_type\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0c\n\x04\x66rom\x18\x02 \x01(\t\x12\n\n\x02to\x18\x03 \x01(\t\x12\x14\n\x0c\x63reate_block\x18\x04 \x01(\x04\"\xed\x01\n\x10\x63hain_properties\x12-\n\x14\x61\x63\x63ount_creation_fee\x18\x01 \x01(\x0b\x32\x0f.prototype.coin\x12\x14\n\x0cstamina_free\x18\x02 \x01(\x04\x12\x14\n\x0ctps_expected\x18\x03 \x01(\x04\x12 \n\x18top_n_acquire_free_token\x18\x04 \x01(\r\x12\x16\n\x0e\x65poch_duration\x18\x05 \x01(\x04\x12)\n\x10per_ticket_price\x18\x06 \x01(\x0b\x32\x0f.prototype.coin\x12\x19\n\x11per_ticket_weight\x18\x07 \x01(\x04\"\xb5\x0c\n\x12\x64ynamic_properties\x12(\n\rhead_block_id\x18\x01 \x01(\x0b\x32\x11.prototype.sha256\x12\x19\n\x11head_block_number\x18\x02 \x01(\x04\x12\"\n\ttotal_cos\x18\x03 \x01(\x0b\x32\x0f.prototype.coin\x12\'\n\x04time\x18\x04 \x01(\x0b\x32\x19.prototype.time_point_sec\x12\x37\n\x16\x63urrent_block_producer\x18\x05 \x01(\x0b\x32\x17.prototype.account_name\x12\x0b\n\x03tps\x18\x06 \x01(\r\x12#\n\ntotal_vest\x18\x07 \x01(\x0b\x32\x0f.prototype.vest\x12\x15\n\rtotal_trx_cnt\x18\x08 \x01(\x04\x12\x16\n\x0etotal_post_cnt\x18\t \x01(\x04\x12\x16\n\x0etotal_user_cnt\x18\n \x01(\x04\x12\x0f\n\x07max_tps\x18\x0b \x01(\r\x12\x1d\n\x11max_tps_block_num\x18\x0c \x01(\x04\x42\x02\x30\x01\x12\x10\n\x08ith_year\x18\r \x01(\r\x12&\n\rannual_budget\x18\x0e \x01(\x0b\x32\x0f.prototype.vest\x12&\n\rannual_minted\x18\x0f \x01(\x0b\x32\x0f.prototype.vest\x12*\n\x11pool_post_rewards\x18\x10 \x01(\x0b\x32\x0f.prototype.vest\x12+\n\x12pool_reply_rewards\x18\x11 \x01(\x0b\x32\x0f.prototype.vest\x12*\n\x11pool_vote_rewards\x18\x12 \x01(\x0b\x32\x0f.prototype.vest\x12*\n\x11pool_dapp_rewards\x18\x13 \x01(\x0b\x32\x0f.prototype.vest\x12\x19\n\x11weighted_vps_post\x18\x14 \x01(\t\x12\x1a\n\x12weighted_vps_reply\x18\x15 \x01(\t\x12\x19\n\x11weighted_vps_vote\x18\x16 \x01(\t\x12\x19\n\x11weighted_vps_dapp\x18\x17 \x01(\t\x12-\n\x14\x63laimed_post_rewards\x18\x18 \x01(\x0b\x32\x0f.prototype.vest\x12.\n\x15\x63laimed_reply_rewards\x18\x19 \x01(\x0b\x32\x0f.prototype.vest\x12-\n\x14\x63laimed_vote_rewards\x18\x1a \x01(\x0b\x32\x0f.prototype.vest\x12-\n\x14\x63laimed_dapp_rewards\x18\x1b \x01(\x0b\x32\x0f.prototype.vest\x12#\n\nstake_vest\x18\x1c \x01(\x0b\x32\x0f.prototype.vest\x12%\n\x1d\x62lock_producer_boot_completed\x18\x1d \x01(\x08\x12\x14\n\x0cstamina_free\x18\x1e \x01(\x04\x12\x14\n\x0ctps_expected\x18\x1f \x01(\x04\x12\x1c\n\x14\x61vg_tps_update_block\x18  \x01(\x04\x12\x19\n\x11\x61vg_tps_in_window\x18! \x01(\x04\x12\x17\n\x0fone_day_stamina\x18\" \x01(\x04\x12+\n\x12\x61\x63\x63ount_create_fee\x18# \x01(\x0b\x32\x0f.prototype.coin\x12\x31\n\x10reputation_admin\x18$ \x01(\x0b\x32\x17.prototype.account_name\x12!\n\x19\x63urrent_epoch_start_block\x18% \x01(\x04\x12\x16\n\x0e\x65poch_duration\x18& \x01(\x04\x12 \n\x18top_n_acquire_free_token\x18\' \x01(\r\x12)\n\x10per_ticket_price\x18( \x01(\x0b\x32\x0f.prototype.coin\x12\x19\n\x11per_ticket_weight\x18) \x01(\x04\x12\'\n\x0etickets_income\x18* \x01(\x0b\x32\x0f.prototype.vest\x12\x1b\n\x13\x63harged_tickets_num\x18+ \x01(\x04\x12\x30\n\x0f\x63opyright_admin\x18, \x01(\x0b\x32\x17.prototype.account_name\x12)\n\x10tickets_bp_bonus\x18- \x01(\x0b\x32\x0f.prototype.vest\"O\n\x16\x62\x65neficiary_route_type\x12%\n\x04name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x0e\n\x06weight\x18\x02 \x01(\rBP\n\"io.contentos.android.sdk.prototypeZ*github.com/coschain/contentos-go/prototypeb\x06proto3')
 )
 
 
@@ -305,36 +305,36 @@ _SHA256 = _descriptor.Descriptor(
 )
 
 
-_CHAIN_PROPERTIES = _descriptor.Descriptor(
-  name='chain_properties',
-  full_name='prototype.chain_properties',
+_GIFT_TICKET_KEY_TYPE = _descriptor.Descriptor(
+  name='gift_ticket_key_type',
+  full_name='prototype.gift_ticket_key_type',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account_creation_fee', full_name='prototype.chain_properties.account_creation_fee', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='maximum_block_size', full_name='prototype.chain_properties.maximum_block_size', index=1,
-      number=2, type=13, cpp_type=3, label=1,
+      name='type', full_name='prototype.gift_ticket_key_type.type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='stamina_free', full_name='prototype.chain_properties.stamina_free', index=2,
-      number=3, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
+      name='from', full_name='prototype.gift_ticket_key_type.from', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='tps_expected', full_name='prototype.chain_properties.tps_expected', index=3,
+      name='to', full_name='prototype.gift_ticket_key_type.to', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='create_block', full_name='prototype.gift_ticket_key_type.create_block', index=3,
       number=4, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -352,8 +352,81 @@ _CHAIN_PROPERTIES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=309,
-  serialized_end=446,
+  serialized_start=308,
+  serialized_end=392,
+)
+
+
+_CHAIN_PROPERTIES = _descriptor.Descriptor(
+  name='chain_properties',
+  full_name='prototype.chain_properties',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='account_creation_fee', full_name='prototype.chain_properties.account_creation_fee', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='stamina_free', full_name='prototype.chain_properties.stamina_free', index=1,
+      number=2, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='tps_expected', full_name='prototype.chain_properties.tps_expected', index=2,
+      number=3, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='top_n_acquire_free_token', full_name='prototype.chain_properties.top_n_acquire_free_token', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='epoch_duration', full_name='prototype.chain_properties.epoch_duration', index=4,
+      number=5, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='per_ticket_price', full_name='prototype.chain_properties.per_ticket_price', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='per_ticket_weight', full_name='prototype.chain_properties.per_ticket_weight', index=6,
+      number=7, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=395,
+  serialized_end=632,
 )
 
 
@@ -366,238 +439,315 @@ _DYNAMIC_PROPERTIES = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='head_block_id', full_name='prototype.dynamic_properties.head_block_id', index=0,
-      number=2, type=11, cpp_type=10, label=1,
+      number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='head_block_number', full_name='prototype.dynamic_properties.head_block_number', index=1,
-      number=3, type=4, cpp_type=4, label=1,
+      number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='maximum_block_size', full_name='prototype.dynamic_properties.maximum_block_size', index=2,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      name='total_cos', full_name='prototype.dynamic_properties.total_cos', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='total_cos', full_name='prototype.dynamic_properties.total_cos', index=3,
+      name='time', full_name='prototype.dynamic_properties.time', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='current_block_producer', full_name='prototype.dynamic_properties.current_block_producer', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='time', full_name='prototype.dynamic_properties.time', index=4,
-      number=6, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='tps', full_name='prototype.dynamic_properties.tps', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='current_witness', full_name='prototype.dynamic_properties.current_witness', index=5,
+      name='total_vest', full_name='prototype.dynamic_properties.total_vest', index=6,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='tps', full_name='prototype.dynamic_properties.tps', index=6,
-      number=9, type=13, cpp_type=3, label=1,
+      name='total_trx_cnt', full_name='prototype.dynamic_properties.total_trx_cnt', index=7,
+      number=8, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='total_vesting_shares', full_name='prototype.dynamic_properties.total_vesting_shares', index=7,
-      number=10, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='total_post_cnt', full_name='prototype.dynamic_properties.total_post_cnt', index=8,
+      number=9, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='current_supply', full_name='prototype.dynamic_properties.current_supply', index=8,
-      number=11, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='total_user_cnt', full_name='prototype.dynamic_properties.total_user_cnt', index=9,
+      number=10, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_weighted_vps', full_name='prototype.dynamic_properties.post_weighted_vps', index=9,
-      number=13, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='max_tps', full_name='prototype.dynamic_properties.max_tps', index=10,
+      number=11, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_rewards', full_name='prototype.dynamic_properties.post_rewards', index=10,
+      name='max_tps_block_num', full_name='prototype.dynamic_properties.max_tps_block_num', index=11,
+      number=12, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=_b('0\001'), file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ith_year', full_name='prototype.dynamic_properties.ith_year', index=12,
+      number=13, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='annual_budget', full_name='prototype.dynamic_properties.annual_budget', index=13,
       number=14, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='total_trx_cnt', full_name='prototype.dynamic_properties.total_trx_cnt', index=11,
-      number=15, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='total_post_cnt', full_name='prototype.dynamic_properties.total_post_cnt', index=12,
-      number=16, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='total_user_cnt', full_name='prototype.dynamic_properties.total_user_cnt', index=13,
-      number=17, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='max_tps', full_name='prototype.dynamic_properties.max_tps', index=14,
-      number=18, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='max_tps_block_num', full_name='prototype.dynamic_properties.max_tps_block_num', index=15,
-      number=19, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=_b('0\001'), file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='head_block_prefix', full_name='prototype.dynamic_properties.head_block_prefix', index=16,
-      number=20, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='report_rewards', full_name='prototype.dynamic_properties.report_rewards', index=17,
-      number=21, type=11, cpp_type=10, label=1,
+      name='annual_minted', full_name='prototype.dynamic_properties.annual_minted', index=14,
+      number=15, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ith_year', full_name='prototype.dynamic_properties.ith_year', index=18,
-      number=22, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='annual_budget', full_name='prototype.dynamic_properties.annual_budget', index=19,
-      number=23, type=11, cpp_type=10, label=1,
+      name='pool_post_rewards', full_name='prototype.dynamic_properties.pool_post_rewards', index=15,
+      number=16, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='annual_minted', full_name='prototype.dynamic_properties.annual_minted', index=20,
+      name='pool_reply_rewards', full_name='prototype.dynamic_properties.pool_reply_rewards', index=16,
+      number=17, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='pool_vote_rewards', full_name='prototype.dynamic_properties.pool_vote_rewards', index=17,
+      number=18, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='pool_dapp_rewards', full_name='prototype.dynamic_properties.pool_dapp_rewards', index=18,
+      number=19, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='weighted_vps_post', full_name='prototype.dynamic_properties.weighted_vps_post', index=19,
+      number=20, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='weighted_vps_reply', full_name='prototype.dynamic_properties.weighted_vps_reply', index=20,
+      number=21, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='weighted_vps_vote', full_name='prototype.dynamic_properties.weighted_vps_vote', index=21,
+      number=22, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='weighted_vps_dapp', full_name='prototype.dynamic_properties.weighted_vps_dapp', index=22,
+      number=23, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='claimed_post_rewards', full_name='prototype.dynamic_properties.claimed_post_rewards', index=23,
       number=24, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='post_dapp_rewards', full_name='prototype.dynamic_properties.post_dapp_rewards', index=21,
+      name='claimed_reply_rewards', full_name='prototype.dynamic_properties.claimed_reply_rewards', index=24,
       number=25, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='voter_rewards', full_name='prototype.dynamic_properties.voter_rewards', index=22,
+      name='claimed_vote_rewards', full_name='prototype.dynamic_properties.claimed_vote_rewards', index=25,
       number=26, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='reply_rewards', full_name='prototype.dynamic_properties.reply_rewards', index=23,
+      name='claimed_dapp_rewards', full_name='prototype.dynamic_properties.claimed_dapp_rewards', index=26,
       number=27, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='reply_weighted_vps', full_name='prototype.dynamic_properties.reply_weighted_vps', index=24,
-      number=28, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='reply_dapp_rewards', full_name='prototype.dynamic_properties.reply_dapp_rewards', index=25,
-      number=29, type=11, cpp_type=10, label=1,
+      name='stake_vest', full_name='prototype.dynamic_properties.stake_vest', index=27,
+      number=28, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='stake_vesting_shares', full_name='prototype.dynamic_properties.stake_vesting_shares', index=26,
-      number=30, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='witness_boot_completed', full_name='prototype.dynamic_properties.witness_boot_completed', index=27,
-      number=31, type=8, cpp_type=7, label=1,
+      name='block_producer_boot_completed', full_name='prototype.dynamic_properties.block_producer_boot_completed', index=28,
+      number=29, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='stamina_free', full_name='prototype.dynamic_properties.stamina_free', index=28,
+      name='stamina_free', full_name='prototype.dynamic_properties.stamina_free', index=29,
+      number=30, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='tps_expected', full_name='prototype.dynamic_properties.tps_expected', index=30,
+      number=31, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='avg_tps_update_block', full_name='prototype.dynamic_properties.avg_tps_update_block', index=31,
       number=32, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='tps_expected', full_name='prototype.dynamic_properties.tps_expected', index=29,
+      name='avg_tps_in_window', full_name='prototype.dynamic_properties.avg_tps_in_window', index=32,
       number=33, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='avg_tps_update_block', full_name='prototype.dynamic_properties.avg_tps_update_block', index=30,
+      name='one_day_stamina', full_name='prototype.dynamic_properties.one_day_stamina', index=33,
       number=34, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='avg_tps_in_window', full_name='prototype.dynamic_properties.avg_tps_in_window', index=31,
-      number=35, type=4, cpp_type=4, label=1,
+      name='account_create_fee', full_name='prototype.dynamic_properties.account_create_fee', index=34,
+      number=35, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='reputation_admin', full_name='prototype.dynamic_properties.reputation_admin', index=35,
+      number=36, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='current_epoch_start_block', full_name='prototype.dynamic_properties.current_epoch_start_block', index=36,
+      number=37, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='one_day_stamina', full_name='prototype.dynamic_properties.one_day_stamina', index=32,
-      number=36, type=4, cpp_type=4, label=1,
+      name='epoch_duration', full_name='prototype.dynamic_properties.epoch_duration', index=37,
+      number=38, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='account_create_fee', full_name='prototype.dynamic_properties.account_create_fee', index=33,
-      number=37, type=11, cpp_type=10, label=1,
+      name='top_n_acquire_free_token', full_name='prototype.dynamic_properties.top_n_acquire_free_token', index=38,
+      number=39, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='per_ticket_price', full_name='prototype.dynamic_properties.per_ticket_price', index=39,
+      number=40, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='per_ticket_weight', full_name='prototype.dynamic_properties.per_ticket_weight', index=40,
+      number=41, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='tickets_income', full_name='prototype.dynamic_properties.tickets_income', index=41,
+      number=42, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='charged_tickets_num', full_name='prototype.dynamic_properties.charged_tickets_num', index=42,
+      number=43, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='copyright_admin', full_name='prototype.dynamic_properties.copyright_admin', index=43,
+      number=44, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='tickets_bp_bonus', full_name='prototype.dynamic_properties.tickets_bp_bonus', index=44,
+      number=45, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -614,8 +764,8 @@ _DYNAMIC_PROPERTIES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=449,
-  serialized_end=1592,
+  serialized_start=635,
+  serialized_end=2224,
 )
 
 
@@ -652,27 +802,34 @@ _BENEFICIARY_ROUTE_TYPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1594,
-  serialized_end=1673,
+  serialized_start=2226,
+  serialized_end=2305,
 )
 
 _CHAIN_PROPERTIES.fields_by_name['account_creation_fee'].message_type = _COIN
+_CHAIN_PROPERTIES.fields_by_name['per_ticket_price'].message_type = _COIN
 _DYNAMIC_PROPERTIES.fields_by_name['head_block_id'].message_type = _SHA256
 _DYNAMIC_PROPERTIES.fields_by_name['total_cos'].message_type = _COIN
 _DYNAMIC_PROPERTIES.fields_by_name['time'].message_type = _TIME_POINT_SEC
-_DYNAMIC_PROPERTIES.fields_by_name['current_witness'].message_type = _ACCOUNT_NAME
-_DYNAMIC_PROPERTIES.fields_by_name['total_vesting_shares'].message_type = _VEST
-_DYNAMIC_PROPERTIES.fields_by_name['current_supply'].message_type = _COIN
-_DYNAMIC_PROPERTIES.fields_by_name['post_rewards'].message_type = _VEST
-_DYNAMIC_PROPERTIES.fields_by_name['report_rewards'].message_type = _VEST
+_DYNAMIC_PROPERTIES.fields_by_name['current_block_producer'].message_type = _ACCOUNT_NAME
+_DYNAMIC_PROPERTIES.fields_by_name['total_vest'].message_type = _VEST
 _DYNAMIC_PROPERTIES.fields_by_name['annual_budget'].message_type = _VEST
 _DYNAMIC_PROPERTIES.fields_by_name['annual_minted'].message_type = _VEST
-_DYNAMIC_PROPERTIES.fields_by_name['post_dapp_rewards'].message_type = _VEST
-_DYNAMIC_PROPERTIES.fields_by_name['voter_rewards'].message_type = _VEST
-_DYNAMIC_PROPERTIES.fields_by_name['reply_rewards'].message_type = _VEST
-_DYNAMIC_PROPERTIES.fields_by_name['reply_dapp_rewards'].message_type = _VEST
-_DYNAMIC_PROPERTIES.fields_by_name['stake_vesting_shares'].message_type = _VEST
+_DYNAMIC_PROPERTIES.fields_by_name['pool_post_rewards'].message_type = _VEST
+_DYNAMIC_PROPERTIES.fields_by_name['pool_reply_rewards'].message_type = _VEST
+_DYNAMIC_PROPERTIES.fields_by_name['pool_vote_rewards'].message_type = _VEST
+_DYNAMIC_PROPERTIES.fields_by_name['pool_dapp_rewards'].message_type = _VEST
+_DYNAMIC_PROPERTIES.fields_by_name['claimed_post_rewards'].message_type = _VEST
+_DYNAMIC_PROPERTIES.fields_by_name['claimed_reply_rewards'].message_type = _VEST
+_DYNAMIC_PROPERTIES.fields_by_name['claimed_vote_rewards'].message_type = _VEST
+_DYNAMIC_PROPERTIES.fields_by_name['claimed_dapp_rewards'].message_type = _VEST
+_DYNAMIC_PROPERTIES.fields_by_name['stake_vest'].message_type = _VEST
 _DYNAMIC_PROPERTIES.fields_by_name['account_create_fee'].message_type = _COIN
+_DYNAMIC_PROPERTIES.fields_by_name['reputation_admin'].message_type = _ACCOUNT_NAME
+_DYNAMIC_PROPERTIES.fields_by_name['per_ticket_price'].message_type = _COIN
+_DYNAMIC_PROPERTIES.fields_by_name['tickets_income'].message_type = _VEST
+_DYNAMIC_PROPERTIES.fields_by_name['copyright_admin'].message_type = _ACCOUNT_NAME
+_DYNAMIC_PROPERTIES.fields_by_name['tickets_bp_bonus'].message_type = _VEST
 _BENEFICIARY_ROUTE_TYPE.fields_by_name['name'].message_type = _ACCOUNT_NAME
 DESCRIPTOR.message_types_by_name['account_name'] = _ACCOUNT_NAME
 DESCRIPTOR.message_types_by_name['chain_id'] = _CHAIN_ID
@@ -683,6 +840,7 @@ DESCRIPTOR.message_types_by_name['private_key_type'] = _PRIVATE_KEY_TYPE
 DESCRIPTOR.message_types_by_name['time_point_sec'] = _TIME_POINT_SEC
 DESCRIPTOR.message_types_by_name['signature_type'] = _SIGNATURE_TYPE
 DESCRIPTOR.message_types_by_name['sha256'] = _SHA256
+DESCRIPTOR.message_types_by_name['gift_ticket_key_type'] = _GIFT_TICKET_KEY_TYPE
 DESCRIPTOR.message_types_by_name['chain_properties'] = _CHAIN_PROPERTIES
 DESCRIPTOR.message_types_by_name['dynamic_properties'] = _DYNAMIC_PROPERTIES
 DESCRIPTOR.message_types_by_name['beneficiary_route_type'] = _BENEFICIARY_ROUTE_TYPE
@@ -750,6 +908,13 @@ sha256 = _reflection.GeneratedProtocolMessageType('sha256', (_message.Message,),
   # @@protoc_insertion_point(class_scope:prototype.sha256)
   })
 _sym_db.RegisterMessage(sha256)
+
+gift_ticket_key_type = _reflection.GeneratedProtocolMessageType('gift_ticket_key_type', (_message.Message,), {
+  'DESCRIPTOR' : _GIFT_TICKET_KEY_TYPE,
+  '__module__' : 'prototype.type_pb2'
+  # @@protoc_insertion_point(class_scope:prototype.gift_ticket_key_type)
+  })
+_sym_db.RegisterMessage(gift_ticket_key_type)
 
 chain_properties = _reflection.GeneratedProtocolMessageType('chain_properties', (_message.Message,), {
   'DESCRIPTOR' : _CHAIN_PROPERTIES,

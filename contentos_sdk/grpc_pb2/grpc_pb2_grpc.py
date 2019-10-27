@@ -24,16 +24,6 @@ class ApiServiceStub(object):
         request_serializer=grpc__pb2.GetAccountByNameRequest.SerializeToString,
         response_deserializer=grpc__pb2.AccountResponse.FromString,
         )
-    self.GetAccountCashout = channel.unary_unary(
-        '/grpcpb.ApiService/GetAccountCashout',
-        request_serializer=grpc__pb2.GetAccountCashoutRequest.SerializeToString,
-        response_deserializer=grpc__pb2.AccountCashoutResponse.FromString,
-        )
-    self.GetBlockCashout = channel.unary_unary(
-        '/grpcpb.ApiService/GetBlockCashout',
-        request_serializer=grpc__pb2.GetBlockCashoutRequest.SerializeToString,
-        response_deserializer=grpc__pb2.BlockCashoutResponse.FromString,
-        )
     self.GetFollowerListByName = channel.unary_unary(
         '/grpcpb.ApiService/GetFollowerListByName',
         request_serializer=grpc__pb2.GetFollowerListByNameRequest.SerializeToString,
@@ -49,10 +39,10 @@ class ApiServiceStub(object):
         request_serializer=grpc__pb2.GetFollowCountByNameRequest.SerializeToString,
         response_deserializer=grpc__pb2.GetFollowCountByNameResponse.FromString,
         )
-    self.GetWitnessList = channel.unary_unary(
-        '/grpcpb.ApiService/GetWitnessList',
-        request_serializer=grpc__pb2.GetWitnessListRequest.SerializeToString,
-        response_deserializer=grpc__pb2.GetWitnessListResponse.FromString,
+    self.GetBlockProducerList = channel.unary_unary(
+        '/grpcpb.ApiService/GetBlockProducerList',
+        request_serializer=grpc__pb2.GetBlockProducerListRequest.SerializeToString,
+        response_deserializer=grpc__pb2.GetBlockProducerListResponse.FromString,
         )
     self.GetPostListByCreated = channel.unary_unary(
         '/grpcpb.ApiService/GetPostListByCreated',
@@ -159,15 +149,65 @@ class ApiServiceStub(object):
         request_serializer=grpc__pb2.GetContractListByTimeRequest.SerializeToString,
         response_deserializer=grpc__pb2.GetContractListResponse.FromString,
         )
-    self.GetWitnessListByVoteCount = channel.unary_unary(
-        '/grpcpb.ApiService/GetWitnessListByVoteCount',
-        request_serializer=grpc__pb2.GetWitnessListByVoteCountRequest.SerializeToString,
-        response_deserializer=grpc__pb2.GetWitnessListResponse.FromString,
+    self.GetBlockProducerListByVoteCount = channel.unary_unary(
+        '/grpcpb.ApiService/GetBlockProducerListByVoteCount',
+        request_serializer=grpc__pb2.GetBlockProducerListByVoteCountRequest.SerializeToString,
+        response_deserializer=grpc__pb2.GetBlockProducerListResponse.FromString,
         )
     self.GetPostListByVest = channel.unary_unary(
         '/grpcpb.ApiService/GetPostListByVest',
         request_serializer=grpc__pb2.GetPostListByVestRequest.SerializeToString,
         response_deserializer=grpc__pb2.GetPostListByVestResponse.FromString,
+        )
+    self.EstimateStamina = channel.unary_unary(
+        '/grpcpb.ApiService/EstimateStamina',
+        request_serializer=grpc__pb2.EsimateRequest.SerializeToString,
+        response_deserializer=grpc__pb2.EsimateResponse.FromString,
+        )
+    self.GetNodeNeighbours = channel.unary_unary(
+        '/grpcpb.ApiService/GetNodeNeighbours',
+        request_serializer=grpc__pb2.NonParamsRequest.SerializeToString,
+        response_deserializer=grpc__pb2.GetNodeNeighboursResponse.FromString,
+        )
+    self.GetMyStakers = channel.unary_unary(
+        '/grpcpb.ApiService/GetMyStakers',
+        request_serializer=grpc__pb2.GetMyStakerListByNameRequest.SerializeToString,
+        response_deserializer=grpc__pb2.GetMyStakerListByNameResponse.FromString,
+        )
+    self.GetMyStakes = channel.unary_unary(
+        '/grpcpb.ApiService/GetMyStakes',
+        request_serializer=grpc__pb2.GetMyStakeListByNameRequest.SerializeToString,
+        response_deserializer=grpc__pb2.GetMyStakeListByNameResponse.FromString,
+        )
+    self.GetNodeRunningVersion = channel.unary_unary(
+        '/grpcpb.ApiService/GetNodeRunningVersion',
+        request_serializer=grpc__pb2.NonParamsRequest.SerializeToString,
+        response_deserializer=grpc__pb2.GetNodeRunningVersionResponse.FromString,
+        )
+    self.GetAccountListByVest = channel.unary_unary(
+        '/grpcpb.ApiService/GetAccountListByVest',
+        request_serializer=grpc__pb2.GetAccountListByVestRequest.SerializeToString,
+        response_deserializer=grpc__pb2.GetAccountListResponse.FromString,
+        )
+    self.GetBlockProducerByName = channel.unary_unary(
+        '/grpcpb.ApiService/GetBlockProducerByName',
+        request_serializer=grpc__pb2.GetBlockProducerByNameRequest.SerializeToString,
+        response_deserializer=grpc__pb2.BlockProducerResponse.FromString,
+        )
+    self.GetAccountByPubKey = channel.unary_unary(
+        '/grpcpb.ApiService/GetAccountByPubKey',
+        request_serializer=grpc__pb2.GetAccountByPubKeyRequest.SerializeToString,
+        response_deserializer=grpc__pb2.AccountResponse.FromString,
+        )
+    self.GetBlockBFTInfoByNum = channel.unary_unary(
+        '/grpcpb.ApiService/GetBlockBFTInfoByNum',
+        request_serializer=grpc__pb2.GetBlockBFTInfoByNumRequest.SerializeToString,
+        response_deserializer=grpc__pb2.GetBlockBFTInfoByNumResponse.FromString,
+        )
+    self.GetAppTableRecord = channel.unary_unary(
+        '/grpcpb.ApiService/GetAppTableRecord',
+        request_serializer=grpc__pb2.GetAppTableRecordRequest.SerializeToString,
+        response_deserializer=grpc__pb2.GetAppTableRecordResponse.FromString,
         )
 
 
@@ -183,20 +223,6 @@ class ApiServiceServicer(object):
     raise NotImplementedError('Method not implemented!')
 
   def GetAccountByName(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def GetAccountCashout(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def GetBlockCashout(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -224,7 +250,7 @@ class ApiServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def GetWitnessList(self, request, context):
+  def GetBlockProducerList(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -378,7 +404,7 @@ class ApiServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def GetWitnessListByVoteCount(self, request, context):
+  def GetBlockProducerListByVoteCount(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -386,6 +412,76 @@ class ApiServiceServicer(object):
     raise NotImplementedError('Method not implemented!')
 
   def GetPostListByVest(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def EstimateStamina(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetNodeNeighbours(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetMyStakers(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetMyStakes(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetNodeRunningVersion(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetAccountListByVest(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetBlockProducerByName(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetAccountByPubKey(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetBlockBFTInfoByNum(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def GetAppTableRecord(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -405,16 +501,6 @@ def add_ApiServiceServicer_to_server(servicer, server):
           request_deserializer=grpc__pb2.GetAccountByNameRequest.FromString,
           response_serializer=grpc__pb2.AccountResponse.SerializeToString,
       ),
-      'GetAccountCashout': grpc.unary_unary_rpc_method_handler(
-          servicer.GetAccountCashout,
-          request_deserializer=grpc__pb2.GetAccountCashoutRequest.FromString,
-          response_serializer=grpc__pb2.AccountCashoutResponse.SerializeToString,
-      ),
-      'GetBlockCashout': grpc.unary_unary_rpc_method_handler(
-          servicer.GetBlockCashout,
-          request_deserializer=grpc__pb2.GetBlockCashoutRequest.FromString,
-          response_serializer=grpc__pb2.BlockCashoutResponse.SerializeToString,
-      ),
       'GetFollowerListByName': grpc.unary_unary_rpc_method_handler(
           servicer.GetFollowerListByName,
           request_deserializer=grpc__pb2.GetFollowerListByNameRequest.FromString,
@@ -430,10 +516,10 @@ def add_ApiServiceServicer_to_server(servicer, server):
           request_deserializer=grpc__pb2.GetFollowCountByNameRequest.FromString,
           response_serializer=grpc__pb2.GetFollowCountByNameResponse.SerializeToString,
       ),
-      'GetWitnessList': grpc.unary_unary_rpc_method_handler(
-          servicer.GetWitnessList,
-          request_deserializer=grpc__pb2.GetWitnessListRequest.FromString,
-          response_serializer=grpc__pb2.GetWitnessListResponse.SerializeToString,
+      'GetBlockProducerList': grpc.unary_unary_rpc_method_handler(
+          servicer.GetBlockProducerList,
+          request_deserializer=grpc__pb2.GetBlockProducerListRequest.FromString,
+          response_serializer=grpc__pb2.GetBlockProducerListResponse.SerializeToString,
       ),
       'GetPostListByCreated': grpc.unary_unary_rpc_method_handler(
           servicer.GetPostListByCreated,
@@ -540,15 +626,65 @@ def add_ApiServiceServicer_to_server(servicer, server):
           request_deserializer=grpc__pb2.GetContractListByTimeRequest.FromString,
           response_serializer=grpc__pb2.GetContractListResponse.SerializeToString,
       ),
-      'GetWitnessListByVoteCount': grpc.unary_unary_rpc_method_handler(
-          servicer.GetWitnessListByVoteCount,
-          request_deserializer=grpc__pb2.GetWitnessListByVoteCountRequest.FromString,
-          response_serializer=grpc__pb2.GetWitnessListResponse.SerializeToString,
+      'GetBlockProducerListByVoteCount': grpc.unary_unary_rpc_method_handler(
+          servicer.GetBlockProducerListByVoteCount,
+          request_deserializer=grpc__pb2.GetBlockProducerListByVoteCountRequest.FromString,
+          response_serializer=grpc__pb2.GetBlockProducerListResponse.SerializeToString,
       ),
       'GetPostListByVest': grpc.unary_unary_rpc_method_handler(
           servicer.GetPostListByVest,
           request_deserializer=grpc__pb2.GetPostListByVestRequest.FromString,
           response_serializer=grpc__pb2.GetPostListByVestResponse.SerializeToString,
+      ),
+      'EstimateStamina': grpc.unary_unary_rpc_method_handler(
+          servicer.EstimateStamina,
+          request_deserializer=grpc__pb2.EsimateRequest.FromString,
+          response_serializer=grpc__pb2.EsimateResponse.SerializeToString,
+      ),
+      'GetNodeNeighbours': grpc.unary_unary_rpc_method_handler(
+          servicer.GetNodeNeighbours,
+          request_deserializer=grpc__pb2.NonParamsRequest.FromString,
+          response_serializer=grpc__pb2.GetNodeNeighboursResponse.SerializeToString,
+      ),
+      'GetMyStakers': grpc.unary_unary_rpc_method_handler(
+          servicer.GetMyStakers,
+          request_deserializer=grpc__pb2.GetMyStakerListByNameRequest.FromString,
+          response_serializer=grpc__pb2.GetMyStakerListByNameResponse.SerializeToString,
+      ),
+      'GetMyStakes': grpc.unary_unary_rpc_method_handler(
+          servicer.GetMyStakes,
+          request_deserializer=grpc__pb2.GetMyStakeListByNameRequest.FromString,
+          response_serializer=grpc__pb2.GetMyStakeListByNameResponse.SerializeToString,
+      ),
+      'GetNodeRunningVersion': grpc.unary_unary_rpc_method_handler(
+          servicer.GetNodeRunningVersion,
+          request_deserializer=grpc__pb2.NonParamsRequest.FromString,
+          response_serializer=grpc__pb2.GetNodeRunningVersionResponse.SerializeToString,
+      ),
+      'GetAccountListByVest': grpc.unary_unary_rpc_method_handler(
+          servicer.GetAccountListByVest,
+          request_deserializer=grpc__pb2.GetAccountListByVestRequest.FromString,
+          response_serializer=grpc__pb2.GetAccountListResponse.SerializeToString,
+      ),
+      'GetBlockProducerByName': grpc.unary_unary_rpc_method_handler(
+          servicer.GetBlockProducerByName,
+          request_deserializer=grpc__pb2.GetBlockProducerByNameRequest.FromString,
+          response_serializer=grpc__pb2.BlockProducerResponse.SerializeToString,
+      ),
+      'GetAccountByPubKey': grpc.unary_unary_rpc_method_handler(
+          servicer.GetAccountByPubKey,
+          request_deserializer=grpc__pb2.GetAccountByPubKeyRequest.FromString,
+          response_serializer=grpc__pb2.AccountResponse.SerializeToString,
+      ),
+      'GetBlockBFTInfoByNum': grpc.unary_unary_rpc_method_handler(
+          servicer.GetBlockBFTInfoByNum,
+          request_deserializer=grpc__pb2.GetBlockBFTInfoByNumRequest.FromString,
+          response_serializer=grpc__pb2.GetBlockBFTInfoByNumResponse.SerializeToString,
+      ),
+      'GetAppTableRecord': grpc.unary_unary_rpc_method_handler(
+          servicer.GetAppTableRecord,
+          request_deserializer=grpc__pb2.GetAppTableRecordRequest.FromString,
+          response_serializer=grpc__pb2.GetAppTableRecordResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

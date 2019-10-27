@@ -21,53 +21,11 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='prototype',
   syntax='proto3',
   serialized_options=_b('\n\"io.contentos.android.sdk.prototypeZ*github.com/coschain/contentos-go/prototype'),
-  serialized_pb=_b('\n\x19prototype/operation.proto\x12\tprototype\x1a\x14prototype/type.proto\"\xd7\x01\n\x18\x61\x63\x63ount_create_operation\x12\x1c\n\x03\x66\x65\x65\x18\x01 \x01(\x0b\x32\x0f.prototype.coin\x12(\n\x07\x63reator\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\x31\n\x10new_account_name\x18\x03 \x01(\x0b\x32\x17.prototype.account_name\x12)\n\x05owner\x18\x04 \x01(\x0b\x32\x1a.prototype.public_key_type\x12\x15\n\rjson_metadata\x18\x08 \x01(\t\"n\n\x18\x61\x63\x63ount_update_operation\x12&\n\x05owner\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12*\n\x06pubkey\x18\x02 \x01(\x0b\x32\x1a.prototype.public_key_type\"\x8f\x01\n\x12transfer_operation\x12%\n\x04\x66rom\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12#\n\x02to\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\x1f\n\x06\x61mount\x18\x03 \x01(\x0b\x32\x0f.prototype.coin\x12\x0c\n\x04memo\x18\x04 \x01(\t\"\x8c\x01\n\x1dtransfer_to_vesting_operation\x12%\n\x04\x66rom\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12#\n\x02to\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\x1f\n\x06\x61mount\x18\x03 \x01(\x0b\x32\x0f.prototype.coin\"I\n\x0evote_operation\x12&\n\x05voter\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x0f\n\x03idx\x18\x03 \x01(\x04\x42\x02\x30\x01\"\xbd\x01\n\x15\x62p_register_operation\x12&\n\x05owner\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x0b\n\x03url\x18\x02 \x01(\t\x12\x0c\n\x04\x64\x65sc\x18\x03 \x01(\t\x12\x35\n\x11\x62lock_signing_key\x18\x04 \x01(\x0b\x32\x1a.prototype.public_key_type\x12*\n\x05props\x18\x05 \x01(\x0b\x32\x1b.prototype.chain_properties\"\xa1\x01\n\x13\x62p_update_operation\x12&\n\x05owner\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x1d\n\x15proposed_stamina_free\x18\x02 \x01(\x04\x12\x14\n\x0ctps_expected\x18\x03 \x01(\x04\x12-\n\x14\x61\x63\x63ount_creation_fee\x18\x04 \x01(\x0b\x32\x0f.prototype.coin\"A\n\x17\x62p_unregister_operation\x12&\n\x05owner\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\"u\n\x11\x62p_vote_operation\x12&\n\x05voter\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12(\n\x07witness\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\x0e\n\x06\x63\x61ncel\x18\x03 \x01(\x08\"x\n\x10\x66ollow_operation\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12*\n\tf_account\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\x0e\n\x06\x63\x61ncel\x18\x03 \x01(\x08\"\x85\x01\n\x19\x63ontract_deploy_operation\x12&\n\x05owner\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x10\n\x08\x63ontract\x18\x02 \x01(\t\x12\x0b\n\x03\x61\x62i\x18\x03 \x01(\x0c\x12\x0c\n\x04\x63ode\x18\x04 \x01(\x0c\x12\x13\n\x0bupgradeable\x18\x05 \x01(\x08\"\xbe\x01\n\x18\x63ontract_apply_operation\x12\'\n\x06\x63\x61ller\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12&\n\x05owner\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\x10\n\x08\x63ontract\x18\x03 \x01(\t\x12\x0e\n\x06method\x18\x04 \x01(\t\x12\x0e\n\x06params\x18\x05 \x01(\t\x12\x1f\n\x06\x61mount\x18\x06 \x01(\x0b\x32\x0f.prototype.coin\"\xae\x02\n!internal_contract_apply_operation\x12,\n\x0b\x66rom_caller\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12+\n\nfrom_owner\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\x15\n\rfrom_contract\x18\x03 \x01(\t\x12\x13\n\x0b\x66rom_method\x18\x04 \x01(\t\x12)\n\x08to_owner\x18\x05 \x01(\x0b\x32\x17.prototype.account_name\x12\x13\n\x0bto_contract\x18\x06 \x01(\t\x12\x11\n\tto_method\x18\x07 \x01(\t\x12\x0e\n\x06params\x18\x08 \x01(\x0c\x12\x1f\n\x06\x61mount\x18\t \x01(\x0b\x32\x0f.prototype.coin\"\xb2\x01\n\x0epost_operation\x12\x10\n\x04uuid\x18\x01 \x01(\x04\x42\x02\x30\x01\x12&\n\x05owner\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\r\n\x05title\x18\x03 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x04 \x01(\t\x12\x0c\n\x04tags\x18\x05 \x03(\t\x12\x38\n\rbeneficiaries\x18\x06 \x03(\x0b\x32!.prototype.beneficiary_route_type\"\xaf\x01\n\x0freply_operation\x12\x10\n\x04uuid\x18\x01 \x01(\x04\x42\x02\x30\x01\x12&\n\x05owner\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\x12\x17\n\x0bparent_uuid\x18\x04 \x01(\x04\x42\x02\x30\x01\x12\x38\n\rbeneficiaries\x18\x06 \x03(\x0b\x32!.prototype.beneficiary_route_type\"?\n\x13\x63laim_all_operation\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\"K\n\x0f\x63laim_operation\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x04\"\xb0\x02\n\x10report_operation\x12)\n\x08reporter\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x10\n\x08reported\x18\x02 \x01(\x04\x12\x33\n\nreport_tag\x18\x03 \x03(\x0e\x32\x1f.prototype.report_operation.tag\x12\x16\n\x0eis_arbitration\x18\x04 \x01(\x08\x12\x13\n\x0bis_approved\x18\x05 \x01(\x08\"}\n\x03tag\x12\x15\n\x11\x43HILD_PORNOGRAPHY\x10\x00\x12\n\n\x06RACISM\x10\x01\x12\x0f\n\x0bREACTIONARY\x10\x02\x12\x0e\n\nPLAGIARISM\x10\x03\x12\x0b\n\x07SLANDER\x10\x04\x12\x14\n\x10\x46\x41LSE_PROPAGANDA\x10\x05\x12\x0f\n\x0bPORNOGRAPHY\x10\x06\"c\n\x19\x63onvert_vesting_operation\x12%\n\x04\x66rom\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x1f\n\x06\x61mount\x18\x02 \x01(\x0b\x32\x0f.prototype.vest\"~\n\x0fstake_operation\x12%\n\x04\x66rom\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12#\n\x02to\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\x1f\n\x06\x61mount\x18\x03 \x01(\x0b\x32\x0f.prototype.coin\"\x89\x01\n\x12un_stake_operation\x12)\n\x08\x63reditor\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\'\n\x06\x64\x65\x62tor\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\x1f\n\x06\x61mount\x18\x03 \x01(\x0b\x32\x0f.prototype.coinBP\n\"io.contentos.android.sdk.prototypeZ*github.com/coschain/contentos-go/prototypeb\x06proto3')
+  serialized_pb=_b('\n\x19prototype/operation.proto\x12\tprototype\x1a\x14prototype/type.proto\"\xd9\x01\n\x18\x61\x63\x63ount_create_operation\x12\x1c\n\x03\x66\x65\x65\x18\x01 \x01(\x0b\x32\x0f.prototype.coin\x12(\n\x07\x63reator\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\x31\n\x10new_account_name\x18\x03 \x01(\x0b\x32\x17.prototype.account_name\x12+\n\x07pub_key\x18\x04 \x01(\x0b\x32\x1a.prototype.public_key_type\x12\x15\n\rjson_metadata\x18\x05 \x01(\t\"o\n\x18\x61\x63\x63ount_update_operation\x12&\n\x05owner\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12+\n\x07pub_key\x18\x02 \x01(\x0b\x32\x1a.prototype.public_key_type\"\x8f\x01\n\x12transfer_operation\x12%\n\x04\x66rom\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12#\n\x02to\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\x1f\n\x06\x61mount\x18\x03 \x01(\x0b\x32\x0f.prototype.coin\x12\x0c\n\x04memo\x18\x04 \x01(\t\"\x97\x01\n\x1atransfer_to_vest_operation\x12%\n\x04\x66rom\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12#\n\x02to\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\x1f\n\x06\x61mount\x18\x03 \x01(\x0b\x32\x0f.prototype.coin\x12\x0c\n\x04memo\x18\x04 \x01(\t\"I\n\x0evote_operation\x12&\n\x05voter\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x0f\n\x03idx\x18\x02 \x01(\x04\x42\x02\x30\x01\"\xbd\x01\n\x15\x62p_register_operation\x12&\n\x05owner\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x0b\n\x03url\x18\x02 \x01(\t\x12\x0c\n\x04\x64\x65sc\x18\x03 \x01(\t\x12\x35\n\x11\x62lock_signing_key\x18\x04 \x01(\x0b\x32\x1a.prototype.public_key_type\x12*\n\x05props\x18\x05 \x01(\x0b\x32\x1b.prototype.chain_properties\"i\n\x13\x62p_update_operation\x12&\n\x05owner\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12*\n\x05props\x18\x02 \x01(\x0b\x32\x1b.prototype.chain_properties\"M\n\x13\x62p_enable_operation\x12&\n\x05owner\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x0e\n\x06\x63\x61ncel\x18\x02 \x01(\x08\"|\n\x11\x62p_vote_operation\x12&\n\x05voter\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12/\n\x0e\x62lock_producer\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\x0e\n\x06\x63\x61ncel\x18\x03 \x01(\x08\"x\n\x10\x66ollow_operation\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12*\n\tf_account\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\x0e\n\x06\x63\x61ncel\x18\x03 \x01(\x08\"\xa4\x01\n\x19\x63ontract_deploy_operation\x12&\n\x05owner\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x10\n\x08\x63ontract\x18\x02 \x01(\t\x12\x0b\n\x03\x61\x62i\x18\x03 \x01(\x0c\x12\x0c\n\x04\x63ode\x18\x04 \x01(\x0c\x12\x13\n\x0bupgradeable\x18\x05 \x01(\x08\x12\x0b\n\x03url\x18\x06 \x01(\t\x12\x10\n\x08\x64\x65scribe\x18\x07 \x01(\t\"\xbe\x01\n\x18\x63ontract_apply_operation\x12\'\n\x06\x63\x61ller\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12&\n\x05owner\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\x10\n\x08\x63ontract\x18\x03 \x01(\t\x12\x0e\n\x06method\x18\x04 \x01(\t\x12\x0e\n\x06params\x18\x05 \x01(\t\x12\x1f\n\x06\x61mount\x18\x06 \x01(\x0b\x32\x0f.prototype.coin\"\xae\x02\n!internal_contract_apply_operation\x12,\n\x0b\x66rom_caller\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12+\n\nfrom_owner\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\x15\n\rfrom_contract\x18\x03 \x01(\t\x12\x13\n\x0b\x66rom_method\x18\x04 \x01(\t\x12)\n\x08to_owner\x18\x05 \x01(\x0b\x32\x17.prototype.account_name\x12\x13\n\x0bto_contract\x18\x06 \x01(\t\x12\x11\n\tto_method\x18\x07 \x01(\t\x12\x0e\n\x06params\x18\x08 \x01(\x0c\x12\x1f\n\x06\x61mount\x18\t \x01(\x0b\x32\x0f.prototype.coin\"\xb2\x01\n\x0epost_operation\x12\x10\n\x04uuid\x18\x01 \x01(\x04\x42\x02\x30\x01\x12&\n\x05owner\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\r\n\x05title\x18\x03 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x04 \x01(\t\x12\x0c\n\x04tags\x18\x05 \x03(\t\x12\x38\n\rbeneficiaries\x18\x06 \x03(\x0b\x32!.prototype.beneficiary_route_type\"\xaf\x01\n\x0freply_operation\x12\x10\n\x04uuid\x18\x01 \x01(\x04\x42\x02\x30\x01\x12&\n\x05owner\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\x12\x17\n\x0bparent_uuid\x18\x04 \x01(\x04\x42\x02\x30\x01\x12\x38\n\rbeneficiaries\x18\x06 \x03(\x0b\x32!.prototype.beneficiary_route_type\"`\n\x16\x63onvert_vest_operation\x12%\n\x04\x66rom\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x1f\n\x06\x61mount\x18\x02 \x01(\x0b\x32\x0f.prototype.vest\"~\n\x0fstake_operation\x12%\n\x04\x66rom\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12#\n\x02to\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\x1f\n\x06\x61mount\x18\x03 \x01(\x0b\x32\x0f.prototype.coin\"\x89\x01\n\x12un_stake_operation\x12)\n\x08\x63reditor\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\'\n\x06\x64\x65\x62tor\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12\x1f\n\x06\x61mount\x18\x03 \x01(\x0b\x32\x0f.prototype.coin\"S\n\x18\x61\x63quire_ticket_operation\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\r\n\x05\x63ount\x18\x02 \x01(\x04\"d\n\x18vote_by_ticket_operation\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x0f\n\x03idx\x18\x02 \x01(\x04\x42\x02\x30\x01\x12\r\n\x05\x63ount\x18\x03 \x01(\x04\x42P\n\"io.contentos.android.sdk.prototypeZ*github.com/coschain/contentos-go/prototypeb\x06proto3')
   ,
   dependencies=[prototype_dot_type__pb2.DESCRIPTOR,])
 
 
-
-_REPORT_OPERATION_TAG = _descriptor.EnumDescriptor(
-  name='tag',
-  full_name='prototype.report_operation.tag',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='CHILD_PORNOGRAPHY', index=0, number=0,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='RACISM', index=1, number=1,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='REACTIONARY', index=2, number=2,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='PLAGIARISM', index=3, number=3,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SLANDER', index=4, number=4,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FALSE_PROPAGANDA', index=5, number=5,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='PORNOGRAPHY', index=6, number=6,
-      serialized_options=None,
-      type=None),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=2735,
-  serialized_end=2860,
-)
-_sym_db.RegisterEnumDescriptor(_REPORT_OPERATION_TAG)
 
 
 _ACCOUNT_CREATE_OPERATION = _descriptor.Descriptor(
@@ -99,7 +57,7 @@ _ACCOUNT_CREATE_OPERATION = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='owner', full_name='prototype.account_create_operation.owner', index=3,
+      name='pub_key', full_name='prototype.account_create_operation.pub_key', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -107,7 +65,7 @@ _ACCOUNT_CREATE_OPERATION = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='json_metadata', full_name='prototype.account_create_operation.json_metadata', index=4,
-      number=8, type=9, cpp_type=9, label=1,
+      number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -125,7 +83,7 @@ _ACCOUNT_CREATE_OPERATION = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=63,
-  serialized_end=278,
+  serialized_end=280,
 )
 
 
@@ -144,7 +102,7 @@ _ACCOUNT_UPDATE_OPERATION = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='pubkey', full_name='prototype.account_update_operation.pubkey', index=1,
+      name='pub_key', full_name='prototype.account_update_operation.pub_key', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -162,8 +120,8 @@ _ACCOUNT_UPDATE_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=280,
-  serialized_end=390,
+  serialized_start=282,
+  serialized_end=393,
 )
 
 
@@ -214,36 +172,43 @@ _TRANSFER_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=393,
-  serialized_end=536,
+  serialized_start=396,
+  serialized_end=539,
 )
 
 
-_TRANSFER_TO_VESTING_OPERATION = _descriptor.Descriptor(
-  name='transfer_to_vesting_operation',
-  full_name='prototype.transfer_to_vesting_operation',
+_TRANSFER_TO_VEST_OPERATION = _descriptor.Descriptor(
+  name='transfer_to_vest_operation',
+  full_name='prototype.transfer_to_vest_operation',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='from', full_name='prototype.transfer_to_vesting_operation.from', index=0,
+      name='from', full_name='prototype.transfer_to_vest_operation.from', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='to', full_name='prototype.transfer_to_vesting_operation.to', index=1,
+      name='to', full_name='prototype.transfer_to_vest_operation.to', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='amount', full_name='prototype.transfer_to_vesting_operation.amount', index=2,
+      name='amount', full_name='prototype.transfer_to_vest_operation.amount', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='memo', full_name='prototype.transfer_to_vest_operation.memo', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -259,8 +224,8 @@ _TRANSFER_TO_VESTING_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=539,
-  serialized_end=679,
+  serialized_start=542,
+  serialized_end=693,
 )
 
 
@@ -280,7 +245,7 @@ _VOTE_OPERATION = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='idx', full_name='prototype.vote_operation.idx', index=1,
-      number=3, type=4, cpp_type=4, label=1,
+      number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -297,8 +262,8 @@ _VOTE_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=681,
-  serialized_end=754,
+  serialized_start=695,
+  serialized_end=768,
 )
 
 
@@ -356,8 +321,8 @@ _BP_REGISTER_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=757,
-  serialized_end=946,
+  serialized_start=771,
+  serialized_end=960,
 )
 
 
@@ -376,22 +341,8 @@ _BP_UPDATE_OPERATION = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='proposed_stamina_free', full_name='prototype.bp_update_operation.proposed_stamina_free', index=1,
-      number=2, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='tps_expected', full_name='prototype.bp_update_operation.tps_expected', index=2,
-      number=3, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='account_creation_fee', full_name='prototype.bp_update_operation.account_creation_fee', index=3,
-      number=4, type=11, cpp_type=10, label=1,
+      name='props', full_name='prototype.bp_update_operation.props', index=1,
+      number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -408,22 +359,29 @@ _BP_UPDATE_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=949,
-  serialized_end=1110,
+  serialized_start=962,
+  serialized_end=1067,
 )
 
 
-_BP_UNREGISTER_OPERATION = _descriptor.Descriptor(
-  name='bp_unregister_operation',
-  full_name='prototype.bp_unregister_operation',
+_BP_ENABLE_OPERATION = _descriptor.Descriptor(
+  name='bp_enable_operation',
+  full_name='prototype.bp_enable_operation',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='owner', full_name='prototype.bp_unregister_operation.owner', index=0,
+      name='owner', full_name='prototype.bp_enable_operation.owner', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='cancel', full_name='prototype.bp_enable_operation.cancel', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -439,8 +397,8 @@ _BP_UNREGISTER_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1112,
-  serialized_end=1177,
+  serialized_start=1069,
+  serialized_end=1146,
 )
 
 
@@ -459,7 +417,7 @@ _BP_VOTE_OPERATION = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='witness', full_name='prototype.bp_vote_operation.witness', index=1,
+      name='block_producer', full_name='prototype.bp_vote_operation.block_producer', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -484,8 +442,8 @@ _BP_VOTE_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1179,
-  serialized_end=1296,
+  serialized_start=1148,
+  serialized_end=1272,
 )
 
 
@@ -529,8 +487,8 @@ _FOLLOW_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1298,
-  serialized_end=1418,
+  serialized_start=1274,
+  serialized_end=1394,
 )
 
 
@@ -576,6 +534,20 @@ _CONTRACT_DEPLOY_OPERATION = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='url', full_name='prototype.contract_deploy_operation.url', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='describe', full_name='prototype.contract_deploy_operation.describe', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -588,8 +560,8 @@ _CONTRACT_DEPLOY_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1421,
-  serialized_end=1554,
+  serialized_start=1397,
+  serialized_end=1561,
 )
 
 
@@ -654,8 +626,8 @@ _CONTRACT_APPLY_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1557,
-  serialized_end=1747,
+  serialized_start=1564,
+  serialized_end=1754,
 )
 
 
@@ -741,8 +713,8 @@ _INTERNAL_CONTRACT_APPLY_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1750,
-  serialized_end=2052,
+  serialized_start=1757,
+  serialized_end=2059,
 )
 
 
@@ -807,8 +779,8 @@ _POST_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2055,
-  serialized_end=2233,
+  serialized_start=2062,
+  serialized_end=2240,
 )
 
 
@@ -866,156 +838,27 @@ _REPLY_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2236,
-  serialized_end=2411,
+  serialized_start=2243,
+  serialized_end=2418,
 )
 
 
-_CLAIM_ALL_OPERATION = _descriptor.Descriptor(
-  name='claim_all_operation',
-  full_name='prototype.claim_all_operation',
+_CONVERT_VEST_OPERATION = _descriptor.Descriptor(
+  name='convert_vest_operation',
+  full_name='prototype.convert_vest_operation',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='account', full_name='prototype.claim_all_operation.account', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2413,
-  serialized_end=2476,
-)
-
-
-_CLAIM_OPERATION = _descriptor.Descriptor(
-  name='claim_operation',
-  full_name='prototype.claim_operation',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='account', full_name='prototype.claim_operation.account', index=0,
+      name='from', full_name='prototype.convert_vest_operation.from', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='amount', full_name='prototype.claim_operation.amount', index=1,
-      number=2, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2478,
-  serialized_end=2553,
-)
-
-
-_REPORT_OPERATION = _descriptor.Descriptor(
-  name='report_operation',
-  full_name='prototype.report_operation',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='reporter', full_name='prototype.report_operation.reporter', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='reported', full_name='prototype.report_operation.reported', index=1,
-      number=2, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='report_tag', full_name='prototype.report_operation.report_tag', index=2,
-      number=3, type=14, cpp_type=8, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='is_arbitration', full_name='prototype.report_operation.is_arbitration', index=3,
-      number=4, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='is_approved', full_name='prototype.report_operation.is_approved', index=4,
-      number=5, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _REPORT_OPERATION_TAG,
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2556,
-  serialized_end=2860,
-)
-
-
-_CONVERT_VESTING_OPERATION = _descriptor.Descriptor(
-  name='convert_vesting_operation',
-  full_name='prototype.convert_vesting_operation',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='from', full_name='prototype.convert_vesting_operation.from', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='amount', full_name='prototype.convert_vesting_operation.amount', index=1,
+      name='amount', full_name='prototype.convert_vest_operation.amount', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -1033,8 +876,8 @@ _CONVERT_VESTING_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2862,
-  serialized_end=2961,
+  serialized_start=2420,
+  serialized_end=2516,
 )
 
 
@@ -1078,8 +921,8 @@ _STAKE_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2963,
-  serialized_end=3089,
+  serialized_start=2518,
+  serialized_end=2644,
 )
 
 
@@ -1123,31 +966,114 @@ _UN_STAKE_OPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3092,
-  serialized_end=3229,
+  serialized_start=2647,
+  serialized_end=2784,
+)
+
+
+_ACQUIRE_TICKET_OPERATION = _descriptor.Descriptor(
+  name='acquire_ticket_operation',
+  full_name='prototype.acquire_ticket_operation',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='account', full_name='prototype.acquire_ticket_operation.account', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='count', full_name='prototype.acquire_ticket_operation.count', index=1,
+      number=2, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2786,
+  serialized_end=2869,
+)
+
+
+_VOTE_BY_TICKET_OPERATION = _descriptor.Descriptor(
+  name='vote_by_ticket_operation',
+  full_name='prototype.vote_by_ticket_operation',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='account', full_name='prototype.vote_by_ticket_operation.account', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='idx', full_name='prototype.vote_by_ticket_operation.idx', index=1,
+      number=2, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=_b('0\001'), file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='count', full_name='prototype.vote_by_ticket_operation.count', index=2,
+      number=3, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2871,
+  serialized_end=2971,
 )
 
 _ACCOUNT_CREATE_OPERATION.fields_by_name['fee'].message_type = prototype_dot_type__pb2._COIN
 _ACCOUNT_CREATE_OPERATION.fields_by_name['creator'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _ACCOUNT_CREATE_OPERATION.fields_by_name['new_account_name'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
-_ACCOUNT_CREATE_OPERATION.fields_by_name['owner'].message_type = prototype_dot_type__pb2._PUBLIC_KEY_TYPE
+_ACCOUNT_CREATE_OPERATION.fields_by_name['pub_key'].message_type = prototype_dot_type__pb2._PUBLIC_KEY_TYPE
 _ACCOUNT_UPDATE_OPERATION.fields_by_name['owner'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
-_ACCOUNT_UPDATE_OPERATION.fields_by_name['pubkey'].message_type = prototype_dot_type__pb2._PUBLIC_KEY_TYPE
+_ACCOUNT_UPDATE_OPERATION.fields_by_name['pub_key'].message_type = prototype_dot_type__pb2._PUBLIC_KEY_TYPE
 _TRANSFER_OPERATION.fields_by_name['from'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _TRANSFER_OPERATION.fields_by_name['to'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _TRANSFER_OPERATION.fields_by_name['amount'].message_type = prototype_dot_type__pb2._COIN
-_TRANSFER_TO_VESTING_OPERATION.fields_by_name['from'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
-_TRANSFER_TO_VESTING_OPERATION.fields_by_name['to'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
-_TRANSFER_TO_VESTING_OPERATION.fields_by_name['amount'].message_type = prototype_dot_type__pb2._COIN
+_TRANSFER_TO_VEST_OPERATION.fields_by_name['from'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
+_TRANSFER_TO_VEST_OPERATION.fields_by_name['to'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
+_TRANSFER_TO_VEST_OPERATION.fields_by_name['amount'].message_type = prototype_dot_type__pb2._COIN
 _VOTE_OPERATION.fields_by_name['voter'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _BP_REGISTER_OPERATION.fields_by_name['owner'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _BP_REGISTER_OPERATION.fields_by_name['block_signing_key'].message_type = prototype_dot_type__pb2._PUBLIC_KEY_TYPE
 _BP_REGISTER_OPERATION.fields_by_name['props'].message_type = prototype_dot_type__pb2._CHAIN_PROPERTIES
 _BP_UPDATE_OPERATION.fields_by_name['owner'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
-_BP_UPDATE_OPERATION.fields_by_name['account_creation_fee'].message_type = prototype_dot_type__pb2._COIN
-_BP_UNREGISTER_OPERATION.fields_by_name['owner'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
+_BP_UPDATE_OPERATION.fields_by_name['props'].message_type = prototype_dot_type__pb2._CHAIN_PROPERTIES
+_BP_ENABLE_OPERATION.fields_by_name['owner'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _BP_VOTE_OPERATION.fields_by_name['voter'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
-_BP_VOTE_OPERATION.fields_by_name['witness'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
+_BP_VOTE_OPERATION.fields_by_name['block_producer'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _FOLLOW_OPERATION.fields_by_name['account'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _FOLLOW_OPERATION.fields_by_name['f_account'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _CONTRACT_DEPLOY_OPERATION.fields_by_name['owner'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
@@ -1162,27 +1088,24 @@ _POST_OPERATION.fields_by_name['owner'].message_type = prototype_dot_type__pb2._
 _POST_OPERATION.fields_by_name['beneficiaries'].message_type = prototype_dot_type__pb2._BENEFICIARY_ROUTE_TYPE
 _REPLY_OPERATION.fields_by_name['owner'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _REPLY_OPERATION.fields_by_name['beneficiaries'].message_type = prototype_dot_type__pb2._BENEFICIARY_ROUTE_TYPE
-_CLAIM_ALL_OPERATION.fields_by_name['account'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
-_CLAIM_OPERATION.fields_by_name['account'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
-_REPORT_OPERATION.fields_by_name['reporter'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
-_REPORT_OPERATION.fields_by_name['report_tag'].enum_type = _REPORT_OPERATION_TAG
-_REPORT_OPERATION_TAG.containing_type = _REPORT_OPERATION
-_CONVERT_VESTING_OPERATION.fields_by_name['from'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
-_CONVERT_VESTING_OPERATION.fields_by_name['amount'].message_type = prototype_dot_type__pb2._VEST
+_CONVERT_VEST_OPERATION.fields_by_name['from'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
+_CONVERT_VEST_OPERATION.fields_by_name['amount'].message_type = prototype_dot_type__pb2._VEST
 _STAKE_OPERATION.fields_by_name['from'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _STAKE_OPERATION.fields_by_name['to'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _STAKE_OPERATION.fields_by_name['amount'].message_type = prototype_dot_type__pb2._COIN
 _UN_STAKE_OPERATION.fields_by_name['creditor'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _UN_STAKE_OPERATION.fields_by_name['debtor'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _UN_STAKE_OPERATION.fields_by_name['amount'].message_type = prototype_dot_type__pb2._COIN
+_ACQUIRE_TICKET_OPERATION.fields_by_name['account'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
+_VOTE_BY_TICKET_OPERATION.fields_by_name['account'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 DESCRIPTOR.message_types_by_name['account_create_operation'] = _ACCOUNT_CREATE_OPERATION
 DESCRIPTOR.message_types_by_name['account_update_operation'] = _ACCOUNT_UPDATE_OPERATION
 DESCRIPTOR.message_types_by_name['transfer_operation'] = _TRANSFER_OPERATION
-DESCRIPTOR.message_types_by_name['transfer_to_vesting_operation'] = _TRANSFER_TO_VESTING_OPERATION
+DESCRIPTOR.message_types_by_name['transfer_to_vest_operation'] = _TRANSFER_TO_VEST_OPERATION
 DESCRIPTOR.message_types_by_name['vote_operation'] = _VOTE_OPERATION
 DESCRIPTOR.message_types_by_name['bp_register_operation'] = _BP_REGISTER_OPERATION
 DESCRIPTOR.message_types_by_name['bp_update_operation'] = _BP_UPDATE_OPERATION
-DESCRIPTOR.message_types_by_name['bp_unregister_operation'] = _BP_UNREGISTER_OPERATION
+DESCRIPTOR.message_types_by_name['bp_enable_operation'] = _BP_ENABLE_OPERATION
 DESCRIPTOR.message_types_by_name['bp_vote_operation'] = _BP_VOTE_OPERATION
 DESCRIPTOR.message_types_by_name['follow_operation'] = _FOLLOW_OPERATION
 DESCRIPTOR.message_types_by_name['contract_deploy_operation'] = _CONTRACT_DEPLOY_OPERATION
@@ -1190,12 +1113,11 @@ DESCRIPTOR.message_types_by_name['contract_apply_operation'] = _CONTRACT_APPLY_O
 DESCRIPTOR.message_types_by_name['internal_contract_apply_operation'] = _INTERNAL_CONTRACT_APPLY_OPERATION
 DESCRIPTOR.message_types_by_name['post_operation'] = _POST_OPERATION
 DESCRIPTOR.message_types_by_name['reply_operation'] = _REPLY_OPERATION
-DESCRIPTOR.message_types_by_name['claim_all_operation'] = _CLAIM_ALL_OPERATION
-DESCRIPTOR.message_types_by_name['claim_operation'] = _CLAIM_OPERATION
-DESCRIPTOR.message_types_by_name['report_operation'] = _REPORT_OPERATION
-DESCRIPTOR.message_types_by_name['convert_vesting_operation'] = _CONVERT_VESTING_OPERATION
+DESCRIPTOR.message_types_by_name['convert_vest_operation'] = _CONVERT_VEST_OPERATION
 DESCRIPTOR.message_types_by_name['stake_operation'] = _STAKE_OPERATION
 DESCRIPTOR.message_types_by_name['un_stake_operation'] = _UN_STAKE_OPERATION
+DESCRIPTOR.message_types_by_name['acquire_ticket_operation'] = _ACQUIRE_TICKET_OPERATION
+DESCRIPTOR.message_types_by_name['vote_by_ticket_operation'] = _VOTE_BY_TICKET_OPERATION
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 account_create_operation = _reflection.GeneratedProtocolMessageType('account_create_operation', (_message.Message,), {
@@ -1219,12 +1141,12 @@ transfer_operation = _reflection.GeneratedProtocolMessageType('transfer_operatio
   })
 _sym_db.RegisterMessage(transfer_operation)
 
-transfer_to_vesting_operation = _reflection.GeneratedProtocolMessageType('transfer_to_vesting_operation', (_message.Message,), {
-  'DESCRIPTOR' : _TRANSFER_TO_VESTING_OPERATION,
+transfer_to_vest_operation = _reflection.GeneratedProtocolMessageType('transfer_to_vest_operation', (_message.Message,), {
+  'DESCRIPTOR' : _TRANSFER_TO_VEST_OPERATION,
   '__module__' : 'prototype.operation_pb2'
-  # @@protoc_insertion_point(class_scope:prototype.transfer_to_vesting_operation)
+  # @@protoc_insertion_point(class_scope:prototype.transfer_to_vest_operation)
   })
-_sym_db.RegisterMessage(transfer_to_vesting_operation)
+_sym_db.RegisterMessage(transfer_to_vest_operation)
 
 vote_operation = _reflection.GeneratedProtocolMessageType('vote_operation', (_message.Message,), {
   'DESCRIPTOR' : _VOTE_OPERATION,
@@ -1247,12 +1169,12 @@ bp_update_operation = _reflection.GeneratedProtocolMessageType('bp_update_operat
   })
 _sym_db.RegisterMessage(bp_update_operation)
 
-bp_unregister_operation = _reflection.GeneratedProtocolMessageType('bp_unregister_operation', (_message.Message,), {
-  'DESCRIPTOR' : _BP_UNREGISTER_OPERATION,
+bp_enable_operation = _reflection.GeneratedProtocolMessageType('bp_enable_operation', (_message.Message,), {
+  'DESCRIPTOR' : _BP_ENABLE_OPERATION,
   '__module__' : 'prototype.operation_pb2'
-  # @@protoc_insertion_point(class_scope:prototype.bp_unregister_operation)
+  # @@protoc_insertion_point(class_scope:prototype.bp_enable_operation)
   })
-_sym_db.RegisterMessage(bp_unregister_operation)
+_sym_db.RegisterMessage(bp_enable_operation)
 
 bp_vote_operation = _reflection.GeneratedProtocolMessageType('bp_vote_operation', (_message.Message,), {
   'DESCRIPTOR' : _BP_VOTE_OPERATION,
@@ -1303,33 +1225,12 @@ reply_operation = _reflection.GeneratedProtocolMessageType('reply_operation', (_
   })
 _sym_db.RegisterMessage(reply_operation)
 
-claim_all_operation = _reflection.GeneratedProtocolMessageType('claim_all_operation', (_message.Message,), {
-  'DESCRIPTOR' : _CLAIM_ALL_OPERATION,
+convert_vest_operation = _reflection.GeneratedProtocolMessageType('convert_vest_operation', (_message.Message,), {
+  'DESCRIPTOR' : _CONVERT_VEST_OPERATION,
   '__module__' : 'prototype.operation_pb2'
-  # @@protoc_insertion_point(class_scope:prototype.claim_all_operation)
+  # @@protoc_insertion_point(class_scope:prototype.convert_vest_operation)
   })
-_sym_db.RegisterMessage(claim_all_operation)
-
-claim_operation = _reflection.GeneratedProtocolMessageType('claim_operation', (_message.Message,), {
-  'DESCRIPTOR' : _CLAIM_OPERATION,
-  '__module__' : 'prototype.operation_pb2'
-  # @@protoc_insertion_point(class_scope:prototype.claim_operation)
-  })
-_sym_db.RegisterMessage(claim_operation)
-
-report_operation = _reflection.GeneratedProtocolMessageType('report_operation', (_message.Message,), {
-  'DESCRIPTOR' : _REPORT_OPERATION,
-  '__module__' : 'prototype.operation_pb2'
-  # @@protoc_insertion_point(class_scope:prototype.report_operation)
-  })
-_sym_db.RegisterMessage(report_operation)
-
-convert_vesting_operation = _reflection.GeneratedProtocolMessageType('convert_vesting_operation', (_message.Message,), {
-  'DESCRIPTOR' : _CONVERT_VESTING_OPERATION,
-  '__module__' : 'prototype.operation_pb2'
-  # @@protoc_insertion_point(class_scope:prototype.convert_vesting_operation)
-  })
-_sym_db.RegisterMessage(convert_vesting_operation)
+_sym_db.RegisterMessage(convert_vest_operation)
 
 stake_operation = _reflection.GeneratedProtocolMessageType('stake_operation', (_message.Message,), {
   'DESCRIPTOR' : _STAKE_OPERATION,
@@ -1345,10 +1246,25 @@ un_stake_operation = _reflection.GeneratedProtocolMessageType('un_stake_operatio
   })
 _sym_db.RegisterMessage(un_stake_operation)
 
+acquire_ticket_operation = _reflection.GeneratedProtocolMessageType('acquire_ticket_operation', (_message.Message,), {
+  'DESCRIPTOR' : _ACQUIRE_TICKET_OPERATION,
+  '__module__' : 'prototype.operation_pb2'
+  # @@protoc_insertion_point(class_scope:prototype.acquire_ticket_operation)
+  })
+_sym_db.RegisterMessage(acquire_ticket_operation)
+
+vote_by_ticket_operation = _reflection.GeneratedProtocolMessageType('vote_by_ticket_operation', (_message.Message,), {
+  'DESCRIPTOR' : _VOTE_BY_TICKET_OPERATION,
+  '__module__' : 'prototype.operation_pb2'
+  # @@protoc_insertion_point(class_scope:prototype.vote_by_ticket_operation)
+  })
+_sym_db.RegisterMessage(vote_by_ticket_operation)
+
 
 DESCRIPTOR._options = None
 _VOTE_OPERATION.fields_by_name['idx']._options = None
 _POST_OPERATION.fields_by_name['uuid']._options = None
 _REPLY_OPERATION.fields_by_name['uuid']._options = None
 _REPLY_OPERATION.fields_by_name['parent_uuid']._options = None
+_VOTE_BY_TICKET_OPERATION.fields_by_name['idx']._options = None
 # @@protoc_insertion_point(module_scope)

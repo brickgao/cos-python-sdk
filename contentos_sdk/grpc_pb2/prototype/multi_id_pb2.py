@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='prototype',
   syntax='proto3',
   serialized_options=_b('\n\"io.contentos.android.sdk.prototypeZ*github.com/coschain/contentos-go/prototype'),
-  serialized_pb=_b('\n\x18prototype/multi_id.proto\x12\tprototype\x1a\x14prototype/type.proto\"h\n\x11\x66ollower_relation\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12)\n\x08\x66ollower\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\"j\n\x12\x66ollowing_relation\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12*\n\tfollowing\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\"\x9e\x01\n\x16\x66ollower_created_order\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12/\n\x0c\x63reated_time\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\x12)\n\x08\x66ollower\x18\x03 \x01(\x0b\x32\x17.prototype.account_name\"\xa0\x01\n\x17\x66ollowing_created_order\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12/\n\x0c\x63reated_time\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\x12*\n\tfollowing\x18\x03 \x01(\x0b\x32\x17.prototype.account_name\"S\n\x12post_created_order\x12*\n\x07\x63reated\x18\x01 \x01(\x0b\x32\x19.prototype.time_point_sec\x12\x11\n\tparent_id\x18\x02 \x01(\x04\"C\n\x08voter_id\x12&\n\x05voter\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x0f\n\x07post_id\x18\x02 \x01(\x04\"_\n\x0b\x62p_voter_id\x12&\n\x05voter\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12(\n\x07witness\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\"a\n\rbp_witness_id\x12&\n\x05voter\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12(\n\x07witness\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\"D\n\x0b\x63ontract_id\x12&\n\x05owner\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\r\n\x05\x63name\x18\x02 \x01(\t\"T\n\x13reply_created_order\x12\x11\n\tparent_id\x18\x01 \x01(\x04\x12*\n\x07\x63reated\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\"l\n\x16user_post_create_order\x12\'\n\x06\x61uthor\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12)\n\x06\x63reate\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\"N\n\x11reward_cashout_id\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x0f\n\x07post_id\x18\x02 \x01(\x04\"q\n\x15user_trx_create_order\x12(\n\x07\x63reator\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12.\n\x0b\x63reate_time\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\"Z\n\x0cstake_record\x12%\n\x04\x66rom\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12#\n\x02to\x18\x02 \x01(\x0b\x32\x17.prototype.account_nameBP\n\"io.contentos.android.sdk.prototypeZ*github.com/coschain/contentos-go/prototypeb\x06proto3')
+  serialized_pb=_b('\n\x18prototype/multi_id.proto\x12\tprototype\x1a\x14prototype/type.proto\"h\n\x11\x66ollower_relation\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12)\n\x08\x66ollower\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\"j\n\x12\x66ollowing_relation\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12*\n\tfollowing\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\"\x9e\x01\n\x16\x66ollower_created_order\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12/\n\x0c\x63reated_time\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\x12)\n\x08\x66ollower\x18\x03 \x01(\x0b\x32\x17.prototype.account_name\"\xa0\x01\n\x17\x66ollowing_created_order\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12/\n\x0c\x63reated_time\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\x12*\n\tfollowing\x18\x03 \x01(\x0b\x32\x17.prototype.account_name\"S\n\x12post_created_order\x12*\n\x07\x63reated\x18\x01 \x01(\x0b\x32\x19.prototype.time_point_sec\x12\x11\n\tparent_id\x18\x02 \x01(\x04\"C\n\x08voter_id\x12&\n\x05voter\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x0f\n\x07post_id\x18\x02 \x01(\x04\"@\n\nbp_vest_id\x12\x0e\n\x06\x61\x63tive\x18\x01 \x01(\x08\x12\"\n\tvote_vest\x18\x02 \x01(\x0b\x32\x0f.prototype.vest\"o\n\x14\x62p_block_producer_id\x12/\n\x0e\x62lock_producer\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12&\n\x05voter\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\"D\n\x0b\x63ontract_id\x12&\n\x05owner\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\r\n\x05\x63name\x18\x02 \x01(\t\"T\n\x13reply_created_order\x12\x11\n\tparent_id\x18\x01 \x01(\x04\x12*\n\x07\x63reated\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\"l\n\x16user_post_create_order\x12\'\n\x06\x61uthor\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12)\n\x06\x63reate\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\"N\n\x11reward_cashout_id\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x0f\n\x07post_id\x18\x02 \x01(\x04\"q\n\x15user_trx_create_order\x12(\n\x07\x63reator\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12.\n\x0b\x63reate_time\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\"Z\n\x0cstake_record\x12%\n\x04\x66rom\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12#\n\x02to\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\"b\n\x14stake_record_reverse\x12#\n\x02to\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12%\n\x04\x66rom\x18\x02 \x01(\x0b\x32\x17.prototype.account_nameBP\n\"io.contentos.android.sdk.prototypeZ*github.com/coschain/contentos-go/prototypeb\x06proto3')
   ,
   dependencies=[prototype_dot_type__pb2.DESCRIPTOR,])
 
@@ -270,22 +270,22 @@ _VOTER_ID = _descriptor.Descriptor(
 )
 
 
-_BP_VOTER_ID = _descriptor.Descriptor(
-  name='bp_voter_id',
-  full_name='prototype.bp_voter_id',
+_BP_VEST_ID = _descriptor.Descriptor(
+  name='bp_vest_id',
+  full_name='prototype.bp_vest_id',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='voter', full_name='prototype.bp_voter_id.voter', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='active', full_name='prototype.bp_vest_id.active', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='witness', full_name='prototype.bp_voter_id.witness', index=1,
+      name='vote_vest', full_name='prototype.bp_vest_id.vote_vest', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -304,26 +304,26 @@ _BP_VOTER_ID = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=753,
-  serialized_end=848,
+  serialized_end=817,
 )
 
 
-_BP_WITNESS_ID = _descriptor.Descriptor(
-  name='bp_witness_id',
-  full_name='prototype.bp_witness_id',
+_BP_BLOCK_PRODUCER_ID = _descriptor.Descriptor(
+  name='bp_block_producer_id',
+  full_name='prototype.bp_block_producer_id',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='voter', full_name='prototype.bp_witness_id.voter', index=0,
+      name='block_producer', full_name='prototype.bp_block_producer_id.block_producer', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='witness', full_name='prototype.bp_witness_id.witness', index=1,
+      name='voter', full_name='prototype.bp_block_producer_id.voter', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -341,8 +341,8 @@ _BP_WITNESS_ID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=850,
-  serialized_end=947,
+  serialized_start=819,
+  serialized_end=930,
 )
 
 
@@ -379,8 +379,8 @@ _CONTRACT_ID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=949,
-  serialized_end=1017,
+  serialized_start=932,
+  serialized_end=1000,
 )
 
 
@@ -417,8 +417,8 @@ _REPLY_CREATED_ORDER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1019,
-  serialized_end=1103,
+  serialized_start=1002,
+  serialized_end=1086,
 )
 
 
@@ -455,8 +455,8 @@ _USER_POST_CREATE_ORDER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1105,
-  serialized_end=1213,
+  serialized_start=1088,
+  serialized_end=1196,
 )
 
 
@@ -493,8 +493,8 @@ _REWARD_CASHOUT_ID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1215,
-  serialized_end=1293,
+  serialized_start=1198,
+  serialized_end=1276,
 )
 
 
@@ -531,8 +531,8 @@ _USER_TRX_CREATE_ORDER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1295,
-  serialized_end=1408,
+  serialized_start=1278,
+  serialized_end=1391,
 )
 
 
@@ -569,8 +569,46 @@ _STAKE_RECORD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1410,
-  serialized_end=1500,
+  serialized_start=1393,
+  serialized_end=1483,
+)
+
+
+_STAKE_RECORD_REVERSE = _descriptor.Descriptor(
+  name='stake_record_reverse',
+  full_name='prototype.stake_record_reverse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='to', full_name='prototype.stake_record_reverse.to', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='from', full_name='prototype.stake_record_reverse.from', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1485,
+  serialized_end=1583,
 )
 
 _FOLLOWER_RELATION.fields_by_name['account'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
@@ -585,10 +623,9 @@ _FOLLOWING_CREATED_ORDER.fields_by_name['created_time'].message_type = prototype
 _FOLLOWING_CREATED_ORDER.fields_by_name['following'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _POST_CREATED_ORDER.fields_by_name['created'].message_type = prototype_dot_type__pb2._TIME_POINT_SEC
 _VOTER_ID.fields_by_name['voter'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
-_BP_VOTER_ID.fields_by_name['voter'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
-_BP_VOTER_ID.fields_by_name['witness'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
-_BP_WITNESS_ID.fields_by_name['voter'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
-_BP_WITNESS_ID.fields_by_name['witness'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
+_BP_VEST_ID.fields_by_name['vote_vest'].message_type = prototype_dot_type__pb2._VEST
+_BP_BLOCK_PRODUCER_ID.fields_by_name['block_producer'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
+_BP_BLOCK_PRODUCER_ID.fields_by_name['voter'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _CONTRACT_ID.fields_by_name['owner'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _REPLY_CREATED_ORDER.fields_by_name['created'].message_type = prototype_dot_type__pb2._TIME_POINT_SEC
 _USER_POST_CREATE_ORDER.fields_by_name['author'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
@@ -598,20 +635,23 @@ _USER_TRX_CREATE_ORDER.fields_by_name['creator'].message_type = prototype_dot_ty
 _USER_TRX_CREATE_ORDER.fields_by_name['create_time'].message_type = prototype_dot_type__pb2._TIME_POINT_SEC
 _STAKE_RECORD.fields_by_name['from'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _STAKE_RECORD.fields_by_name['to'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
+_STAKE_RECORD_REVERSE.fields_by_name['to'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
+_STAKE_RECORD_REVERSE.fields_by_name['from'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 DESCRIPTOR.message_types_by_name['follower_relation'] = _FOLLOWER_RELATION
 DESCRIPTOR.message_types_by_name['following_relation'] = _FOLLOWING_RELATION
 DESCRIPTOR.message_types_by_name['follower_created_order'] = _FOLLOWER_CREATED_ORDER
 DESCRIPTOR.message_types_by_name['following_created_order'] = _FOLLOWING_CREATED_ORDER
 DESCRIPTOR.message_types_by_name['post_created_order'] = _POST_CREATED_ORDER
 DESCRIPTOR.message_types_by_name['voter_id'] = _VOTER_ID
-DESCRIPTOR.message_types_by_name['bp_voter_id'] = _BP_VOTER_ID
-DESCRIPTOR.message_types_by_name['bp_witness_id'] = _BP_WITNESS_ID
+DESCRIPTOR.message_types_by_name['bp_vest_id'] = _BP_VEST_ID
+DESCRIPTOR.message_types_by_name['bp_block_producer_id'] = _BP_BLOCK_PRODUCER_ID
 DESCRIPTOR.message_types_by_name['contract_id'] = _CONTRACT_ID
 DESCRIPTOR.message_types_by_name['reply_created_order'] = _REPLY_CREATED_ORDER
 DESCRIPTOR.message_types_by_name['user_post_create_order'] = _USER_POST_CREATE_ORDER
 DESCRIPTOR.message_types_by_name['reward_cashout_id'] = _REWARD_CASHOUT_ID
 DESCRIPTOR.message_types_by_name['user_trx_create_order'] = _USER_TRX_CREATE_ORDER
 DESCRIPTOR.message_types_by_name['stake_record'] = _STAKE_RECORD
+DESCRIPTOR.message_types_by_name['stake_record_reverse'] = _STAKE_RECORD_REVERSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 follower_relation = _reflection.GeneratedProtocolMessageType('follower_relation', (_message.Message,), {
@@ -656,19 +696,19 @@ voter_id = _reflection.GeneratedProtocolMessageType('voter_id', (_message.Messag
   })
 _sym_db.RegisterMessage(voter_id)
 
-bp_voter_id = _reflection.GeneratedProtocolMessageType('bp_voter_id', (_message.Message,), {
-  'DESCRIPTOR' : _BP_VOTER_ID,
+bp_vest_id = _reflection.GeneratedProtocolMessageType('bp_vest_id', (_message.Message,), {
+  'DESCRIPTOR' : _BP_VEST_ID,
   '__module__' : 'prototype.multi_id_pb2'
-  # @@protoc_insertion_point(class_scope:prototype.bp_voter_id)
+  # @@protoc_insertion_point(class_scope:prototype.bp_vest_id)
   })
-_sym_db.RegisterMessage(bp_voter_id)
+_sym_db.RegisterMessage(bp_vest_id)
 
-bp_witness_id = _reflection.GeneratedProtocolMessageType('bp_witness_id', (_message.Message,), {
-  'DESCRIPTOR' : _BP_WITNESS_ID,
+bp_block_producer_id = _reflection.GeneratedProtocolMessageType('bp_block_producer_id', (_message.Message,), {
+  'DESCRIPTOR' : _BP_BLOCK_PRODUCER_ID,
   '__module__' : 'prototype.multi_id_pb2'
-  # @@protoc_insertion_point(class_scope:prototype.bp_witness_id)
+  # @@protoc_insertion_point(class_scope:prototype.bp_block_producer_id)
   })
-_sym_db.RegisterMessage(bp_witness_id)
+_sym_db.RegisterMessage(bp_block_producer_id)
 
 contract_id = _reflection.GeneratedProtocolMessageType('contract_id', (_message.Message,), {
   'DESCRIPTOR' : _CONTRACT_ID,
@@ -711,6 +751,13 @@ stake_record = _reflection.GeneratedProtocolMessageType('stake_record', (_messag
   # @@protoc_insertion_point(class_scope:prototype.stake_record)
   })
 _sym_db.RegisterMessage(stake_record)
+
+stake_record_reverse = _reflection.GeneratedProtocolMessageType('stake_record_reverse', (_message.Message,), {
+  'DESCRIPTOR' : _STAKE_RECORD_REVERSE,
+  '__module__' : 'prototype.multi_id_pb2'
+  # @@protoc_insertion_point(class_scope:prototype.stake_record_reverse)
+  })
+_sym_db.RegisterMessage(stake_record_reverse)
 
 
 DESCRIPTOR._options = None

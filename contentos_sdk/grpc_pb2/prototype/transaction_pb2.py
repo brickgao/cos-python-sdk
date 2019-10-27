@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='prototype',
   syntax='proto3',
   serialized_options=_b('\n\"io.contentos.android.sdk.prototypeZ*github.com/coschain/contentos-go/prototype'),
-  serialized_pb=_b('\n\x1bprototype/transaction.proto\x12\tprototype\x1a\x14prototype/type.proto\x1a\x19prototype/operation.proto\"\xd3\x07\n\toperation\x12\x32\n\x03op1\x18\x01 \x01(\x0b\x32#.prototype.account_create_operationH\x00\x12,\n\x03op2\x18\x02 \x01(\x0b\x32\x1d.prototype.transfer_operationH\x00\x12/\n\x03op3\x18\x03 \x01(\x0b\x32 .prototype.bp_register_operationH\x00\x12\x31\n\x03op4\x18\x04 \x01(\x0b\x32\".prototype.bp_unregister_operationH\x00\x12+\n\x03op5\x18\x05 \x01(\x0b\x32\x1c.prototype.bp_vote_operationH\x00\x12(\n\x03op6\x18\x06 \x01(\x0b\x32\x19.prototype.post_operationH\x00\x12)\n\x03op7\x18\x07 \x01(\x0b\x32\x1a.prototype.reply_operationH\x00\x12*\n\x03op8\x18\x08 \x01(\x0b\x32\x1b.prototype.follow_operationH\x00\x12(\n\x03op9\x18\t \x01(\x0b\x32\x19.prototype.vote_operationH\x00\x12\x38\n\x04op10\x18\n \x01(\x0b\x32(.prototype.transfer_to_vesting_operationH\x00\x12*\n\x04op11\x18\x0b \x01(\x0b\x32\x1a.prototype.claim_operationH\x00\x12.\n\x04op12\x18\x0c \x01(\x0b\x32\x1e.prototype.claim_all_operationH\x00\x12\x34\n\x04op13\x18\r \x01(\x0b\x32$.prototype.contract_deploy_operationH\x00\x12\x33\n\x04op14\x18\x0e \x01(\x0b\x32#.prototype.contract_apply_operationH\x00\x12+\n\x04op15\x18\x0f \x01(\x0b\x32\x1b.prototype.report_operationH\x00\x12\x34\n\x04op16\x18\x10 \x01(\x0b\x32$.prototype.convert_vesting_operationH\x00\x12*\n\x04op17\x18\x11 \x01(\x0b\x32\x1a.prototype.stake_operationH\x00\x12-\n\x04op18\x18\x12 \x01(\x0b\x32\x1d.prototype.un_stake_operationH\x00\x12.\n\x04op19\x18\x13 \x01(\x0b\x32\x1e.prototype.bp_update_operationH\x00\x12\x33\n\x04op20\x18\x14 \x01(\x0b\x32#.prototype.account_update_operationH\x00\x42\x04\n\x02op\"\x97\x01\n\x0btransaction\x12\x15\n\rref_block_num\x18\x01 \x01(\r\x12\x18\n\x10ref_block_prefix\x18\x02 \x01(\r\x12-\n\nexpiration\x18\x03 \x01(\x0b\x32\x19.prototype.time_point_sec\x12(\n\noperations\x18\x04 \x03(\x0b\x32\x14.prototype.operation\"g\n\x12signed_transaction\x12#\n\x03trx\x18\x01 \x01(\x0b\x32\x16.prototype.transaction\x12,\n\tsignature\x18\x02 \x01(\x0b\x32\x19.prototype.signature_type\"T\n\x1boperation_receipt_with_info\x12\x0e\n\x06status\x18\x01 \x01(\r\x12\x11\n\tgas_usage\x18\x05 \x01(\x04\x12\x12\n\nvm_console\x18\x06 \x01(\t\"\xa5\x01\n\x1dtransaction_receipt_with_info\x12\x0e\n\x06status\x18\x01 \x01(\r\x12\x11\n\tnet_usage\x18\x02 \x01(\x04\x12\x11\n\tcpu_usage\x18\x03 \x01(\x04\x12\x12\n\nerror_info\x18\x04 \x01(\t\x12:\n\nop_results\x18\x05 \x03(\x0b\x32&.prototype.operation_receipt_with_info\"\x8a\x01\n\x1dtransaction_wrapper_with_info\x12.\n\x07sig_trx\x18\x01 \x01(\x0b\x32\x1d.prototype.signed_transaction\x12\x39\n\x07receipt\x18\x02 \x01(\x0b\x32(.prototype.transaction_receipt_with_info\"K\n\x13transaction_receipt\x12\x0e\n\x06status\x18\x01 \x01(\r\x12\x11\n\tnet_usage\x18\x02 \x01(\x04\x12\x11\n\tcpu_usage\x18\x03 \x01(\x04\"v\n\x13transaction_wrapper\x12.\n\x07sig_trx\x18\x01 \x01(\x0b\x32\x1d.prototype.signed_transaction\x12/\n\x07receipt\x18\x02 \x01(\x0b\x32\x1e.prototype.transaction_receipt\"\xd8\x01\n\x0c\x62lock_header\x12#\n\x08previous\x18\x01 \x01(\x0b\x32\x11.prototype.sha256\x12,\n\ttimestamp\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\x12(\n\x07witness\x18\x03 \x01(\x0b\x32\x17.prototype.account_name\x12\x32\n\x17transaction_merkle_root\x18\x04 \x01(\x0b\x32\x11.prototype.sha256\x12\x17\n\x0fprev_apply_hash\x18\x05 \x01(\x04\"t\n\x13signed_block_header\x12\'\n\x06header\x18\x01 \x01(\x0b\x32\x17.prototype.block_header\x12\x34\n\x11witness_signature\x18\x02 \x01(\x0b\x32\x19.prototype.signature_type\"{\n\x0csigned_block\x12\x35\n\rsigned_header\x18\x01 \x01(\x0b\x32\x1e.prototype.signed_block_header\x12\x34\n\x0ctransactions\x18\x02 \x03(\x0b\x32\x1e.prototype.transaction_wrapper\"^\n\x12\x65mpty_signed_block\x12\x35\n\rsigned_header\x18\x01 \x01(\x0b\x32\x1e.prototype.signed_block_header\x12\x11\n\ttrx_count\x18\x02 \x01(\rBP\n\"io.contentos.android.sdk.prototypeZ*github.com/coschain/contentos-go/prototypeb\x06proto3')
+  serialized_pb=_b('\n\x1bprototype/transaction.proto\x12\tprototype\x1a\x14prototype/type.proto\x1a\x19prototype/operation.proto\"\xaa\x07\n\toperation\x12\x32\n\x03op1\x18\x01 \x01(\x0b\x32#.prototype.account_create_operationH\x00\x12,\n\x03op2\x18\x02 \x01(\x0b\x32\x1d.prototype.transfer_operationH\x00\x12/\n\x03op3\x18\x03 \x01(\x0b\x32 .prototype.bp_register_operationH\x00\x12-\n\x03op4\x18\x04 \x01(\x0b\x32\x1e.prototype.bp_enable_operationH\x00\x12+\n\x03op5\x18\x05 \x01(\x0b\x32\x1c.prototype.bp_vote_operationH\x00\x12(\n\x03op6\x18\x06 \x01(\x0b\x32\x19.prototype.post_operationH\x00\x12)\n\x03op7\x18\x07 \x01(\x0b\x32\x1a.prototype.reply_operationH\x00\x12*\n\x03op8\x18\x08 \x01(\x0b\x32\x1b.prototype.follow_operationH\x00\x12(\n\x03op9\x18\t \x01(\x0b\x32\x19.prototype.vote_operationH\x00\x12\x35\n\x04op10\x18\n \x01(\x0b\x32%.prototype.transfer_to_vest_operationH\x00\x12\x34\n\x04op13\x18\r \x01(\x0b\x32$.prototype.contract_deploy_operationH\x00\x12\x33\n\x04op14\x18\x0e \x01(\x0b\x32#.prototype.contract_apply_operationH\x00\x12\x31\n\x04op16\x18\x10 \x01(\x0b\x32!.prototype.convert_vest_operationH\x00\x12*\n\x04op17\x18\x11 \x01(\x0b\x32\x1a.prototype.stake_operationH\x00\x12-\n\x04op18\x18\x12 \x01(\x0b\x32\x1d.prototype.un_stake_operationH\x00\x12.\n\x04op19\x18\x13 \x01(\x0b\x32\x1e.prototype.bp_update_operationH\x00\x12\x33\n\x04op20\x18\x14 \x01(\x0b\x32#.prototype.account_update_operationH\x00\x12\x33\n\x04op21\x18\x15 \x01(\x0b\x32#.prototype.acquire_ticket_operationH\x00\x12\x33\n\x04op22\x18\x16 \x01(\x0b\x32#.prototype.vote_by_ticket_operationH\x00\x42\x04\n\x02op\"\x97\x01\n\x0btransaction\x12\x15\n\rref_block_num\x18\x01 \x01(\r\x12\x18\n\x10ref_block_prefix\x18\x02 \x01(\r\x12-\n\nexpiration\x18\x03 \x01(\x0b\x32\x19.prototype.time_point_sec\x12(\n\noperations\x18\x04 \x03(\x0b\x32\x14.prototype.operation\"g\n\x12signed_transaction\x12#\n\x03trx\x18\x01 \x01(\x0b\x32\x16.prototype.transaction\x12,\n\tsignature\x18\x02 \x01(\x0b\x32\x19.prototype.signature_type\"T\n\x1boperation_receipt_with_info\x12\x0e\n\x06status\x18\x01 \x01(\r\x12\x11\n\tgas_usage\x18\x02 \x01(\x04\x12\x12\n\nvm_console\x18\x03 \x01(\t\"\xa5\x01\n\x1dtransaction_receipt_with_info\x12\x0e\n\x06status\x18\x01 \x01(\r\x12\x11\n\tnet_usage\x18\x02 \x01(\x04\x12\x11\n\tcpu_usage\x18\x03 \x01(\x04\x12\x12\n\nerror_info\x18\x04 \x01(\t\x12:\n\nop_results\x18\x05 \x03(\x0b\x32&.prototype.operation_receipt_with_info\"\x8a\x01\n\x1dtransaction_wrapper_with_info\x12.\n\x07sig_trx\x18\x01 \x01(\x0b\x32\x1d.prototype.signed_transaction\x12\x39\n\x07receipt\x18\x02 \x01(\x0b\x32(.prototype.transaction_receipt_with_info\"K\n\x13transaction_receipt\x12\x0e\n\x06status\x18\x01 \x01(\r\x12\x11\n\tnet_usage\x18\x02 \x01(\x04\x12\x11\n\tcpu_usage\x18\x03 \x01(\x04\"v\n\x13transaction_wrapper\x12.\n\x07sig_trx\x18\x01 \x01(\x0b\x32\x1d.prototype.signed_transaction\x12/\n\x07receipt\x18\x02 \x01(\x0b\x32\x1e.prototype.transaction_receipt\"\xdf\x01\n\x0c\x62lock_header\x12#\n\x08previous\x18\x01 \x01(\x0b\x32\x11.prototype.sha256\x12,\n\ttimestamp\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\x12/\n\x0e\x62lock_producer\x18\x03 \x01(\x0b\x32\x17.prototype.account_name\x12\x32\n\x17transaction_merkle_root\x18\x04 \x01(\x0b\x32\x11.prototype.sha256\x12\x17\n\x0fprev_apply_hash\x18\x05 \x01(\x04\"{\n\x13signed_block_header\x12\'\n\x06header\x18\x01 \x01(\x0b\x32\x17.prototype.block_header\x12;\n\x18\x62lock_producer_signature\x18\x02 \x01(\x0b\x32\x19.prototype.signature_type\"{\n\x0csigned_block\x12\x35\n\rsigned_header\x18\x01 \x01(\x0b\x32\x1e.prototype.signed_block_header\x12\x34\n\x0ctransactions\x18\x02 \x03(\x0b\x32\x1e.prototype.transaction_wrapper\"^\n\x12\x65mpty_signed_block\x12\x35\n\rsigned_header\x18\x01 \x01(\x0b\x32\x1e.prototype.signed_block_header\x12\x11\n\ttrx_count\x18\x02 \x01(\rBP\n\"io.contentos.android.sdk.prototypeZ*github.com/coschain/contentos-go/prototypeb\x06proto3')
   ,
   dependencies=[prototype_dot_type__pb2.DESCRIPTOR,prototype_dot_operation__pb2.DESCRIPTOR,])
 
@@ -107,71 +107,64 @@ _OPERATION = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='op11', full_name='prototype.operation.op11', index=10,
-      number=11, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='op12', full_name='prototype.operation.op12', index=11,
-      number=12, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='op13', full_name='prototype.operation.op13', index=12,
+      name='op13', full_name='prototype.operation.op13', index=10,
       number=13, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='op14', full_name='prototype.operation.op14', index=13,
+      name='op14', full_name='prototype.operation.op14', index=11,
       number=14, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='op15', full_name='prototype.operation.op15', index=14,
-      number=15, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='op16', full_name='prototype.operation.op16', index=15,
+      name='op16', full_name='prototype.operation.op16', index=12,
       number=16, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='op17', full_name='prototype.operation.op17', index=16,
+      name='op17', full_name='prototype.operation.op17', index=13,
       number=17, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='op18', full_name='prototype.operation.op18', index=17,
+      name='op18', full_name='prototype.operation.op18', index=14,
       number=18, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='op19', full_name='prototype.operation.op19', index=18,
+      name='op19', full_name='prototype.operation.op19', index=15,
       number=19, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='op20', full_name='prototype.operation.op20', index=19,
+      name='op20', full_name='prototype.operation.op20', index=16,
       number=20, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='op21', full_name='prototype.operation.op21', index=17,
+      number=21, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='op22', full_name='prototype.operation.op22', index=18,
+      number=22, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -192,7 +185,7 @@ _OPERATION = _descriptor.Descriptor(
       index=0, containing_type=None, fields=[]),
   ],
   serialized_start=92,
-  serialized_end=1071,
+  serialized_end=1030,
 )
 
 
@@ -243,8 +236,8 @@ _TRANSACTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1074,
-  serialized_end=1225,
+  serialized_start=1033,
+  serialized_end=1184,
 )
 
 
@@ -281,8 +274,8 @@ _SIGNED_TRANSACTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1227,
-  serialized_end=1330,
+  serialized_start=1186,
+  serialized_end=1289,
 )
 
 
@@ -302,14 +295,14 @@ _OPERATION_RECEIPT_WITH_INFO = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='gas_usage', full_name='prototype.operation_receipt_with_info.gas_usage', index=1,
-      number=5, type=4, cpp_type=4, label=1,
+      number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='vm_console', full_name='prototype.operation_receipt_with_info.vm_console', index=2,
-      number=6, type=9, cpp_type=9, label=1,
+      number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -326,8 +319,8 @@ _OPERATION_RECEIPT_WITH_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1332,
-  serialized_end=1416,
+  serialized_start=1291,
+  serialized_end=1375,
 )
 
 
@@ -385,8 +378,8 @@ _TRANSACTION_RECEIPT_WITH_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1419,
-  serialized_end=1584,
+  serialized_start=1378,
+  serialized_end=1543,
 )
 
 
@@ -423,8 +416,8 @@ _TRANSACTION_WRAPPER_WITH_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1587,
-  serialized_end=1725,
+  serialized_start=1546,
+  serialized_end=1684,
 )
 
 
@@ -468,8 +461,8 @@ _TRANSACTION_RECEIPT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1727,
-  serialized_end=1802,
+  serialized_start=1686,
+  serialized_end=1761,
 )
 
 
@@ -506,8 +499,8 @@ _TRANSACTION_WRAPPER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1804,
-  serialized_end=1922,
+  serialized_start=1763,
+  serialized_end=1881,
 )
 
 
@@ -533,7 +526,7 @@ _BLOCK_HEADER = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='witness', full_name='prototype.block_header.witness', index=2,
+      name='block_producer', full_name='prototype.block_header.block_producer', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -565,8 +558,8 @@ _BLOCK_HEADER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1925,
-  serialized_end=2141,
+  serialized_start=1884,
+  serialized_end=2107,
 )
 
 
@@ -585,7 +578,7 @@ _SIGNED_BLOCK_HEADER = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='witness_signature', full_name='prototype.signed_block_header.witness_signature', index=1,
+      name='block_producer_signature', full_name='prototype.signed_block_header.block_producer_signature', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -603,8 +596,8 @@ _SIGNED_BLOCK_HEADER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2143,
-  serialized_end=2259,
+  serialized_start=2109,
+  serialized_end=2232,
 )
 
 
@@ -641,8 +634,8 @@ _SIGNED_BLOCK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2261,
-  serialized_end=2384,
+  serialized_start=2234,
+  serialized_end=2357,
 )
 
 
@@ -679,30 +672,29 @@ _EMPTY_SIGNED_BLOCK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2386,
-  serialized_end=2480,
+  serialized_start=2359,
+  serialized_end=2453,
 )
 
 _OPERATION.fields_by_name['op1'].message_type = prototype_dot_operation__pb2._ACCOUNT_CREATE_OPERATION
 _OPERATION.fields_by_name['op2'].message_type = prototype_dot_operation__pb2._TRANSFER_OPERATION
 _OPERATION.fields_by_name['op3'].message_type = prototype_dot_operation__pb2._BP_REGISTER_OPERATION
-_OPERATION.fields_by_name['op4'].message_type = prototype_dot_operation__pb2._BP_UNREGISTER_OPERATION
+_OPERATION.fields_by_name['op4'].message_type = prototype_dot_operation__pb2._BP_ENABLE_OPERATION
 _OPERATION.fields_by_name['op5'].message_type = prototype_dot_operation__pb2._BP_VOTE_OPERATION
 _OPERATION.fields_by_name['op6'].message_type = prototype_dot_operation__pb2._POST_OPERATION
 _OPERATION.fields_by_name['op7'].message_type = prototype_dot_operation__pb2._REPLY_OPERATION
 _OPERATION.fields_by_name['op8'].message_type = prototype_dot_operation__pb2._FOLLOW_OPERATION
 _OPERATION.fields_by_name['op9'].message_type = prototype_dot_operation__pb2._VOTE_OPERATION
-_OPERATION.fields_by_name['op10'].message_type = prototype_dot_operation__pb2._TRANSFER_TO_VESTING_OPERATION
-_OPERATION.fields_by_name['op11'].message_type = prototype_dot_operation__pb2._CLAIM_OPERATION
-_OPERATION.fields_by_name['op12'].message_type = prototype_dot_operation__pb2._CLAIM_ALL_OPERATION
+_OPERATION.fields_by_name['op10'].message_type = prototype_dot_operation__pb2._TRANSFER_TO_VEST_OPERATION
 _OPERATION.fields_by_name['op13'].message_type = prototype_dot_operation__pb2._CONTRACT_DEPLOY_OPERATION
 _OPERATION.fields_by_name['op14'].message_type = prototype_dot_operation__pb2._CONTRACT_APPLY_OPERATION
-_OPERATION.fields_by_name['op15'].message_type = prototype_dot_operation__pb2._REPORT_OPERATION
-_OPERATION.fields_by_name['op16'].message_type = prototype_dot_operation__pb2._CONVERT_VESTING_OPERATION
+_OPERATION.fields_by_name['op16'].message_type = prototype_dot_operation__pb2._CONVERT_VEST_OPERATION
 _OPERATION.fields_by_name['op17'].message_type = prototype_dot_operation__pb2._STAKE_OPERATION
 _OPERATION.fields_by_name['op18'].message_type = prototype_dot_operation__pb2._UN_STAKE_OPERATION
 _OPERATION.fields_by_name['op19'].message_type = prototype_dot_operation__pb2._BP_UPDATE_OPERATION
 _OPERATION.fields_by_name['op20'].message_type = prototype_dot_operation__pb2._ACCOUNT_UPDATE_OPERATION
+_OPERATION.fields_by_name['op21'].message_type = prototype_dot_operation__pb2._ACQUIRE_TICKET_OPERATION
+_OPERATION.fields_by_name['op22'].message_type = prototype_dot_operation__pb2._VOTE_BY_TICKET_OPERATION
 _OPERATION.oneofs_by_name['op'].fields.append(
   _OPERATION.fields_by_name['op1'])
 _OPERATION.fields_by_name['op1'].containing_oneof = _OPERATION.oneofs_by_name['op']
@@ -734,20 +726,11 @@ _OPERATION.oneofs_by_name['op'].fields.append(
   _OPERATION.fields_by_name['op10'])
 _OPERATION.fields_by_name['op10'].containing_oneof = _OPERATION.oneofs_by_name['op']
 _OPERATION.oneofs_by_name['op'].fields.append(
-  _OPERATION.fields_by_name['op11'])
-_OPERATION.fields_by_name['op11'].containing_oneof = _OPERATION.oneofs_by_name['op']
-_OPERATION.oneofs_by_name['op'].fields.append(
-  _OPERATION.fields_by_name['op12'])
-_OPERATION.fields_by_name['op12'].containing_oneof = _OPERATION.oneofs_by_name['op']
-_OPERATION.oneofs_by_name['op'].fields.append(
   _OPERATION.fields_by_name['op13'])
 _OPERATION.fields_by_name['op13'].containing_oneof = _OPERATION.oneofs_by_name['op']
 _OPERATION.oneofs_by_name['op'].fields.append(
   _OPERATION.fields_by_name['op14'])
 _OPERATION.fields_by_name['op14'].containing_oneof = _OPERATION.oneofs_by_name['op']
-_OPERATION.oneofs_by_name['op'].fields.append(
-  _OPERATION.fields_by_name['op15'])
-_OPERATION.fields_by_name['op15'].containing_oneof = _OPERATION.oneofs_by_name['op']
 _OPERATION.oneofs_by_name['op'].fields.append(
   _OPERATION.fields_by_name['op16'])
 _OPERATION.fields_by_name['op16'].containing_oneof = _OPERATION.oneofs_by_name['op']
@@ -763,6 +746,12 @@ _OPERATION.fields_by_name['op19'].containing_oneof = _OPERATION.oneofs_by_name['
 _OPERATION.oneofs_by_name['op'].fields.append(
   _OPERATION.fields_by_name['op20'])
 _OPERATION.fields_by_name['op20'].containing_oneof = _OPERATION.oneofs_by_name['op']
+_OPERATION.oneofs_by_name['op'].fields.append(
+  _OPERATION.fields_by_name['op21'])
+_OPERATION.fields_by_name['op21'].containing_oneof = _OPERATION.oneofs_by_name['op']
+_OPERATION.oneofs_by_name['op'].fields.append(
+  _OPERATION.fields_by_name['op22'])
+_OPERATION.fields_by_name['op22'].containing_oneof = _OPERATION.oneofs_by_name['op']
 _TRANSACTION.fields_by_name['expiration'].message_type = prototype_dot_type__pb2._TIME_POINT_SEC
 _TRANSACTION.fields_by_name['operations'].message_type = _OPERATION
 _SIGNED_TRANSACTION.fields_by_name['trx'].message_type = _TRANSACTION
@@ -774,10 +763,10 @@ _TRANSACTION_WRAPPER.fields_by_name['sig_trx'].message_type = _SIGNED_TRANSACTIO
 _TRANSACTION_WRAPPER.fields_by_name['receipt'].message_type = _TRANSACTION_RECEIPT
 _BLOCK_HEADER.fields_by_name['previous'].message_type = prototype_dot_type__pb2._SHA256
 _BLOCK_HEADER.fields_by_name['timestamp'].message_type = prototype_dot_type__pb2._TIME_POINT_SEC
-_BLOCK_HEADER.fields_by_name['witness'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
+_BLOCK_HEADER.fields_by_name['block_producer'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _BLOCK_HEADER.fields_by_name['transaction_merkle_root'].message_type = prototype_dot_type__pb2._SHA256
 _SIGNED_BLOCK_HEADER.fields_by_name['header'].message_type = _BLOCK_HEADER
-_SIGNED_BLOCK_HEADER.fields_by_name['witness_signature'].message_type = prototype_dot_type__pb2._SIGNATURE_TYPE
+_SIGNED_BLOCK_HEADER.fields_by_name['block_producer_signature'].message_type = prototype_dot_type__pb2._SIGNATURE_TYPE
 _SIGNED_BLOCK.fields_by_name['signed_header'].message_type = _SIGNED_BLOCK_HEADER
 _SIGNED_BLOCK.fields_by_name['transactions'].message_type = _TRANSACTION_WRAPPER
 _EMPTY_SIGNED_BLOCK.fields_by_name['signed_header'].message_type = _SIGNED_BLOCK_HEADER

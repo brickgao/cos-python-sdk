@@ -22,8 +22,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='grpc.proto',
   package='grpcpb',
   syntax='proto3',
-  serialized_options=_b('\n\034io.contentos.android.sdk.rpcZ\'github.com/coschain/contentos-go/grpcpb'),
-  serialized_pb=_b('\n\ngrpc.proto\x12\x06grpcpb\x1a\x14prototype/type.proto\x1a\x18prototype/multi_id.proto\x1a\x1bprototype/transaction.proto\"\x86\x01\n\x16GetTableContentRequest\x12\r\n\x05owner\x18\x01 \x01(\t\x12\x10\n\x08\x63ontract\x18\x02 \x01(\t\x12\r\n\x05table\x18\x03 \x01(\t\x12\r\n\x05\x66ield\x18\x04 \x01(\t\x12\r\n\x05\x62\x65gin\x18\x05 \x01(\t\x12\r\n\x05\x63ount\x18\x06 \x01(\r\x12\x0f\n\x07reverse\x18\x07 \x01(\x08\"-\n\x14TableContentResponse\x12\x15\n\rtable_content\x18\x01 \x01(\t\"H\n\x17GetAccountByNameRequest\x12-\n\x0c\x61\x63\x63ount_name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\"Z\n\x18GetAccountCashoutRequest\x12-\n\x0c\x61\x63\x63ount_name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x0f\n\x07post_id\x18\x02 \x01(\x04\"h\n\x16\x41\x63\x63ountCashoutResponse\x12-\n\x0c\x61\x63\x63ount_name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x1f\n\x06reward\x18\x02 \x01(\x0b\x32\x0f.prototype.vest\".\n\x16GetBlockCashoutRequest\x12\x14\n\x0c\x62lock_height\x18\x01 \x01(\x04\"L\n\x14\x42lockCashoutResponse\x12\x34\n\x0c\x63\x61shout_list\x18\x01 \x03(\x0b\x32\x1e.grpcpb.AccountCashoutResponse\"N\n\x1dGetAccountRewardByNameRequest\x12-\n\x0c\x61\x63\x63ount_name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\"g\n\x15\x41\x63\x63ountRewardResponse\x12-\n\x0c\x61\x63\x63ount_name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x1f\n\x06reward\x18\x02 \x01(\x0b\x32\x0f.prototype.vest\"\x8c\x05\n\x0b\x41\x63\x63ountInfo\x12-\n\x0c\x61\x63\x63ount_name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x1d\n\x04\x63oin\x18\x02 \x01(\x0b\x32\x0f.prototype.coin\x12\x1d\n\x04vest\x18\x03 \x01(\x0b\x32\x0f.prototype.vest\x12.\n\npublic_key\x18\x04 \x01(\x0b\x32\x1a.prototype.public_key_type\x12/\n\x0c\x63reated_time\x18\x05 \x01(\x0b\x32\x19.prototype.time_point_sec\x12(\n\x07witness\x18\x06 \x01(\x0b\x32\x17.grpcpb.WitnessResponse\x12\x12\n\npost_count\x18\x07 \x01(\r\x12\x16\n\x0e\x66ollower_count\x18\x08 \x01(\r\x12\x17\n\x0f\x66ollowing_count\x18\t \x01(\r\x12\x11\n\ttrx_count\x18\n \x01(\r\x12\x12\n\nvote_power\x18\x0b \x01(\r\x12\x1b\n\x13stamina_free_remain\x18\x0c \x01(\x04\x12\x1c\n\x14stamina_stake_remain\x18\r \x01(\x04\x12\x13\n\x0bstamina_max\x18\x0e \x01(\x04\x12#\n\nstake_vest\x18\x0f \x01(\x0b\x32\x0f.prototype.vest\x12)\n\x10withdraw_remains\x18\x10 \x01(\x0b\x32\x0f.prototype.vest\x12+\n\x12withdraw_each_time\x18\x11 \x01(\x0b\x32\x0f.prototype.vest\x12\x35\n\x12next_withdraw_time\x18\x12 \x01(\x0b\x32\x19.prototype.time_point_sec\x12\x15\n\rbp_vote_count\x18\x13 \x01(\r\"W\n\x0f\x41\x63\x63ountResponse\x12!\n\x04info\x18\x01 \x01(\x0b\x32\x13.grpcpb.AccountInfo\x12!\n\x05state\x18\x02 \x01(\x0b\x32\x12.grpcpb.ChainState\"\xc6\x01\n\x1cGetFollowerListByNameRequest\x12\x30\n\x05start\x18\x01 \x01(\x0b\x32!.prototype.follower_created_order\x12.\n\x03\x65nd\x18\x02 \x01(\x0b\x32!.prototype.follower_created_order\x12\r\n\x05limit\x18\x03 \x01(\r\x12\x35\n\nlast_order\x18\x04 \x01(\x0b\x32!.prototype.follower_created_order\"u\n\x10\x46ollowerListInfo\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.grpcpb.AccountResponse\x12\x37\n\x0c\x63reate_order\x18\x02 \x01(\x0b\x32!.prototype.follower_created_order\"P\n\x1dGetFollowerListByNameResponse\x12/\n\rfollower_list\x18\x01 \x03(\x0b\x32\x18.grpcpb.FollowerListInfo\"\xca\x01\n\x1dGetFollowingListByNameRequest\x12\x31\n\x05start\x18\x01 \x01(\x0b\x32\".prototype.following_created_order\x12/\n\x03\x65nd\x18\x02 \x01(\x0b\x32\".prototype.following_created_order\x12\r\n\x05limit\x18\x03 \x01(\r\x12\x36\n\nlast_order\x18\x04 \x01(\x0b\x32\".prototype.following_created_order\"w\n\x11\x46ollowingListInfo\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.grpcpb.AccountResponse\x12\x38\n\x0c\x63reate_order\x18\x02 \x01(\x0b\x32\".prototype.following_created_order\"S\n\x1eGetFollowingListByNameResponse\x12\x31\n\x0e\x66ollowing_list\x18\x01 \x03(\x0b\x32\x19.grpcpb.FollowingListInfo\"L\n\x1bGetFollowCountByNameRequest\x12-\n\x0c\x61\x63\x63ount_name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\"A\n\x1cGetFollowCountByNameResponse\x12\x0f\n\x07\x66\x65r_cnt\x18\x01 \x01(\r\x12\x10\n\x08\x66ing_cnt\x18\x02 \x01(\r\"\xec\x02\n\x0fWitnessResponse\x12&\n\x05owner\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12/\n\x0c\x63reated_time\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\x12\x0b\n\x03url\x18\x03 \x01(\t\x12#\n\nvote_count\x18\x04 \x01(\x0b\x32\x0f.prototype.vest\x12/\n\x0bsigning_key\x18\x05 \x01(\x0b\x32\x1a.prototype.public_key_type\x12\x1d\n\x15proposed_stamina_free\x18\x06 \x01(\x04\x12\x0e\n\x06\x61\x63tive\x18\x07 \x01(\x08\x12\x14\n\x0ctps_expected\x18\x08 \x01(\x04\x12+\n\x12\x61\x63\x63ount_create_fee\x18\t \x01(\x0b\x32\x0f.prototype.coin\x12+\n\nvoter_list\x18\n \x03(\x0b\x32\x17.prototype.account_name\"N\n\x15GetWitnessListRequest\x12&\n\x05start\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\r\n\x05limit\x18\x02 \x01(\r\"G\n\x16GetWitnessListResponse\x12-\n\x0cwitness_list\x18\x01 \x03(\x0b\x32\x17.grpcpb.WitnessResponse\"\xeb\x04\n\x0cPostResponse\x12\x13\n\x07post_id\x18\x01 \x01(\x04\x42\x02\x30\x01\x12\x10\n\x08\x63\x61tegory\x18\x02 \x01(\t\x12.\n\rparent_author\x18\x03 \x01(\x0b\x32\x17.prototype.account_name\x12\'\n\x06\x61uthor\x18\x05 \x01(\x0b\x32\x17.prototype.account_name\x12\r\n\x05title\x18\x07 \x01(\t\x12\x0c\n\x04\x62ody\x18\x08 \x01(\t\x12*\n\x07\x63reated\x18\x0b \x01(\x0b\x32\x19.prototype.time_point_sec\x12.\n\x0blast_payout\x18\r \x01(\x0b\x32\x19.prototype.time_point_sec\x12\r\n\x05\x64\x65pth\x18\x0e \x01(\r\x12\x10\n\x08\x63hildren\x18\x0f \x01(\r\x12\x13\n\x07root_id\x18\x10 \x01(\x04\x42\x02\x30\x01\x12\x15\n\tparent_id\x18\x11 \x01(\x04\x42\x02\x30\x01\x12\x0c\n\x04tags\x18\x12 \x03(\t\x12\x38\n\rbeneficiaries\x18\x13 \x03(\x0b\x32!.prototype.beneficiary_route_type\x12\x10\n\x08vote_cnt\x18\x14 \x01(\x04\x12\x13\n\x0bweighted_vp\x18\x15 \x01(\t\x12 \n\x07rewards\x18\x16 \x01(\x0b\x32\x0f.prototype.vest\x12%\n\x0c\x64\x61pp_rewards\x18\x17 \x01(\x0b\x32\x0f.prototype.vest\x12\x18\n\x10\x63\x61shout_interval\x18\x18 \x01(\x04\x12\'\n\x0eglobal_rewards\x18\x19 \x01(\x0b\x32\x0f.prototype.vest\x12\x1a\n\x12global_weighted_vp\x18\x1a \x01(\t\"\x86\x01\n\x1bGetPostListByCreatedRequest\x12,\n\x05start\x18\x01 \x01(\x0b\x32\x1d.prototype.post_created_order\x12*\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x1d.prototype.post_created_order\x12\r\n\x05limit\x18\x03 \x01(\r\"G\n\x1cGetPostListByCreatedResponse\x12\'\n\tpost_list\x18\x01 \x03(\x0b\x32\x14.grpcpb.PostResponse\"\x88\x01\n\x1bGetReplyListByPostIdRequest\x12-\n\x05start\x18\x01 \x01(\x0b\x32\x1e.prototype.reply_created_order\x12+\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x1e.prototype.reply_created_order\x12\r\n\x05limit\x18\x03 \x01(\r\"H\n\x1cGetReplyListByPostIdResponse\x12(\n\nreply_list\x18\x01 \x03(\x0b\x32\x14.grpcpb.PostResponse\"S\n GetBlockTransactionsByNumRequest\x12\x11\n\tblock_num\x18\x01 \x01(\r\x12\r\n\x05start\x18\x02 \x01(\r\x12\r\n\x05limit\x18\x03 \x01(\r\"X\n!GetBlockTransactionsByNumResponse\x12\x33\n\x0ctransactions\x18\x01 \x03(\x0b\x32\x1d.prototype.signed_transaction\":\n\x15GetChainStateResponse\x12!\n\x05state\x18\x01 \x01(\x0b\x32\x12.grpcpb.ChainState\"_\n\x13\x42roadcastTrxRequest\x12\x32\n\x0btransaction\x18\x01 \x01(\x0b\x32\x1d.prototype.signed_transaction\x12\x14\n\x0conly_deliver\x18\x02 \x01(\x08\"n\n\x14\x42roadcastTrxResponse\x12\x39\n\x07invoice\x18\x01 \x01(\x0b\x32(.prototype.transaction_receipt_with_info\x12\x0e\n\x06status\x18\x02 \x01(\r\x12\x0b\n\x03msg\x18\x03 \x01(\t\"\x12\n\x10NonParamsRequest\"I\n\x0c\x43\x61llResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\x12\x13\n\x0b\x65xecute_err\x18\x02 \x01(\t\x12\x14\n\x0c\x65stimate_gas\x18\x03 \x01(\t\"\x87\x01\n\nChainState\x12&\n\x1elast_irreversible_block_number\x18\x01 \x01(\x04\x12$\n\x1clast_irreversible_block_time\x18\x02 \x01(\x04\x12+\n\x04\x64gpo\x18\x03 \x01(\x0b\x32\x1d.prototype.dynamic_properties\"@\n\x13GetBlockListRequest\x12\r\n\x05start\x18\x01 \x01(\x04\x12\x0b\n\x03\x65nd\x18\x02 \x01(\x04\x12\r\n\x05limit\x18\x03 \x01(\r\"\xec\x01\n\tBlockInfo\x12,\n\ttimestamp\x18\x01 \x01(\x0b\x32\x19.prototype.time_point_sec\x12\x18\n\x0c\x62lock_height\x18\x02 \x01(\x04\x42\x02\x30\x01\x12\x11\n\ttrx_count\x18\x03 \x01(\r\x12(\n\x07witness\x18\x04 \x01(\x0b\x32\x17.prototype.account_name\x12#\n\x08\x62lock_id\x18\x05 \x01(\x0b\x32\x11.prototype.sha256\x12!\n\x06pre_id\x18\x06 \x01(\x0b\x32\x11.prototype.sha256\x12\x12\n\nblock_size\x18\x07 \x01(\r\"9\n\x14GetBlockListResponse\x12!\n\x06\x62locks\x18\x01 \x03(\x0b\x32\x11.grpcpb.BlockInfo\"&\n\x15GetSignedBlockRequest\x12\r\n\x05start\x18\x01 \x01(\x04\"@\n\x16GetSignedBlockResponse\x12&\n\x05\x62lock\x18\x01 \x01(\x0b\x32\x17.prototype.signed_block\"\x98\x01\n\x1eGetAccountListByBalanceRequest\x12\x1e\n\x05start\x18\x01 \x01(\x0b\x32\x0f.prototype.coin\x12\x1c\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x0f.prototype.coin\x12)\n\x0clast_account\x18\x03 \x01(\x0b\x32\x13.grpcpb.AccountInfo\x12\r\n\x05limit\x18\x04 \x01(\r\"?\n\x16GetAccountListResponse\x12%\n\x04list\x18\x01 \x03(\x0b\x32\x17.grpcpb.AccountResponse\"G\n\rDailyTotalTrx\x12\'\n\x04\x64\x61te\x18\x01 \x01(\x0b\x32\x19.prototype.time_point_sec\x12\r\n\x05\x63ount\x18\x02 \x01(\x04\"\xa4\x01\n\x17GetDailyTotalTrxRequest\x12(\n\x05start\x18\x01 \x01(\x0b\x32\x19.prototype.time_point_sec\x12&\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\x12(\n\tlast_info\x18\x03 \x01(\x0b\x32\x15.grpcpb.DailyTotalTrx\x12\r\n\x05limit\x18\x04 \x01(\r\"?\n\x18GetDailyTotalTrxResponse\x12#\n\x04list\x18\x01 \x03(\x0b\x32\x15.grpcpb.DailyTotalTrx\")\n\nStatByHour\x12\x0c\n\x04hour\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\"%\n\x14TrxStatByHourRequest\x12\r\n\x05hours\x18\x01 \x01(\r\"9\n\x15TrxStatByHourResponse\x12 \n\x04stat\x18\x01 \x03(\x0b\x32\x12.grpcpb.StatByHour\"\xe5\x01\n\x07TrxInfo\x12!\n\x06trx_id\x18\x01 \x01(\x0b\x32\x11.prototype.sha256\x12\x14\n\x0c\x62lock_height\x18\x02 \x01(\x04\x12\x30\n\x08trx_wrap\x18\x03 \x01(\x0b\x32\x1e.prototype.transaction_wrapper\x12-\n\nblock_time\x18\x04 \x01(\x0b\x32\x19.prototype.time_point_sec\x12#\n\x08\x62lock_id\x18\x05 \x01(\x0b\x32\x11.prototype.sha256\x12\x1b\n\x13\x62lk_is_irreversible\x18\x06 \x01(\x08\":\n\x15GetTrxInfoByIdRequest\x12!\n\x06trx_id\x18\x01 \x01(\x0b\x32\x11.prototype.sha256\"7\n\x16GetTrxInfoByIdResponse\x12\x1d\n\x04info\x18\x01 \x01(\x0b\x32\x0f.grpcpb.TrxInfo\"\x9e\x01\n\x17GetTrxListByTimeRequest\x12(\n\x05start\x18\x01 \x01(\x0b\x32\x19.prototype.time_point_sec\x12&\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\x12\r\n\x05limit\x18\x03 \x01(\r\x12\"\n\tlast_info\x18\x04 \x01(\x0b\x32\x0f.grpcpb.TrxInfo\"9\n\x18GetTrxListByTimeResponse\x12\x1d\n\x04list\x18\x01 \x03(\x0b\x32\x0f.grpcpb.TrxInfo\"\xaa\x01\n\x1eGetPostListByCreateTimeRequest\x12(\n\x05start\x18\x01 \x01(\x0b\x32\x19.prototype.time_point_sec\x12&\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\x12\'\n\tlast_post\x18\x03 \x01(\x0b\x32\x14.grpcpb.PostResponse\x12\r\n\x05limit\x18\x04 \x01(\r\"L\n\x1fGetPostListByCreateTimeResponse\x12)\n\x0bposted_list\x18\x01 \x03(\x0b\x32\x14.grpcpb.PostResponse\"\xb4\x01\n\x18GetPostListByNameRequest\x12\x30\n\x05start\x18\x01 \x01(\x0b\x32!.prototype.user_post_create_order\x12.\n\x03\x65nd\x18\x02 \x01(\x0b\x32!.prototype.user_post_create_order\x12\'\n\tlast_post\x18\x03 \x01(\x0b\x32\x14.grpcpb.PostResponse\x12\r\n\x05limit\x18\x04 \x01(\r\"\xc8\x01\n\x1bGetUserTrxListByTimeRequest\x12%\n\x04name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12(\n\x05start\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\x12&\n\x03\x65nd\x18\x03 \x01(\x0b\x32\x19.prototype.time_point_sec\x12!\n\x08last_trx\x18\x04 \x01(\x0b\x32\x0f.grpcpb.TrxInfo\x12\r\n\x05limit\x18\x05 \x01(\r\"A\n\x1cGetUserTrxListByTimeResponse\x12!\n\x08trx_list\x18\x01 \x03(\x0b\x32\x0f.grpcpb.TrxInfo\"Q\n\x0bVoterOfPost\x12-\n\x0c\x61\x63\x63ount_name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x13\n\x0bweighted_vp\x18\x02 \x01(\t\"a\n\x16GetPostInfoByIdRequest\x12\x13\n\x07post_id\x18\x01 \x01(\x04\x42\x02\x30\x01\x12\x18\n\x10voter_list_limit\x18\x02 \x01(\r\x12\x18\n\x10reply_list_limit\x18\x03 \x01(\r\"\x95\x01\n\x17GetPostInfoByIdResponse\x12\'\n\tpost_info\x18\x01 \x01(\x0b\x32\x14.grpcpb.PostResponse\x12\'\n\nvoter_list\x18\x02 \x03(\x0b\x32\x13.grpcpb.VoterOfPost\x12(\n\nreply_list\x18\x03 \x03(\x0b\x32\x14.grpcpb.PostResponse\"|\n\x16GetContractInfoRequest\x12&\n\x05owner\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x15\n\rcontract_name\x18\x02 \x01(\t\x12\x10\n\x08\x66\x65tchAbi\x18\x03 \x01(\x08\x12\x11\n\tfetchCode\x18\x04 \x01(\x08\"C\n\x17GetContractInfoResponse\x12\r\n\x05\x65xist\x18\x01 \x01(\x08\x12\x0b\n\x03\x61\x62i\x18\x02 \x01(\t\x12\x0c\n\x04\x63ode\x18\x03 \x01(\x0c\"F\n!GetBlkIsIrreversibleByTxIdRequest\x12!\n\x06trx_id\x18\x01 \x01(\x0b\x32\x11.prototype.sha256\"4\n\"GetBlkIsIrreversibleByTxIdResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\"\xac\x01\n\x1eGetAccountListByCreTimeRequest\x12(\n\x05start\x18\x01 \x01(\x0b\x32\x19.prototype.time_point_sec\x12&\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\x12)\n\x0clast_account\x18\x03 \x01(\x0b\x32\x13.grpcpb.AccountInfo\x12\r\n\x05limit\x18\x04 \x01(\r\"}\n\tDailyStat\x12\x0c\n\x04\x64\x61te\x18\x01 \x01(\x04\x12\x0c\n\x04\x64\x61pp\x18\x02 \x01(\t\x12\x0b\n\x03\x64\x61u\x18\x03 \x01(\r\x12\x0b\n\x03\x64nu\x18\x04 \x01(\r\x12\x0c\n\x04trxs\x18\x05 \x01(\r\x12\x12\n\x06\x61mount\x18\x06 \x01(\x04\x42\x02\x30\x01\x12\x18\n\x10total_user_count\x18\x07 \x01(\r\"2\n\x14GetDailyStatsRequest\x12\x0c\n\x04\x64\x61ys\x18\x01 \x01(\r\x12\x0c\n\x04\x64\x61pp\x18\x02 \x01(\t\"8\n\x15GetDailyStatsResponse\x12\x1f\n\x04stat\x18\x01 \x03(\x0b\x32\x11.grpcpb.DailyStat\"\xd9\x01\n\x0c\x43ontractInfo\x12&\n\x05owner\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12%\n\x04name\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12.\n\x0b\x63reate_time\x18\x03 \x01(\x0b\x32\x19.prototype.time_point_sec\x12 \n\x07\x62\x61lance\x18\x04 \x01(\x0b\x32\x0f.prototype.coin\x12\x13\n\x0b\x61pply_count\x18\x05 \x01(\r\x12\x13\n\x0bupgradeable\x18\x06 \x01(\x08\"\xac\x01\n\x1cGetContractListByTimeRequest\x12(\n\x05start\x18\x01 \x01(\x0b\x32\x19.prototype.time_point_sec\x12&\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\x12+\n\rlast_contract\x18\x03 \x01(\x0b\x32\x14.grpcpb.ContractInfo\x12\r\n\x05limit\x18\x04 \x01(\r\"F\n\x17GetContractListResponse\x12+\n\rcontract_list\x18\x01 \x03(\x0b\x32\x14.grpcpb.ContractInfo\"\x9e\x01\n GetWitnessListByVoteCountRequest\x12\x1e\n\x05start\x18\x01 \x01(\x0b\x32\x0f.prototype.vest\x12\x1c\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x0f.prototype.vest\x12-\n\x0clast_witness\x18\x03 \x01(\x0b\x32\x17.grpcpb.WitnessResponse\x12\r\n\x05limit\x18\x04 \x01(\r\"\x90\x01\n\x18GetPostListByVestRequest\x12\x1e\n\x05start\x18\x01 \x01(\x0b\x32\x0f.prototype.vest\x12\x1c\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x0f.prototype.vest\x12\'\n\tlast_post\x18\x03 \x01(\x0b\x32\x14.grpcpb.PostResponse\x12\r\n\x05limit\x18\x04 \x01(\r\"D\n\x19GetPostListByVestResponse\x12\'\n\tpost_list\x18\x01 \x03(\x0b\x32\x14.grpcpb.PostResponse2\xd1\x16\n\nApiService\x12S\n\x11QueryTableContent\x12\x1e.grpcpb.GetTableContentRequest\x1a\x1c.grpcpb.TableContentResponse\"\x00\x12N\n\x10GetAccountByName\x12\x1f.grpcpb.GetAccountByNameRequest\x1a\x17.grpcpb.AccountResponse\"\x00\x12W\n\x11GetAccountCashout\x12 .grpcpb.GetAccountCashoutRequest\x1a\x1e.grpcpb.AccountCashoutResponse\"\x00\x12Q\n\x0fGetBlockCashout\x12\x1e.grpcpb.GetBlockCashoutRequest\x1a\x1c.grpcpb.BlockCashoutResponse\"\x00\x12\x66\n\x15GetFollowerListByName\x12$.grpcpb.GetFollowerListByNameRequest\x1a%.grpcpb.GetFollowerListByNameResponse\"\x00\x12i\n\x16GetFollowingListByName\x12%.grpcpb.GetFollowingListByNameRequest\x1a&.grpcpb.GetFollowingListByNameResponse\"\x00\x12\x63\n\x14GetFollowCountByName\x12#.grpcpb.GetFollowCountByNameRequest\x1a$.grpcpb.GetFollowCountByNameResponse\"\x00\x12Q\n\x0eGetWitnessList\x12\x1d.grpcpb.GetWitnessListRequest\x1a\x1e.grpcpb.GetWitnessListResponse\"\x00\x12\x63\n\x14GetPostListByCreated\x12#.grpcpb.GetPostListByCreatedRequest\x1a$.grpcpb.GetPostListByCreatedResponse\"\x00\x12\x63\n\x14GetReplyListByPostId\x12#.grpcpb.GetReplyListByPostIdRequest\x1a$.grpcpb.GetReplyListByPostIdResponse\"\x00\x12r\n\x19GetBlockTransactionsByNum\x12(.grpcpb.GetBlockTransactionsByNumRequest\x1a).grpcpb.GetBlockTransactionsByNumResponse\"\x00\x12J\n\rGetChainState\x12\x18.grpcpb.NonParamsRequest\x1a\x1d.grpcpb.GetChainStateResponse\"\x00\x12K\n\x0c\x42roadcastTrx\x12\x1b.grpcpb.BroadcastTrxRequest\x1a\x1c.grpcpb.BroadcastTrxResponse\"\x00\x12K\n\x0cGetBlockList\x12\x1b.grpcpb.GetBlockListRequest\x1a\x1c.grpcpb.GetBlockListResponse\"\x00\x12Q\n\x0eGetSignedBlock\x12\x1d.grpcpb.GetSignedBlockRequest\x1a\x1e.grpcpb.GetSignedBlockResponse\"\x00\x12\x63\n\x17GetAccountListByBalance\x12&.grpcpb.GetAccountListByBalanceRequest\x1a\x1e.grpcpb.GetAccountListResponse\"\x00\x12[\n\x14GetDailyTotalTrxInfo\x12\x1f.grpcpb.GetDailyTotalTrxRequest\x1a .grpcpb.GetDailyTotalTrxResponse\"\x00\x12Q\n\x0eGetTrxInfoById\x12\x1d.grpcpb.GetTrxInfoByIdRequest\x1a\x1e.grpcpb.GetTrxInfoByIdResponse\"\x00\x12W\n\x10GetTrxListByTime\x12\x1f.grpcpb.GetTrxListByTimeRequest\x1a .grpcpb.GetTrxListByTimeResponse\"\x00\x12l\n\x17GetPostListByCreateTime\x12&.grpcpb.GetPostListByCreateTimeRequest\x1a\'.grpcpb.GetPostListByCreateTimeResponse\"\x00\x12`\n\x11GetPostListByName\x12 .grpcpb.GetPostListByNameRequest\x1a\'.grpcpb.GetPostListByCreateTimeResponse\"\x00\x12N\n\rTrxStatByHour\x12\x1c.grpcpb.TrxStatByHourRequest\x1a\x1d.grpcpb.TrxStatByHourResponse\"\x00\x12\x63\n\x14GetUserTrxListByTime\x12#.grpcpb.GetUserTrxListByTimeRequest\x1a$.grpcpb.GetUserTrxListByTimeResponse\"\x00\x12T\n\x0fGetPostInfoById\x12\x1e.grpcpb.GetPostInfoByIdRequest\x1a\x1f.grpcpb.GetPostInfoByIdResponse\"\x00\x12T\n\x0fGetContractInfo\x12\x1e.grpcpb.GetContractInfoRequest\x1a\x1f.grpcpb.GetContractInfoResponse\"\x00\x12u\n\x1aGetBlkIsIrreversibleByTxId\x12).grpcpb.GetBlkIsIrreversibleByTxIdRequest\x1a*.grpcpb.GetBlkIsIrreversibleByTxIdResponse\"\x00\x12\x63\n\x17GetAccountListByCreTime\x12&.grpcpb.GetAccountListByCreTimeRequest\x1a\x1e.grpcpb.GetAccountListResponse\"\x00\x12N\n\rGetDailyStats\x12\x1c.grpcpb.GetDailyStatsRequest\x1a\x1d.grpcpb.GetDailyStatsResponse\"\x00\x12`\n\x15GetContractListByTime\x12$.grpcpb.GetContractListByTimeRequest\x1a\x1f.grpcpb.GetContractListResponse\"\x00\x12g\n\x19GetWitnessListByVoteCount\x12(.grpcpb.GetWitnessListByVoteCountRequest\x1a\x1e.grpcpb.GetWitnessListResponse\"\x00\x12Z\n\x11GetPostListByVest\x12 .grpcpb.GetPostListByVestRequest\x1a!.grpcpb.GetPostListByVestResponse\"\x00\x42G\n\x1cio.contentos.android.sdk.rpcZ\'github.com/coschain/contentos-go/grpcpbb\x06proto3')
+  serialized_options=_b('\n\034io.contentos.android.sdk.rpc'),
+  serialized_pb=_b('\n\ngrpc.proto\x12\x06grpcpb\x1a\x14prototype/type.proto\x1a\x18prototype/multi_id.proto\x1a\x1bprototype/transaction.proto\"\x86\x01\n\x16GetTableContentRequest\x12\r\n\x05owner\x18\x01 \x01(\t\x12\x10\n\x08\x63ontract\x18\x02 \x01(\t\x12\r\n\x05table\x18\x03 \x01(\t\x12\r\n\x05\x66ield\x18\x04 \x01(\t\x12\r\n\x05\x62\x65gin\x18\x05 \x01(\t\x12\r\n\x05\x63ount\x18\x06 \x01(\r\x12\x0f\n\x07reverse\x18\x07 \x01(\x08\"-\n\x14TableContentResponse\x12\x15\n\rtable_content\x18\x01 \x01(\t\"/\n\x19GetAccountByPubKeyRequest\x12\x12\n\npublic_key\x18\x01 \x01(\t\"H\n\x17GetAccountByNameRequest\x12-\n\x0c\x61\x63\x63ount_name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\"I\n\x1dGetBlockProducerByNameRequest\x12(\n\x07\x62p_name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\"Z\n\x18GetAccountCashoutRequest\x12-\n\x0c\x61\x63\x63ount_name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x0f\n\x07post_id\x18\x02 \x01(\x04\"h\n\x16\x41\x63\x63ountCashoutResponse\x12-\n\x0c\x61\x63\x63ount_name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x1f\n\x06reward\x18\x02 \x01(\x0b\x32\x0f.prototype.vest\".\n\x16GetBlockCashoutRequest\x12\x14\n\x0c\x62lock_height\x18\x01 \x01(\x04\"L\n\x14\x42lockCashoutResponse\x12\x34\n\x0c\x63\x61shout_list\x18\x01 \x03(\x0b\x32\x1e.grpcpb.AccountCashoutResponse\"N\n\x1dGetAccountRewardByNameRequest\x12-\n\x0c\x61\x63\x63ount_name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\"g\n\x15\x41\x63\x63ountRewardResponse\x12-\n\x0c\x61\x63\x63ount_name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x1f\n\x06reward\x18\x02 \x01(\x0b\x32\x0f.prototype.vest\"\xe3\x07\n\x0b\x41\x63\x63ountInfo\x12-\n\x0c\x61\x63\x63ount_name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x1d\n\x04\x63oin\x18\x02 \x01(\x0b\x32\x0f.prototype.coin\x12\x1d\n\x04vest\x18\x03 \x01(\x0b\x32\x0f.prototype.vest\x12.\n\npublic_key\x18\x04 \x01(\x0b\x32\x1a.prototype.public_key_type\x12/\n\x0c\x63reated_time\x18\x05 \x01(\x0b\x32\x19.prototype.time_point_sec\x12\x35\n\x0e\x62lock_producer\x18\x06 \x01(\x0b\x32\x1d.grpcpb.BlockProducerResponse\x12\x12\n\npost_count\x18\x07 \x01(\r\x12\x16\n\x0e\x66ollower_count\x18\x08 \x01(\r\x12\x17\n\x0f\x66ollowing_count\x18\t \x01(\r\x12\x11\n\ttrx_count\x18\n \x01(\r\x12\x12\n\nvote_power\x18\x0b \x01(\r\x12\x1b\n\x13stamina_free_remain\x18\x0c \x01(\x04\x12\x1c\n\x14stamina_stake_remain\x18\r \x01(\x04\x12\x13\n\x0bstamina_max\x18\x0e \x01(\x04\x12*\n\x11stake_vest_for_me\x18\x0f \x01(\x0b\x32\x0f.prototype.vest\x12)\n\x10withdraw_remains\x18\x10 \x01(\x0b\x32\x0f.prototype.vest\x12&\n\rhas_withdrawn\x18\x11 \x01(\x0b\x32\x0f.prototype.vest\x12+\n\x12withdraw_each_time\x18\x12 \x01(\x0b\x32\x0f.prototype.vest\x12\x35\n\x12next_withdraw_time\x18\x13 \x01(\x0b\x32\x19.prototype.time_point_sec\x12\x36\n\x13start_withdraw_time\x18\x14 \x01(\x0b\x32\x19.prototype.time_point_sec\x12\x15\n\rbp_vote_count\x18\x15 \x01(\r\x12\x12\n\nreputation\x18\x16 \x01(\r\x12\x17\n\x0freputation_memo\x18\x17 \x01(\t\x12\x16\n\x0e\x63harged_ticket\x18\x18 \x01(\r\x12\x13\n\x0b\x66ree_ticket\x18\x19 \x01(\r\x12\x0e\n\x06\x66reeze\x18\x1a \x01(\r\x12\x13\n\x0b\x66reeze_memo\x18\x1b \x01(\t\x12+\n\x12stake_vest_from_me\x18\x1c \x01(\x0b\x32\x0f.prototype.vest\x12\x35\n\x14voted_block_producer\x18\x1d \x01(\x0b\x32\x17.prototype.account_name\"W\n\x0f\x41\x63\x63ountResponse\x12!\n\x04info\x18\x01 \x01(\x0b\x32\x13.grpcpb.AccountInfo\x12!\n\x05state\x18\x02 \x01(\x0b\x32\x12.grpcpb.ChainState\"\xc6\x01\n\x1cGetFollowerListByNameRequest\x12\x30\n\x05start\x18\x01 \x01(\x0b\x32!.prototype.follower_created_order\x12.\n\x03\x65nd\x18\x02 \x01(\x0b\x32!.prototype.follower_created_order\x12\r\n\x05limit\x18\x03 \x01(\r\x12\x35\n\nlast_order\x18\x04 \x01(\x0b\x32!.prototype.follower_created_order\"u\n\x10\x46ollowerListInfo\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.grpcpb.AccountResponse\x12\x37\n\x0c\x63reate_order\x18\x02 \x01(\x0b\x32!.prototype.follower_created_order\"P\n\x1dGetFollowerListByNameResponse\x12/\n\rfollower_list\x18\x01 \x03(\x0b\x32\x18.grpcpb.FollowerListInfo\"\xca\x01\n\x1dGetFollowingListByNameRequest\x12\x31\n\x05start\x18\x01 \x01(\x0b\x32\".prototype.following_created_order\x12/\n\x03\x65nd\x18\x02 \x01(\x0b\x32\".prototype.following_created_order\x12\r\n\x05limit\x18\x03 \x01(\r\x12\x36\n\nlast_order\x18\x04 \x01(\x0b\x32\".prototype.following_created_order\"w\n\x11\x46ollowingListInfo\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.grpcpb.AccountResponse\x12\x38\n\x0c\x63reate_order\x18\x02 \x01(\x0b\x32\".prototype.following_created_order\"S\n\x1eGetFollowingListByNameResponse\x12\x31\n\x0e\x66ollowing_list\x18\x01 \x03(\x0b\x32\x19.grpcpb.FollowingListInfo\"L\n\x1bGetFollowCountByNameRequest\x12-\n\x0c\x61\x63\x63ount_name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\"A\n\x1cGetFollowCountByNameResponse\x12\x0f\n\x07\x66\x65r_cnt\x18\x01 \x01(\r\x12\x10\n\x08\x66ing_cnt\x18\x02 \x01(\r\"\xed\x03\n\x15\x42lockProducerResponse\x12&\n\x05owner\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12/\n\x0c\x63reated_time\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\x12\x0b\n\x03url\x18\x03 \x01(\t\x12&\n\x07\x62p_vest\x18\x04 \x01(\x0b\x32\x15.prototype.bp_vest_id\x12/\n\x0bsigning_key\x18\x05 \x01(\x0b\x32\x1a.prototype.public_key_type\x12\x1d\n\x15proposed_stamina_free\x18\x06 \x01(\x04\x12\x14\n\x0ctps_expected\x18\x07 \x01(\x04\x12+\n\x12\x61\x63\x63ount_create_fee\x18\x08 \x01(\x0b\x32\x0f.prototype.coin\x12 \n\x18top_n_acquire_free_token\x18\t \x01(\r\x12\x1d\n\x15ticket_flush_interval\x18\n \x01(\x04\x12)\n\x10per_ticket_price\x18\x0b \x01(\x0b\x32\x0f.prototype.coin\x12\x19\n\x11per_ticket_weight\x18\x0c \x01(\x04\x12\x13\n\x0bvoter_count\x18\r \x01(\x04\x12\x17\n\x0fgen_block_count\x18\x0e \x01(\x04\"T\n\x1bGetBlockProducerListRequest\x12&\n\x05start\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\r\n\x05limit\x18\x02 \x01(\r\"Z\n\x1cGetBlockProducerListResponse\x12:\n\x13\x62lock_producer_list\x18\x01 \x03(\x0b\x32\x1d.grpcpb.BlockProducerResponse\"\xc5\x05\n\x0cPostResponse\x12\x13\n\x07post_id\x18\x01 \x01(\x04\x42\x02\x30\x01\x12\x10\n\x08\x63\x61tegory\x18\x02 \x01(\t\x12.\n\rparent_author\x18\x03 \x01(\x0b\x32\x17.prototype.account_name\x12\'\n\x06\x61uthor\x18\x05 \x01(\x0b\x32\x17.prototype.account_name\x12\r\n\x05title\x18\x07 \x01(\t\x12\x0c\n\x04\x62ody\x18\x08 \x01(\t\x12*\n\x07\x63reated\x18\x0b \x01(\x0b\x32\x19.prototype.time_point_sec\x12.\n\x0blast_payout\x18\r \x01(\x0b\x32\x19.prototype.time_point_sec\x12\r\n\x05\x64\x65pth\x18\x0e \x01(\r\x12\x10\n\x08\x63hildren\x18\x0f \x01(\r\x12\x13\n\x07root_id\x18\x10 \x01(\x04\x42\x02\x30\x01\x12\x15\n\tparent_id\x18\x11 \x01(\x04\x42\x02\x30\x01\x12\x0c\n\x04tags\x18\x12 \x03(\t\x12\x38\n\rbeneficiaries\x18\x13 \x03(\x0b\x32!.prototype.beneficiary_route_type\x12\x10\n\x08vote_cnt\x18\x14 \x01(\x04\x12\x13\n\x0bweighted_vp\x18\x15 \x01(\t\x12 \n\x07rewards\x18\x16 \x01(\x0b\x32\x0f.prototype.vest\x12%\n\x0c\x64\x61pp_rewards\x18\x17 \x01(\x0b\x32\x0f.prototype.vest\x12\x18\n\x10\x63\x61shout_interval\x18\x18 \x01(\x04\x12\'\n\x0eglobal_rewards\x18\x19 \x01(\x0b\x32\x0f.prototype.vest\x12\x1a\n\x12global_weighted_vp\x18\x1a \x01(\t\x12\x0e\n\x06ticket\x18\x1b \x01(\r\x12\x11\n\tcopyright\x18\x1c \x01(\r\x12\x16\n\x0e\x63opyright_memo\x18\x1d \x01(\t\x12\x1d\n\x11\x63\x61shout_block_num\x18\x1e \x01(\x04\x42\x02\x30\x01\"\x86\x01\n\x1bGetPostListByCreatedRequest\x12,\n\x05start\x18\x01 \x01(\x0b\x32\x1d.prototype.post_created_order\x12*\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x1d.prototype.post_created_order\x12\r\n\x05limit\x18\x03 \x01(\r\"G\n\x1cGetPostListByCreatedResponse\x12\'\n\tpost_list\x18\x01 \x03(\x0b\x32\x14.grpcpb.PostResponse\"\x88\x01\n\x1bGetReplyListByPostIdRequest\x12-\n\x05start\x18\x01 \x01(\x0b\x32\x1e.prototype.reply_created_order\x12+\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x1e.prototype.reply_created_order\x12\r\n\x05limit\x18\x03 \x01(\r\"H\n\x1cGetReplyListByPostIdResponse\x12(\n\nreply_list\x18\x01 \x03(\x0b\x32\x14.grpcpb.PostResponse\"S\n GetBlockTransactionsByNumRequest\x12\x11\n\tblock_num\x18\x01 \x01(\r\x12\r\n\x05start\x18\x02 \x01(\r\x12\r\n\x05limit\x18\x03 \x01(\r\"X\n!GetBlockTransactionsByNumResponse\x12\x33\n\x0ctransactions\x18\x01 \x03(\x0b\x32\x1d.prototype.signed_transaction\":\n\x15GetChainStateResponse\x12!\n\x05state\x18\x01 \x01(\x0b\x32\x12.grpcpb.ChainState\"-\n\x19GetNodeNeighboursResponse\x12\x10\n\x08peerlist\x18\x01 \x01(\t\"4\n\x1dGetNodeRunningVersionResponse\x12\x13\n\x0bnodeVersion\x18\x01 \x01(\t\"q\n\x13\x42roadcastTrxRequest\x12\x32\n\x0btransaction\x18\x01 \x01(\x0b\x32\x1d.prototype.signed_transaction\x12\x14\n\x0conly_deliver\x18\x02 \x01(\x08\x12\x10\n\x08\x66inality\x18\x03 \x01(\x08\"\x80\x01\n\x14\x42roadcastTrxResponse\x12\x39\n\x07invoice\x18\x01 \x01(\x0b\x32(.prototype.transaction_receipt_with_info\x12\x0e\n\x06status\x18\x02 \x01(\r\x12\x0b\n\x03msg\x18\x03 \x01(\t\x12\x10\n\x08\x66inality\x18\x04 \x01(\x08\"\x12\n\x10NonParamsRequest\"I\n\x0c\x43\x61llResponse\x12\x0e\n\x06result\x18\x01 \x01(\t\x12\x13\n\x0b\x65xecute_err\x18\x02 \x01(\t\x12\x14\n\x0c\x65stimate_gas\x18\x03 \x01(\t\"\x87\x01\n\nChainState\x12&\n\x1elast_irreversible_block_number\x18\x01 \x01(\x04\x12$\n\x1clast_irreversible_block_time\x18\x02 \x01(\x04\x12+\n\x04\x64gpo\x18\x03 \x01(\x0b\x32\x1d.prototype.dynamic_properties\"@\n\x13GetBlockListRequest\x12\r\n\x05start\x18\x01 \x01(\x04\x12\x0b\n\x03\x65nd\x18\x02 \x01(\x04\x12\r\n\x05limit\x18\x03 \x01(\r\"\xf3\x01\n\tBlockInfo\x12,\n\ttimestamp\x18\x01 \x01(\x0b\x32\x19.prototype.time_point_sec\x12\x18\n\x0c\x62lock_height\x18\x02 \x01(\x04\x42\x02\x30\x01\x12\x11\n\ttrx_count\x18\x03 \x01(\r\x12/\n\x0e\x62lock_producer\x18\x04 \x01(\x0b\x32\x17.prototype.account_name\x12#\n\x08\x62lock_id\x18\x05 \x01(\x0b\x32\x11.prototype.sha256\x12!\n\x06pre_id\x18\x06 \x01(\x0b\x32\x11.prototype.sha256\x12\x12\n\nblock_size\x18\x07 \x01(\r\"9\n\x14GetBlockListResponse\x12!\n\x06\x62locks\x18\x01 \x03(\x0b\x32\x11.grpcpb.BlockInfo\"&\n\x15GetSignedBlockRequest\x12\r\n\x05start\x18\x01 \x01(\x04\"@\n\x16GetSignedBlockResponse\x12&\n\x05\x62lock\x18\x01 \x01(\x0b\x32\x17.prototype.signed_block\"\x98\x01\n\x1eGetAccountListByBalanceRequest\x12\x1e\n\x05start\x18\x01 \x01(\x0b\x32\x0f.prototype.coin\x12\x1c\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x0f.prototype.coin\x12)\n\x0clast_account\x18\x03 \x01(\x0b\x32\x13.grpcpb.AccountInfo\x12\r\n\x05limit\x18\x04 \x01(\r\"?\n\x16GetAccountListResponse\x12%\n\x04list\x18\x01 \x03(\x0b\x32\x17.grpcpb.AccountResponse\"G\n\rDailyTotalTrx\x12\'\n\x04\x64\x61te\x18\x01 \x01(\x0b\x32\x19.prototype.time_point_sec\x12\r\n\x05\x63ount\x18\x02 \x01(\x04\"\xa4\x01\n\x17GetDailyTotalTrxRequest\x12(\n\x05start\x18\x01 \x01(\x0b\x32\x19.prototype.time_point_sec\x12&\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\x12(\n\tlast_info\x18\x03 \x01(\x0b\x32\x15.grpcpb.DailyTotalTrx\x12\r\n\x05limit\x18\x04 \x01(\r\"?\n\x18GetDailyTotalTrxResponse\x12#\n\x04list\x18\x01 \x03(\x0b\x32\x15.grpcpb.DailyTotalTrx\")\n\nStatByHour\x12\x0c\n\x04hour\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\"%\n\x14TrxStatByHourRequest\x12\r\n\x05hours\x18\x01 \x01(\r\"9\n\x15TrxStatByHourResponse\x12 \n\x04stat\x18\x01 \x03(\x0b\x32\x12.grpcpb.StatByHour\"\xe5\x01\n\x07TrxInfo\x12!\n\x06trx_id\x18\x01 \x01(\x0b\x32\x11.prototype.sha256\x12\x14\n\x0c\x62lock_height\x18\x02 \x01(\x04\x12\x30\n\x08trx_wrap\x18\x03 \x01(\x0b\x32\x1e.prototype.transaction_wrapper\x12-\n\nblock_time\x18\x04 \x01(\x0b\x32\x19.prototype.time_point_sec\x12#\n\x08\x62lock_id\x18\x05 \x01(\x0b\x32\x11.prototype.sha256\x12\x1b\n\x13\x62lk_is_irreversible\x18\x06 \x01(\x08\":\n\x15GetTrxInfoByIdRequest\x12!\n\x06trx_id\x18\x01 \x01(\x0b\x32\x11.prototype.sha256\"7\n\x16GetTrxInfoByIdResponse\x12\x1d\n\x04info\x18\x01 \x01(\x0b\x32\x0f.grpcpb.TrxInfo\"\x9e\x01\n\x17GetTrxListByTimeRequest\x12(\n\x05start\x18\x01 \x01(\x0b\x32\x19.prototype.time_point_sec\x12&\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\x12\r\n\x05limit\x18\x03 \x01(\r\x12\"\n\tlast_info\x18\x04 \x01(\x0b\x32\x0f.grpcpb.TrxInfo\"9\n\x18GetTrxListByTimeResponse\x12\x1d\n\x04list\x18\x01 \x03(\x0b\x32\x0f.grpcpb.TrxInfo\"\xaa\x01\n\x1eGetPostListByCreateTimeRequest\x12(\n\x05start\x18\x01 \x01(\x0b\x32\x19.prototype.time_point_sec\x12&\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\x12\'\n\tlast_post\x18\x03 \x01(\x0b\x32\x14.grpcpb.PostResponse\x12\r\n\x05limit\x18\x04 \x01(\r\"L\n\x1fGetPostListByCreateTimeResponse\x12)\n\x0bposted_list\x18\x01 \x03(\x0b\x32\x14.grpcpb.PostResponse\"\xb4\x01\n\x18GetPostListByNameRequest\x12\x30\n\x05start\x18\x01 \x01(\x0b\x32!.prototype.user_post_create_order\x12.\n\x03\x65nd\x18\x02 \x01(\x0b\x32!.prototype.user_post_create_order\x12\'\n\tlast_post\x18\x03 \x01(\x0b\x32\x14.grpcpb.PostResponse\x12\r\n\x05limit\x18\x04 \x01(\r\"\xc8\x01\n\x1bGetUserTrxListByTimeRequest\x12%\n\x04name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12(\n\x05start\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\x12&\n\x03\x65nd\x18\x03 \x01(\x0b\x32\x19.prototype.time_point_sec\x12!\n\x08last_trx\x18\x04 \x01(\x0b\x32\x0f.grpcpb.TrxInfo\x12\r\n\x05limit\x18\x05 \x01(\r\"A\n\x1cGetUserTrxListByTimeResponse\x12!\n\x08trx_list\x18\x01 \x03(\x0b\x32\x0f.grpcpb.TrxInfo\"Q\n\x0bVoterOfPost\x12-\n\x0c\x61\x63\x63ount_name\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x13\n\x0bweighted_vp\x18\x02 \x01(\t\"a\n\x16GetPostInfoByIdRequest\x12\x13\n\x07post_id\x18\x01 \x01(\x04\x42\x02\x30\x01\x12\x18\n\x10voter_list_limit\x18\x02 \x01(\r\x12\x18\n\x10reply_list_limit\x18\x03 \x01(\r\"\x95\x01\n\x17GetPostInfoByIdResponse\x12\'\n\tpost_info\x18\x01 \x01(\x0b\x32\x14.grpcpb.PostResponse\x12\'\n\nvoter_list\x18\x02 \x03(\x0b\x32\x13.grpcpb.VoterOfPost\x12(\n\nreply_list\x18\x03 \x03(\x0b\x32\x14.grpcpb.PostResponse\"|\n\x16GetContractInfoRequest\x12&\n\x05owner\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12\x15\n\rcontract_name\x18\x02 \x01(\t\x12\x10\n\x08\x66\x65tchAbi\x18\x03 \x01(\x08\x12\x11\n\tfetchCode\x18\x04 \x01(\x08\"b\n\x17GetContractInfoResponse\x12\r\n\x05\x65xist\x18\x01 \x01(\x08\x12\x0b\n\x03\x61\x62i\x18\x02 \x01(\t\x12\x0c\n\x04\x63ode\x18\x03 \x01(\x0c\x12\x0b\n\x03url\x18\x04 \x01(\t\x12\x10\n\x08\x64\x65scribe\x18\x05 \x01(\t\"F\n!GetBlkIsIrreversibleByTxIdRequest\x12!\n\x06trx_id\x18\x01 \x01(\x0b\x32\x11.prototype.sha256\"4\n\"GetBlkIsIrreversibleByTxIdResponse\x12\x0e\n\x06result\x18\x01 \x01(\x08\"\xac\x01\n\x1eGetAccountListByCreTimeRequest\x12(\n\x05start\x18\x01 \x01(\x0b\x32\x19.prototype.time_point_sec\x12&\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\x12)\n\x0clast_account\x18\x03 \x01(\x0b\x32\x13.grpcpb.AccountInfo\x12\r\n\x05limit\x18\x04 \x01(\r\"}\n\tDailyStat\x12\x0c\n\x04\x64\x61te\x18\x01 \x01(\x04\x12\x0c\n\x04\x64\x61pp\x18\x02 \x01(\t\x12\x0b\n\x03\x64\x61u\x18\x03 \x01(\r\x12\x0b\n\x03\x64nu\x18\x04 \x01(\r\x12\x0c\n\x04trxs\x18\x05 \x01(\r\x12\x12\n\x06\x61mount\x18\x06 \x01(\x04\x42\x02\x30\x01\x12\x18\n\x10total_user_count\x18\x07 \x01(\r\"2\n\x14GetDailyStatsRequest\x12\x0c\n\x04\x64\x61ys\x18\x01 \x01(\r\x12\x0c\n\x04\x64\x61pp\x18\x02 \x01(\t\"8\n\x15GetDailyStatsResponse\x12\x1f\n\x04stat\x18\x01 \x03(\x0b\x32\x11.grpcpb.DailyStat\"\xd9\x01\n\x0c\x43ontractInfo\x12&\n\x05owner\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12%\n\x04name\x18\x02 \x01(\x0b\x32\x17.prototype.account_name\x12.\n\x0b\x63reate_time\x18\x03 \x01(\x0b\x32\x19.prototype.time_point_sec\x12 \n\x07\x62\x61lance\x18\x04 \x01(\x0b\x32\x0f.prototype.coin\x12\x13\n\x0b\x61pply_count\x18\x05 \x01(\r\x12\x13\n\x0bupgradeable\x18\x06 \x01(\x08\"\xac\x01\n\x1cGetContractListByTimeRequest\x12(\n\x05start\x18\x01 \x01(\x0b\x32\x19.prototype.time_point_sec\x12&\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x19.prototype.time_point_sec\x12+\n\rlast_contract\x18\x03 \x01(\x0b\x32\x14.grpcpb.ContractInfo\x12\r\n\x05limit\x18\x04 \x01(\r\"F\n\x17GetContractListResponse\x12+\n\rcontract_list\x18\x01 \x03(\x0b\x32\x14.grpcpb.ContractInfo\"\xb1\x01\n&GetBlockProducerListByVoteCountRequest\x12\x1e\n\x05start\x18\x01 \x01(\x0b\x32\x0f.prototype.vest\x12\x1c\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x0f.prototype.vest\x12:\n\x13last_block_producer\x18\x03 \x01(\x0b\x32\x1d.grpcpb.BlockProducerResponse\x12\r\n\x05limit\x18\x04 \x01(\r\"\x90\x01\n\x18GetPostListByVestRequest\x12\x1e\n\x05start\x18\x01 \x01(\x0b\x32\x0f.prototype.vest\x12\x1c\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x0f.prototype.vest\x12\'\n\tlast_post\x18\x03 \x01(\x0b\x32\x14.grpcpb.PostResponse\x12\r\n\x05limit\x18\x04 \x01(\r\"D\n\x19GetPostListByVestResponse\x12\'\n\tpost_list\x18\x01 \x03(\x0b\x32\x14.grpcpb.PostResponse\"D\n\x0e\x45simateRequest\x12\x32\n\x0btransaction\x18\x01 \x01(\x0b\x32\x1d.prototype.signed_transaction\"L\n\x0f\x45simateResponse\x12\x39\n\x07invoice\x18\x01 \x01(\x0b\x32(.prototype.transaction_receipt_with_info\"u\n\tStakeInfo\x12(\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x17.prototype.account_name\x12%\n\x0cstake_amount\x18\x02 \x01(\x0b\x32\x0f.prototype.vest\x12\x17\n\x0fstake_block_num\x18\x03 \x01(\x04\"\x8b\x01\n\x1cGetMyStakerListByNameRequest\x12.\n\x05start\x18\x01 \x01(\x0b\x32\x1f.prototype.stake_record_reverse\x12,\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x1f.prototype.stake_record_reverse\x12\r\n\x05limit\x18\x03 \x01(\r\"J\n\x1dGetMyStakerListByNameResponse\x12)\n\x0emy_staker_list\x18\x01 \x03(\x0b\x32\x11.grpcpb.StakeInfo\"z\n\x1bGetMyStakeListByNameRequest\x12&\n\x05start\x18\x01 \x01(\x0b\x32\x17.prototype.stake_record\x12$\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x17.prototype.stake_record\x12\r\n\x05limit\x18\x03 \x01(\r\"H\n\x1cGetMyStakeListByNameResponse\x12(\n\rmy_stake_list\x18\x01 \x03(\x0b\x32\x11.grpcpb.StakeInfo\"\x95\x01\n\x1bGetAccountListByVestRequest\x12\x1e\n\x05start\x18\x01 \x01(\x0b\x32\x0f.prototype.vest\x12\x1c\n\x03\x65nd\x18\x02 \x01(\x0b\x32\x0f.prototype.vest\x12)\n\x0clast_account\x18\x03 \x01(\x0b\x32\x13.grpcpb.AccountInfo\x12\r\n\x05limit\x18\x04 \x01(\r\"4\n\x1bGetBlockBFTInfoByNumRequest\x12\x15\n\tblock_num\x18\x01 \x01(\x04\x42\x02\x30\x01\"1\n\x0b\x42\x46TVoteInfo\x12\x0f\n\x07pub_key\x18\x01 \x01(\t\x12\x11\n\tsignature\x18\x02 \x01(\x0c\"o\n\x1cGetBlockBFTInfoByNumResponse\x12\x19\n\x11\x63ommitter_pub_key\x18\x01 \x01(\t\x12\x11\n\tsignature\x18\x02 \x01(\x0c\x12!\n\x04vote\x18\x03 \x03(\x0b\x32\x13.grpcpb.BFTVoteInfo\";\n\x18GetAppTableRecordRequest\x12\x12\n\ntable_name\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\"O\n\x19GetAppTableRecordResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x11\n\terror_msg\x18\x02 \x01(\t\x12\x0e\n\x06record\x18\x03 \x01(\t2\xd0\x1c\n\nApiService\x12S\n\x11QueryTableContent\x12\x1e.grpcpb.GetTableContentRequest\x1a\x1c.grpcpb.TableContentResponse\"\x00\x12N\n\x10GetAccountByName\x12\x1f.grpcpb.GetAccountByNameRequest\x1a\x17.grpcpb.AccountResponse\"\x00\x12\x66\n\x15GetFollowerListByName\x12$.grpcpb.GetFollowerListByNameRequest\x1a%.grpcpb.GetFollowerListByNameResponse\"\x00\x12i\n\x16GetFollowingListByName\x12%.grpcpb.GetFollowingListByNameRequest\x1a&.grpcpb.GetFollowingListByNameResponse\"\x00\x12\x63\n\x14GetFollowCountByName\x12#.grpcpb.GetFollowCountByNameRequest\x1a$.grpcpb.GetFollowCountByNameResponse\"\x00\x12\x63\n\x14GetBlockProducerList\x12#.grpcpb.GetBlockProducerListRequest\x1a$.grpcpb.GetBlockProducerListResponse\"\x00\x12\x63\n\x14GetPostListByCreated\x12#.grpcpb.GetPostListByCreatedRequest\x1a$.grpcpb.GetPostListByCreatedResponse\"\x00\x12\x63\n\x14GetReplyListByPostId\x12#.grpcpb.GetReplyListByPostIdRequest\x1a$.grpcpb.GetReplyListByPostIdResponse\"\x00\x12r\n\x19GetBlockTransactionsByNum\x12(.grpcpb.GetBlockTransactionsByNumRequest\x1a).grpcpb.GetBlockTransactionsByNumResponse\"\x00\x12J\n\rGetChainState\x12\x18.grpcpb.NonParamsRequest\x1a\x1d.grpcpb.GetChainStateResponse\"\x00\x12K\n\x0c\x42roadcastTrx\x12\x1b.grpcpb.BroadcastTrxRequest\x1a\x1c.grpcpb.BroadcastTrxResponse\"\x00\x12K\n\x0cGetBlockList\x12\x1b.grpcpb.GetBlockListRequest\x1a\x1c.grpcpb.GetBlockListResponse\"\x00\x12Q\n\x0eGetSignedBlock\x12\x1d.grpcpb.GetSignedBlockRequest\x1a\x1e.grpcpb.GetSignedBlockResponse\"\x00\x12\x63\n\x17GetAccountListByBalance\x12&.grpcpb.GetAccountListByBalanceRequest\x1a\x1e.grpcpb.GetAccountListResponse\"\x00\x12[\n\x14GetDailyTotalTrxInfo\x12\x1f.grpcpb.GetDailyTotalTrxRequest\x1a .grpcpb.GetDailyTotalTrxResponse\"\x00\x12Q\n\x0eGetTrxInfoById\x12\x1d.grpcpb.GetTrxInfoByIdRequest\x1a\x1e.grpcpb.GetTrxInfoByIdResponse\"\x00\x12W\n\x10GetTrxListByTime\x12\x1f.grpcpb.GetTrxListByTimeRequest\x1a .grpcpb.GetTrxListByTimeResponse\"\x00\x12l\n\x17GetPostListByCreateTime\x12&.grpcpb.GetPostListByCreateTimeRequest\x1a\'.grpcpb.GetPostListByCreateTimeResponse\"\x00\x12`\n\x11GetPostListByName\x12 .grpcpb.GetPostListByNameRequest\x1a\'.grpcpb.GetPostListByCreateTimeResponse\"\x00\x12N\n\rTrxStatByHour\x12\x1c.grpcpb.TrxStatByHourRequest\x1a\x1d.grpcpb.TrxStatByHourResponse\"\x00\x12\x63\n\x14GetUserTrxListByTime\x12#.grpcpb.GetUserTrxListByTimeRequest\x1a$.grpcpb.GetUserTrxListByTimeResponse\"\x00\x12T\n\x0fGetPostInfoById\x12\x1e.grpcpb.GetPostInfoByIdRequest\x1a\x1f.grpcpb.GetPostInfoByIdResponse\"\x00\x12T\n\x0fGetContractInfo\x12\x1e.grpcpb.GetContractInfoRequest\x1a\x1f.grpcpb.GetContractInfoResponse\"\x00\x12u\n\x1aGetBlkIsIrreversibleByTxId\x12).grpcpb.GetBlkIsIrreversibleByTxIdRequest\x1a*.grpcpb.GetBlkIsIrreversibleByTxIdResponse\"\x00\x12\x63\n\x17GetAccountListByCreTime\x12&.grpcpb.GetAccountListByCreTimeRequest\x1a\x1e.grpcpb.GetAccountListResponse\"\x00\x12N\n\rGetDailyStats\x12\x1c.grpcpb.GetDailyStatsRequest\x1a\x1d.grpcpb.GetDailyStatsResponse\"\x00\x12`\n\x15GetContractListByTime\x12$.grpcpb.GetContractListByTimeRequest\x1a\x1f.grpcpb.GetContractListResponse\"\x00\x12y\n\x1fGetBlockProducerListByVoteCount\x12..grpcpb.GetBlockProducerListByVoteCountRequest\x1a$.grpcpb.GetBlockProducerListResponse\"\x00\x12Z\n\x11GetPostListByVest\x12 .grpcpb.GetPostListByVestRequest\x1a!.grpcpb.GetPostListByVestResponse\"\x00\x12\x44\n\x0f\x45stimateStamina\x12\x16.grpcpb.EsimateRequest\x1a\x17.grpcpb.EsimateResponse\"\x00\x12R\n\x11GetNodeNeighbours\x12\x18.grpcpb.NonParamsRequest\x1a!.grpcpb.GetNodeNeighboursResponse\"\x00\x12]\n\x0cGetMyStakers\x12$.grpcpb.GetMyStakerListByNameRequest\x1a%.grpcpb.GetMyStakerListByNameResponse\"\x00\x12Z\n\x0bGetMyStakes\x12#.grpcpb.GetMyStakeListByNameRequest\x1a$.grpcpb.GetMyStakeListByNameResponse\"\x00\x12Z\n\x15GetNodeRunningVersion\x12\x18.grpcpb.NonParamsRequest\x1a%.grpcpb.GetNodeRunningVersionResponse\"\x00\x12]\n\x14GetAccountListByVest\x12#.grpcpb.GetAccountListByVestRequest\x1a\x1e.grpcpb.GetAccountListResponse\"\x00\x12`\n\x16GetBlockProducerByName\x12%.grpcpb.GetBlockProducerByNameRequest\x1a\x1d.grpcpb.BlockProducerResponse\"\x00\x12R\n\x12GetAccountByPubKey\x12!.grpcpb.GetAccountByPubKeyRequest\x1a\x17.grpcpb.AccountResponse\"\x00\x12\x63\n\x14GetBlockBFTInfoByNum\x12#.grpcpb.GetBlockBFTInfoByNumRequest\x1a$.grpcpb.GetBlockBFTInfoByNumResponse\"\x00\x12Z\n\x11GetAppTableRecord\x12 .grpcpb.GetAppTableRecordRequest\x1a!.grpcpb.GetAppTableRecordResponse\"\x00\x42\x1e\n\x1cio.contentos.android.sdk.rpcb\x06proto3')
   ,
   dependencies=[prototype_dot_type__pb2.DESCRIPTOR,prototype_dot_multi__id__pb2.DESCRIPTOR,prototype_dot_transaction__pb2.DESCRIPTOR,])
 
@@ -134,6 +134,37 @@ _TABLECONTENTRESPONSE = _descriptor.Descriptor(
 )
 
 
+_GETACCOUNTBYPUBKEYREQUEST = _descriptor.Descriptor(
+  name='GetAccountByPubKeyRequest',
+  full_name='grpcpb.GetAccountByPubKeyRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='public_key', full_name='grpcpb.GetAccountByPubKeyRequest.public_key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=283,
+  serialized_end=330,
+)
+
+
 _GETACCOUNTBYNAMEREQUEST = _descriptor.Descriptor(
   name='GetAccountByNameRequest',
   full_name='grpcpb.GetAccountByNameRequest',
@@ -160,8 +191,39 @@ _GETACCOUNTBYNAMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=283,
-  serialized_end=355,
+  serialized_start=332,
+  serialized_end=404,
+)
+
+
+_GETBLOCKPRODUCERBYNAMEREQUEST = _descriptor.Descriptor(
+  name='GetBlockProducerByNameRequest',
+  full_name='grpcpb.GetBlockProducerByNameRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='bp_name', full_name='grpcpb.GetBlockProducerByNameRequest.bp_name', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=406,
+  serialized_end=479,
 )
 
 
@@ -198,8 +260,8 @@ _GETACCOUNTCASHOUTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=357,
-  serialized_end=447,
+  serialized_start=481,
+  serialized_end=571,
 )
 
 
@@ -236,8 +298,8 @@ _ACCOUNTCASHOUTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=449,
-  serialized_end=553,
+  serialized_start=573,
+  serialized_end=677,
 )
 
 
@@ -267,8 +329,8 @@ _GETBLOCKCASHOUTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=555,
-  serialized_end=601,
+  serialized_start=679,
+  serialized_end=725,
 )
 
 
@@ -298,8 +360,8 @@ _BLOCKCASHOUTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=603,
-  serialized_end=679,
+  serialized_start=727,
+  serialized_end=803,
 )
 
 
@@ -329,8 +391,8 @@ _GETACCOUNTREWARDBYNAMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=681,
-  serialized_end=759,
+  serialized_start=805,
+  serialized_end=883,
 )
 
 
@@ -367,8 +429,8 @@ _ACCOUNTREWARDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=761,
-  serialized_end=864,
+  serialized_start=885,
+  serialized_end=988,
 )
 
 
@@ -415,7 +477,7 @@ _ACCOUNTINFO = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='witness', full_name='grpcpb.AccountInfo.witness', index=5,
+      name='block_producer', full_name='grpcpb.AccountInfo.block_producer', index=5,
       number=6, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -478,7 +540,7 @@ _ACCOUNTINFO = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='stake_vest', full_name='grpcpb.AccountInfo.stake_vest', index=14,
+      name='stake_vest_for_me', full_name='grpcpb.AccountInfo.stake_vest_for_me', index=14,
       number=15, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -492,23 +554,93 @@ _ACCOUNTINFO = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='withdraw_each_time', full_name='grpcpb.AccountInfo.withdraw_each_time', index=16,
+      name='has_withdrawn', full_name='grpcpb.AccountInfo.has_withdrawn', index=16,
       number=17, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='next_withdraw_time', full_name='grpcpb.AccountInfo.next_withdraw_time', index=17,
+      name='withdraw_each_time', full_name='grpcpb.AccountInfo.withdraw_each_time', index=17,
       number=18, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='bp_vote_count', full_name='grpcpb.AccountInfo.bp_vote_count', index=18,
-      number=19, type=13, cpp_type=3, label=1,
+      name='next_withdraw_time', full_name='grpcpb.AccountInfo.next_withdraw_time', index=18,
+      number=19, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='start_withdraw_time', full_name='grpcpb.AccountInfo.start_withdraw_time', index=19,
+      number=20, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='bp_vote_count', full_name='grpcpb.AccountInfo.bp_vote_count', index=20,
+      number=21, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='reputation', full_name='grpcpb.AccountInfo.reputation', index=21,
+      number=22, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='reputation_memo', full_name='grpcpb.AccountInfo.reputation_memo', index=22,
+      number=23, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='charged_ticket', full_name='grpcpb.AccountInfo.charged_ticket', index=23,
+      number=24, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='free_ticket', full_name='grpcpb.AccountInfo.free_ticket', index=24,
+      number=25, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='freeze', full_name='grpcpb.AccountInfo.freeze', index=25,
+      number=26, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='freeze_memo', full_name='grpcpb.AccountInfo.freeze_memo', index=26,
+      number=27, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='stake_vest_from_me', full_name='grpcpb.AccountInfo.stake_vest_from_me', index=27,
+      number=28, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='voted_block_producer', full_name='grpcpb.AccountInfo.voted_block_producer', index=28,
+      number=29, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -524,8 +656,8 @@ _ACCOUNTINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=867,
-  serialized_end=1519,
+  serialized_start=991,
+  serialized_end=1986,
 )
 
 
@@ -562,8 +694,8 @@ _ACCOUNTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1521,
-  serialized_end=1608,
+  serialized_start=1988,
+  serialized_end=2075,
 )
 
 
@@ -614,8 +746,8 @@ _GETFOLLOWERLISTBYNAMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1611,
-  serialized_end=1809,
+  serialized_start=2078,
+  serialized_end=2276,
 )
 
 
@@ -652,8 +784,8 @@ _FOLLOWERLISTINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1811,
-  serialized_end=1928,
+  serialized_start=2278,
+  serialized_end=2395,
 )
 
 
@@ -683,8 +815,8 @@ _GETFOLLOWERLISTBYNAMERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1930,
-  serialized_end=2010,
+  serialized_start=2397,
+  serialized_end=2477,
 )
 
 
@@ -735,8 +867,8 @@ _GETFOLLOWINGLISTBYNAMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2013,
-  serialized_end=2215,
+  serialized_start=2480,
+  serialized_end=2682,
 )
 
 
@@ -773,8 +905,8 @@ _FOLLOWINGLISTINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2217,
-  serialized_end=2336,
+  serialized_start=2684,
+  serialized_end=2803,
 )
 
 
@@ -804,8 +936,8 @@ _GETFOLLOWINGLISTBYNAMERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2338,
-  serialized_end=2421,
+  serialized_start=2805,
+  serialized_end=2888,
 )
 
 
@@ -835,8 +967,8 @@ _GETFOLLOWCOUNTBYNAMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2423,
-  serialized_end=2499,
+  serialized_start=2890,
+  serialized_end=2966,
 )
 
 
@@ -873,85 +1005,113 @@ _GETFOLLOWCOUNTBYNAMERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2501,
-  serialized_end=2566,
+  serialized_start=2968,
+  serialized_end=3033,
 )
 
 
-_WITNESSRESPONSE = _descriptor.Descriptor(
-  name='WitnessResponse',
-  full_name='grpcpb.WitnessResponse',
+_BLOCKPRODUCERRESPONSE = _descriptor.Descriptor(
+  name='BlockProducerResponse',
+  full_name='grpcpb.BlockProducerResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='owner', full_name='grpcpb.WitnessResponse.owner', index=0,
+      name='owner', full_name='grpcpb.BlockProducerResponse.owner', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='created_time', full_name='grpcpb.WitnessResponse.created_time', index=1,
+      name='created_time', full_name='grpcpb.BlockProducerResponse.created_time', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='url', full_name='grpcpb.WitnessResponse.url', index=2,
+      name='url', full_name='grpcpb.BlockProducerResponse.url', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='vote_count', full_name='grpcpb.WitnessResponse.vote_count', index=3,
+      name='bp_vest', full_name='grpcpb.BlockProducerResponse.bp_vest', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='signing_key', full_name='grpcpb.WitnessResponse.signing_key', index=4,
+      name='signing_key', full_name='grpcpb.BlockProducerResponse.signing_key', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='proposed_stamina_free', full_name='grpcpb.WitnessResponse.proposed_stamina_free', index=5,
+      name='proposed_stamina_free', full_name='grpcpb.BlockProducerResponse.proposed_stamina_free', index=5,
       number=6, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='active', full_name='grpcpb.WitnessResponse.active', index=6,
-      number=7, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='tps_expected', full_name='grpcpb.WitnessResponse.tps_expected', index=7,
-      number=8, type=4, cpp_type=4, label=1,
+      name='tps_expected', full_name='grpcpb.BlockProducerResponse.tps_expected', index=6,
+      number=7, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='account_create_fee', full_name='grpcpb.WitnessResponse.account_create_fee', index=8,
-      number=9, type=11, cpp_type=10, label=1,
+      name='account_create_fee', full_name='grpcpb.BlockProducerResponse.account_create_fee', index=7,
+      number=8, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='voter_list', full_name='grpcpb.WitnessResponse.voter_list', index=9,
-      number=10, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      name='top_n_acquire_free_token', full_name='grpcpb.BlockProducerResponse.top_n_acquire_free_token', index=8,
+      number=9, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ticket_flush_interval', full_name='grpcpb.BlockProducerResponse.ticket_flush_interval', index=9,
+      number=10, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='per_ticket_price', full_name='grpcpb.BlockProducerResponse.per_ticket_price', index=10,
+      number=11, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='per_ticket_weight', full_name='grpcpb.BlockProducerResponse.per_ticket_weight', index=11,
+      number=12, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='voter_count', full_name='grpcpb.BlockProducerResponse.voter_count', index=12,
+      number=13, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='gen_block_count', full_name='grpcpb.BlockProducerResponse.gen_block_count', index=13,
+      number=14, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -967,27 +1127,27 @@ _WITNESSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2569,
-  serialized_end=2933,
+  serialized_start=3036,
+  serialized_end=3529,
 )
 
 
-_GETWITNESSLISTREQUEST = _descriptor.Descriptor(
-  name='GetWitnessListRequest',
-  full_name='grpcpb.GetWitnessListRequest',
+_GETBLOCKPRODUCERLISTREQUEST = _descriptor.Descriptor(
+  name='GetBlockProducerListRequest',
+  full_name='grpcpb.GetBlockProducerListRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='start', full_name='grpcpb.GetWitnessListRequest.start', index=0,
+      name='start', full_name='grpcpb.GetBlockProducerListRequest.start', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='limit', full_name='grpcpb.GetWitnessListRequest.limit', index=1,
+      name='limit', full_name='grpcpb.GetBlockProducerListRequest.limit', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1005,20 +1165,20 @@ _GETWITNESSLISTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2935,
-  serialized_end=3013,
+  serialized_start=3531,
+  serialized_end=3615,
 )
 
 
-_GETWITNESSLISTRESPONSE = _descriptor.Descriptor(
-  name='GetWitnessListResponse',
-  full_name='grpcpb.GetWitnessListResponse',
+_GETBLOCKPRODUCERLISTRESPONSE = _descriptor.Descriptor(
+  name='GetBlockProducerListResponse',
+  full_name='grpcpb.GetBlockProducerListResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='witness_list', full_name='grpcpb.GetWitnessListResponse.witness_list', index=0,
+      name='block_producer_list', full_name='grpcpb.GetBlockProducerListResponse.block_producer_list', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1036,8 +1196,8 @@ _GETWITNESSLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3015,
-  serialized_end=3086,
+  serialized_start=3617,
+  serialized_end=3707,
 )
 
 
@@ -1195,6 +1355,34 @@ _POSTRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ticket', full_name='grpcpb.PostResponse.ticket', index=21,
+      number=27, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='copyright', full_name='grpcpb.PostResponse.copyright', index=22,
+      number=28, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='copyright_memo', full_name='grpcpb.PostResponse.copyright_memo', index=23,
+      number=29, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='cashout_block_num', full_name='grpcpb.PostResponse.cashout_block_num', index=24,
+      number=30, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=_b('0\001'), file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1207,8 +1395,8 @@ _POSTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3089,
-  serialized_end=3708,
+  serialized_start=3710,
+  serialized_end=4419,
 )
 
 
@@ -1252,8 +1440,8 @@ _GETPOSTLISTBYCREATEDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3711,
-  serialized_end=3845,
+  serialized_start=4422,
+  serialized_end=4556,
 )
 
 
@@ -1283,8 +1471,8 @@ _GETPOSTLISTBYCREATEDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3847,
-  serialized_end=3918,
+  serialized_start=4558,
+  serialized_end=4629,
 )
 
 
@@ -1328,8 +1516,8 @@ _GETREPLYLISTBYPOSTIDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3921,
-  serialized_end=4057,
+  serialized_start=4632,
+  serialized_end=4768,
 )
 
 
@@ -1359,8 +1547,8 @@ _GETREPLYLISTBYPOSTIDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4059,
-  serialized_end=4131,
+  serialized_start=4770,
+  serialized_end=4842,
 )
 
 
@@ -1404,8 +1592,8 @@ _GETBLOCKTRANSACTIONSBYNUMREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4133,
-  serialized_end=4216,
+  serialized_start=4844,
+  serialized_end=4927,
 )
 
 
@@ -1435,8 +1623,8 @@ _GETBLOCKTRANSACTIONSBYNUMRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4218,
-  serialized_end=4306,
+  serialized_start=4929,
+  serialized_end=5017,
 )
 
 
@@ -1466,8 +1654,70 @@ _GETCHAINSTATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4308,
-  serialized_end=4366,
+  serialized_start=5019,
+  serialized_end=5077,
+)
+
+
+_GETNODENEIGHBOURSRESPONSE = _descriptor.Descriptor(
+  name='GetNodeNeighboursResponse',
+  full_name='grpcpb.GetNodeNeighboursResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='peerlist', full_name='grpcpb.GetNodeNeighboursResponse.peerlist', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5079,
+  serialized_end=5124,
+)
+
+
+_GETNODERUNNINGVERSIONRESPONSE = _descriptor.Descriptor(
+  name='GetNodeRunningVersionResponse',
+  full_name='grpcpb.GetNodeRunningVersionResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='nodeVersion', full_name='grpcpb.GetNodeRunningVersionResponse.nodeVersion', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5126,
+  serialized_end=5178,
 )
 
 
@@ -1492,6 +1742,13 @@ _BROADCASTTRXREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='finality', full_name='grpcpb.BroadcastTrxRequest.finality', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1504,8 +1761,8 @@ _BROADCASTTRXREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4368,
-  serialized_end=4463,
+  serialized_start=5180,
+  serialized_end=5293,
 )
 
 
@@ -1537,6 +1794,13 @@ _BROADCASTTRXRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='finality', full_name='grpcpb.BroadcastTrxResponse.finality', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -1549,8 +1813,8 @@ _BROADCASTTRXRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4465,
-  serialized_end=4575,
+  serialized_start=5296,
+  serialized_end=5424,
 )
 
 
@@ -1573,8 +1837,8 @@ _NONPARAMSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4577,
-  serialized_end=4595,
+  serialized_start=5426,
+  serialized_end=5444,
 )
 
 
@@ -1618,8 +1882,8 @@ _CALLRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4597,
-  serialized_end=4670,
+  serialized_start=5446,
+  serialized_end=5519,
 )
 
 
@@ -1663,8 +1927,8 @@ _CHAINSTATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4673,
-  serialized_end=4808,
+  serialized_start=5522,
+  serialized_end=5657,
 )
 
 
@@ -1708,8 +1972,8 @@ _GETBLOCKLISTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4810,
-  serialized_end=4874,
+  serialized_start=5659,
+  serialized_end=5723,
 )
 
 
@@ -1742,7 +2006,7 @@ _BLOCKINFO = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='witness', full_name='grpcpb.BlockInfo.witness', index=3,
+      name='block_producer', full_name='grpcpb.BlockInfo.block_producer', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -1781,8 +2045,8 @@ _BLOCKINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4877,
-  serialized_end=5113,
+  serialized_start=5726,
+  serialized_end=5969,
 )
 
 
@@ -1812,8 +2076,8 @@ _GETBLOCKLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5115,
-  serialized_end=5172,
+  serialized_start=5971,
+  serialized_end=6028,
 )
 
 
@@ -1843,8 +2107,8 @@ _GETSIGNEDBLOCKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5174,
-  serialized_end=5212,
+  serialized_start=6030,
+  serialized_end=6068,
 )
 
 
@@ -1874,8 +2138,8 @@ _GETSIGNEDBLOCKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5214,
-  serialized_end=5278,
+  serialized_start=6070,
+  serialized_end=6134,
 )
 
 
@@ -1926,8 +2190,8 @@ _GETACCOUNTLISTBYBALANCEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5281,
-  serialized_end=5433,
+  serialized_start=6137,
+  serialized_end=6289,
 )
 
 
@@ -1957,8 +2221,8 @@ _GETACCOUNTLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5435,
-  serialized_end=5498,
+  serialized_start=6291,
+  serialized_end=6354,
 )
 
 
@@ -1995,8 +2259,8 @@ _DAILYTOTALTRX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5500,
-  serialized_end=5571,
+  serialized_start=6356,
+  serialized_end=6427,
 )
 
 
@@ -2047,8 +2311,8 @@ _GETDAILYTOTALTRXREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5574,
-  serialized_end=5738,
+  serialized_start=6430,
+  serialized_end=6594,
 )
 
 
@@ -2078,8 +2342,8 @@ _GETDAILYTOTALTRXRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5740,
-  serialized_end=5803,
+  serialized_start=6596,
+  serialized_end=6659,
 )
 
 
@@ -2116,8 +2380,8 @@ _STATBYHOUR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5805,
-  serialized_end=5846,
+  serialized_start=6661,
+  serialized_end=6702,
 )
 
 
@@ -2147,8 +2411,8 @@ _TRXSTATBYHOURREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5848,
-  serialized_end=5885,
+  serialized_start=6704,
+  serialized_end=6741,
 )
 
 
@@ -2178,8 +2442,8 @@ _TRXSTATBYHOURRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5887,
-  serialized_end=5944,
+  serialized_start=6743,
+  serialized_end=6800,
 )
 
 
@@ -2244,8 +2508,8 @@ _TRXINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5947,
-  serialized_end=6176,
+  serialized_start=6803,
+  serialized_end=7032,
 )
 
 
@@ -2275,8 +2539,8 @@ _GETTRXINFOBYIDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6178,
-  serialized_end=6236,
+  serialized_start=7034,
+  serialized_end=7092,
 )
 
 
@@ -2306,8 +2570,8 @@ _GETTRXINFOBYIDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6238,
-  serialized_end=6293,
+  serialized_start=7094,
+  serialized_end=7149,
 )
 
 
@@ -2358,8 +2622,8 @@ _GETTRXLISTBYTIMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6296,
-  serialized_end=6454,
+  serialized_start=7152,
+  serialized_end=7310,
 )
 
 
@@ -2389,8 +2653,8 @@ _GETTRXLISTBYTIMERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6456,
-  serialized_end=6513,
+  serialized_start=7312,
+  serialized_end=7369,
 )
 
 
@@ -2441,8 +2705,8 @@ _GETPOSTLISTBYCREATETIMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6516,
-  serialized_end=6686,
+  serialized_start=7372,
+  serialized_end=7542,
 )
 
 
@@ -2472,8 +2736,8 @@ _GETPOSTLISTBYCREATETIMERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6688,
-  serialized_end=6764,
+  serialized_start=7544,
+  serialized_end=7620,
 )
 
 
@@ -2524,8 +2788,8 @@ _GETPOSTLISTBYNAMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6767,
-  serialized_end=6947,
+  serialized_start=7623,
+  serialized_end=7803,
 )
 
 
@@ -2583,8 +2847,8 @@ _GETUSERTRXLISTBYTIMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6950,
-  serialized_end=7150,
+  serialized_start=7806,
+  serialized_end=8006,
 )
 
 
@@ -2614,8 +2878,8 @@ _GETUSERTRXLISTBYTIMERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7152,
-  serialized_end=7217,
+  serialized_start=8008,
+  serialized_end=8073,
 )
 
 
@@ -2652,8 +2916,8 @@ _VOTEROFPOST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7219,
-  serialized_end=7300,
+  serialized_start=8075,
+  serialized_end=8156,
 )
 
 
@@ -2697,8 +2961,8 @@ _GETPOSTINFOBYIDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7302,
-  serialized_end=7399,
+  serialized_start=8158,
+  serialized_end=8255,
 )
 
 
@@ -2742,8 +3006,8 @@ _GETPOSTINFOBYIDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7402,
-  serialized_end=7551,
+  serialized_start=8258,
+  serialized_end=8407,
 )
 
 
@@ -2794,8 +3058,8 @@ _GETCONTRACTINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7553,
-  serialized_end=7677,
+  serialized_start=8409,
+  serialized_end=8533,
 )
 
 
@@ -2827,6 +3091,20 @@ _GETCONTRACTINFORESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='url', full_name='grpcpb.GetContractInfoResponse.url', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='describe', full_name='grpcpb.GetContractInfoResponse.describe', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -2839,8 +3117,8 @@ _GETCONTRACTINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7679,
-  serialized_end=7746,
+  serialized_start=8535,
+  serialized_end=8633,
 )
 
 
@@ -2870,8 +3148,8 @@ _GETBLKISIRREVERSIBLEBYTXIDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7748,
-  serialized_end=7818,
+  serialized_start=8635,
+  serialized_end=8705,
 )
 
 
@@ -2901,8 +3179,8 @@ _GETBLKISIRREVERSIBLEBYTXIDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7820,
-  serialized_end=7872,
+  serialized_start=8707,
+  serialized_end=8759,
 )
 
 
@@ -2953,8 +3231,8 @@ _GETACCOUNTLISTBYCRETIMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7875,
-  serialized_end=8047,
+  serialized_start=8762,
+  serialized_end=8934,
 )
 
 
@@ -3026,8 +3304,8 @@ _DAILYSTAT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8049,
-  serialized_end=8174,
+  serialized_start=8936,
+  serialized_end=9061,
 )
 
 
@@ -3064,8 +3342,8 @@ _GETDAILYSTATSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8176,
-  serialized_end=8226,
+  serialized_start=9063,
+  serialized_end=9113,
 )
 
 
@@ -3095,8 +3373,8 @@ _GETDAILYSTATSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8228,
-  serialized_end=8284,
+  serialized_start=9115,
+  serialized_end=9171,
 )
 
 
@@ -3161,8 +3439,8 @@ _CONTRACTINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8287,
-  serialized_end=8504,
+  serialized_start=9174,
+  serialized_end=9391,
 )
 
 
@@ -3213,8 +3491,8 @@ _GETCONTRACTLISTBYTIMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8507,
-  serialized_end=8679,
+  serialized_start=9394,
+  serialized_end=9566,
 )
 
 
@@ -3244,41 +3522,41 @@ _GETCONTRACTLISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8681,
-  serialized_end=8751,
+  serialized_start=9568,
+  serialized_end=9638,
 )
 
 
-_GETWITNESSLISTBYVOTECOUNTREQUEST = _descriptor.Descriptor(
-  name='GetWitnessListByVoteCountRequest',
-  full_name='grpcpb.GetWitnessListByVoteCountRequest',
+_GETBLOCKPRODUCERLISTBYVOTECOUNTREQUEST = _descriptor.Descriptor(
+  name='GetBlockProducerListByVoteCountRequest',
+  full_name='grpcpb.GetBlockProducerListByVoteCountRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='start', full_name='grpcpb.GetWitnessListByVoteCountRequest.start', index=0,
+      name='start', full_name='grpcpb.GetBlockProducerListByVoteCountRequest.start', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='end', full_name='grpcpb.GetWitnessListByVoteCountRequest.end', index=1,
+      name='end', full_name='grpcpb.GetBlockProducerListByVoteCountRequest.end', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='last_witness', full_name='grpcpb.GetWitnessListByVoteCountRequest.last_witness', index=2,
+      name='last_block_producer', full_name='grpcpb.GetBlockProducerListByVoteCountRequest.last_block_producer', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='limit', full_name='grpcpb.GetWitnessListByVoteCountRequest.limit', index=3,
+      name='limit', full_name='grpcpb.GetBlockProducerListByVoteCountRequest.limit', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -3296,8 +3574,8 @@ _GETWITNESSLISTBYVOTECOUNTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8754,
-  serialized_end=8912,
+  serialized_start=9641,
+  serialized_end=9818,
 )
 
 
@@ -3348,8 +3626,8 @@ _GETPOSTLISTBYVESTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8915,
-  serialized_end=9059,
+  serialized_start=9821,
+  serialized_end=9965,
 )
 
 
@@ -3379,11 +3657,520 @@ _GETPOSTLISTBYVESTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9061,
-  serialized_end=9129,
+  serialized_start=9967,
+  serialized_end=10035,
+)
+
+
+_ESIMATEREQUEST = _descriptor.Descriptor(
+  name='EsimateRequest',
+  full_name='grpcpb.EsimateRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='transaction', full_name='grpcpb.EsimateRequest.transaction', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10037,
+  serialized_end=10105,
+)
+
+
+_ESIMATERESPONSE = _descriptor.Descriptor(
+  name='EsimateResponse',
+  full_name='grpcpb.EsimateResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='invoice', full_name='grpcpb.EsimateResponse.invoice', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10107,
+  serialized_end=10183,
+)
+
+
+_STAKEINFO = _descriptor.Descriptor(
+  name='StakeInfo',
+  full_name='grpcpb.StakeInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='account', full_name='grpcpb.StakeInfo.account', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='stake_amount', full_name='grpcpb.StakeInfo.stake_amount', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='stake_block_num', full_name='grpcpb.StakeInfo.stake_block_num', index=2,
+      number=3, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10185,
+  serialized_end=10302,
+)
+
+
+_GETMYSTAKERLISTBYNAMEREQUEST = _descriptor.Descriptor(
+  name='GetMyStakerListByNameRequest',
+  full_name='grpcpb.GetMyStakerListByNameRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='start', full_name='grpcpb.GetMyStakerListByNameRequest.start', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='end', full_name='grpcpb.GetMyStakerListByNameRequest.end', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='limit', full_name='grpcpb.GetMyStakerListByNameRequest.limit', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10305,
+  serialized_end=10444,
+)
+
+
+_GETMYSTAKERLISTBYNAMERESPONSE = _descriptor.Descriptor(
+  name='GetMyStakerListByNameResponse',
+  full_name='grpcpb.GetMyStakerListByNameResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='my_staker_list', full_name='grpcpb.GetMyStakerListByNameResponse.my_staker_list', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10446,
+  serialized_end=10520,
+)
+
+
+_GETMYSTAKELISTBYNAMEREQUEST = _descriptor.Descriptor(
+  name='GetMyStakeListByNameRequest',
+  full_name='grpcpb.GetMyStakeListByNameRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='start', full_name='grpcpb.GetMyStakeListByNameRequest.start', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='end', full_name='grpcpb.GetMyStakeListByNameRequest.end', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='limit', full_name='grpcpb.GetMyStakeListByNameRequest.limit', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10522,
+  serialized_end=10644,
+)
+
+
+_GETMYSTAKELISTBYNAMERESPONSE = _descriptor.Descriptor(
+  name='GetMyStakeListByNameResponse',
+  full_name='grpcpb.GetMyStakeListByNameResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='my_stake_list', full_name='grpcpb.GetMyStakeListByNameResponse.my_stake_list', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10646,
+  serialized_end=10718,
+)
+
+
+_GETACCOUNTLISTBYVESTREQUEST = _descriptor.Descriptor(
+  name='GetAccountListByVestRequest',
+  full_name='grpcpb.GetAccountListByVestRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='start', full_name='grpcpb.GetAccountListByVestRequest.start', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='end', full_name='grpcpb.GetAccountListByVestRequest.end', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='last_account', full_name='grpcpb.GetAccountListByVestRequest.last_account', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='limit', full_name='grpcpb.GetAccountListByVestRequest.limit', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10721,
+  serialized_end=10870,
+)
+
+
+_GETBLOCKBFTINFOBYNUMREQUEST = _descriptor.Descriptor(
+  name='GetBlockBFTInfoByNumRequest',
+  full_name='grpcpb.GetBlockBFTInfoByNumRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='block_num', full_name='grpcpb.GetBlockBFTInfoByNumRequest.block_num', index=0,
+      number=1, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=_b('0\001'), file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10872,
+  serialized_end=10924,
+)
+
+
+_BFTVOTEINFO = _descriptor.Descriptor(
+  name='BFTVoteInfo',
+  full_name='grpcpb.BFTVoteInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='pub_key', full_name='grpcpb.BFTVoteInfo.pub_key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='signature', full_name='grpcpb.BFTVoteInfo.signature', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10926,
+  serialized_end=10975,
+)
+
+
+_GETBLOCKBFTINFOBYNUMRESPONSE = _descriptor.Descriptor(
+  name='GetBlockBFTInfoByNumResponse',
+  full_name='grpcpb.GetBlockBFTInfoByNumResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='committer_pub_key', full_name='grpcpb.GetBlockBFTInfoByNumResponse.committer_pub_key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='signature', full_name='grpcpb.GetBlockBFTInfoByNumResponse.signature', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='vote', full_name='grpcpb.GetBlockBFTInfoByNumResponse.vote', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10977,
+  serialized_end=11088,
+)
+
+
+_GETAPPTABLERECORDREQUEST = _descriptor.Descriptor(
+  name='GetAppTableRecordRequest',
+  full_name='grpcpb.GetAppTableRecordRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='table_name', full_name='grpcpb.GetAppTableRecordRequest.table_name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='key', full_name='grpcpb.GetAppTableRecordRequest.key', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=11090,
+  serialized_end=11149,
+)
+
+
+_GETAPPTABLERECORDRESPONSE = _descriptor.Descriptor(
+  name='GetAppTableRecordResponse',
+  full_name='grpcpb.GetAppTableRecordResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='success', full_name='grpcpb.GetAppTableRecordResponse.success', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='error_msg', full_name='grpcpb.GetAppTableRecordResponse.error_msg', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='record', full_name='grpcpb.GetAppTableRecordResponse.record', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=11151,
+  serialized_end=11230,
 )
 
 _GETACCOUNTBYNAMEREQUEST.fields_by_name['account_name'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
+_GETBLOCKPRODUCERBYNAMEREQUEST.fields_by_name['bp_name'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _GETACCOUNTCASHOUTREQUEST.fields_by_name['account_name'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _ACCOUNTCASHOUTRESPONSE.fields_by_name['account_name'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _ACCOUNTCASHOUTRESPONSE.fields_by_name['reward'].message_type = prototype_dot_type__pb2._VEST
@@ -3396,11 +4183,15 @@ _ACCOUNTINFO.fields_by_name['coin'].message_type = prototype_dot_type__pb2._COIN
 _ACCOUNTINFO.fields_by_name['vest'].message_type = prototype_dot_type__pb2._VEST
 _ACCOUNTINFO.fields_by_name['public_key'].message_type = prototype_dot_type__pb2._PUBLIC_KEY_TYPE
 _ACCOUNTINFO.fields_by_name['created_time'].message_type = prototype_dot_type__pb2._TIME_POINT_SEC
-_ACCOUNTINFO.fields_by_name['witness'].message_type = _WITNESSRESPONSE
-_ACCOUNTINFO.fields_by_name['stake_vest'].message_type = prototype_dot_type__pb2._VEST
+_ACCOUNTINFO.fields_by_name['block_producer'].message_type = _BLOCKPRODUCERRESPONSE
+_ACCOUNTINFO.fields_by_name['stake_vest_for_me'].message_type = prototype_dot_type__pb2._VEST
 _ACCOUNTINFO.fields_by_name['withdraw_remains'].message_type = prototype_dot_type__pb2._VEST
+_ACCOUNTINFO.fields_by_name['has_withdrawn'].message_type = prototype_dot_type__pb2._VEST
 _ACCOUNTINFO.fields_by_name['withdraw_each_time'].message_type = prototype_dot_type__pb2._VEST
 _ACCOUNTINFO.fields_by_name['next_withdraw_time'].message_type = prototype_dot_type__pb2._TIME_POINT_SEC
+_ACCOUNTINFO.fields_by_name['start_withdraw_time'].message_type = prototype_dot_type__pb2._TIME_POINT_SEC
+_ACCOUNTINFO.fields_by_name['stake_vest_from_me'].message_type = prototype_dot_type__pb2._VEST
+_ACCOUNTINFO.fields_by_name['voted_block_producer'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _ACCOUNTRESPONSE.fields_by_name['info'].message_type = _ACCOUNTINFO
 _ACCOUNTRESPONSE.fields_by_name['state'].message_type = _CHAINSTATE
 _GETFOLLOWERLISTBYNAMEREQUEST.fields_by_name['start'].message_type = prototype_dot_multi__id__pb2._FOLLOWER_CREATED_ORDER
@@ -3416,14 +4207,14 @@ _FOLLOWINGLISTINFO.fields_by_name['account'].message_type = _ACCOUNTRESPONSE
 _FOLLOWINGLISTINFO.fields_by_name['create_order'].message_type = prototype_dot_multi__id__pb2._FOLLOWING_CREATED_ORDER
 _GETFOLLOWINGLISTBYNAMERESPONSE.fields_by_name['following_list'].message_type = _FOLLOWINGLISTINFO
 _GETFOLLOWCOUNTBYNAMEREQUEST.fields_by_name['account_name'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
-_WITNESSRESPONSE.fields_by_name['owner'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
-_WITNESSRESPONSE.fields_by_name['created_time'].message_type = prototype_dot_type__pb2._TIME_POINT_SEC
-_WITNESSRESPONSE.fields_by_name['vote_count'].message_type = prototype_dot_type__pb2._VEST
-_WITNESSRESPONSE.fields_by_name['signing_key'].message_type = prototype_dot_type__pb2._PUBLIC_KEY_TYPE
-_WITNESSRESPONSE.fields_by_name['account_create_fee'].message_type = prototype_dot_type__pb2._COIN
-_WITNESSRESPONSE.fields_by_name['voter_list'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
-_GETWITNESSLISTREQUEST.fields_by_name['start'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
-_GETWITNESSLISTRESPONSE.fields_by_name['witness_list'].message_type = _WITNESSRESPONSE
+_BLOCKPRODUCERRESPONSE.fields_by_name['owner'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
+_BLOCKPRODUCERRESPONSE.fields_by_name['created_time'].message_type = prototype_dot_type__pb2._TIME_POINT_SEC
+_BLOCKPRODUCERRESPONSE.fields_by_name['bp_vest'].message_type = prototype_dot_multi__id__pb2._BP_VEST_ID
+_BLOCKPRODUCERRESPONSE.fields_by_name['signing_key'].message_type = prototype_dot_type__pb2._PUBLIC_KEY_TYPE
+_BLOCKPRODUCERRESPONSE.fields_by_name['account_create_fee'].message_type = prototype_dot_type__pb2._COIN
+_BLOCKPRODUCERRESPONSE.fields_by_name['per_ticket_price'].message_type = prototype_dot_type__pb2._COIN
+_GETBLOCKPRODUCERLISTREQUEST.fields_by_name['start'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
+_GETBLOCKPRODUCERLISTRESPONSE.fields_by_name['block_producer_list'].message_type = _BLOCKPRODUCERRESPONSE
 _POSTRESPONSE.fields_by_name['parent_author'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _POSTRESPONSE.fields_by_name['author'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _POSTRESPONSE.fields_by_name['created'].message_type = prototype_dot_type__pb2._TIME_POINT_SEC
@@ -3444,7 +4235,7 @@ _BROADCASTTRXREQUEST.fields_by_name['transaction'].message_type = prototype_dot_
 _BROADCASTTRXRESPONSE.fields_by_name['invoice'].message_type = prototype_dot_transaction__pb2._TRANSACTION_RECEIPT_WITH_INFO
 _CHAINSTATE.fields_by_name['dgpo'].message_type = prototype_dot_type__pb2._DYNAMIC_PROPERTIES
 _BLOCKINFO.fields_by_name['timestamp'].message_type = prototype_dot_type__pb2._TIME_POINT_SEC
-_BLOCKINFO.fields_by_name['witness'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
+_BLOCKINFO.fields_by_name['block_producer'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
 _BLOCKINFO.fields_by_name['block_id'].message_type = prototype_dot_type__pb2._SHA256
 _BLOCKINFO.fields_by_name['pre_id'].message_type = prototype_dot_type__pb2._SHA256
 _GETBLOCKLISTRESPONSE.fields_by_name['blocks'].message_type = _BLOCKINFO
@@ -3499,16 +4290,32 @@ _GETCONTRACTLISTBYTIMEREQUEST.fields_by_name['start'].message_type = prototype_d
 _GETCONTRACTLISTBYTIMEREQUEST.fields_by_name['end'].message_type = prototype_dot_type__pb2._TIME_POINT_SEC
 _GETCONTRACTLISTBYTIMEREQUEST.fields_by_name['last_contract'].message_type = _CONTRACTINFO
 _GETCONTRACTLISTRESPONSE.fields_by_name['contract_list'].message_type = _CONTRACTINFO
-_GETWITNESSLISTBYVOTECOUNTREQUEST.fields_by_name['start'].message_type = prototype_dot_type__pb2._VEST
-_GETWITNESSLISTBYVOTECOUNTREQUEST.fields_by_name['end'].message_type = prototype_dot_type__pb2._VEST
-_GETWITNESSLISTBYVOTECOUNTREQUEST.fields_by_name['last_witness'].message_type = _WITNESSRESPONSE
+_GETBLOCKPRODUCERLISTBYVOTECOUNTREQUEST.fields_by_name['start'].message_type = prototype_dot_type__pb2._VEST
+_GETBLOCKPRODUCERLISTBYVOTECOUNTREQUEST.fields_by_name['end'].message_type = prototype_dot_type__pb2._VEST
+_GETBLOCKPRODUCERLISTBYVOTECOUNTREQUEST.fields_by_name['last_block_producer'].message_type = _BLOCKPRODUCERRESPONSE
 _GETPOSTLISTBYVESTREQUEST.fields_by_name['start'].message_type = prototype_dot_type__pb2._VEST
 _GETPOSTLISTBYVESTREQUEST.fields_by_name['end'].message_type = prototype_dot_type__pb2._VEST
 _GETPOSTLISTBYVESTREQUEST.fields_by_name['last_post'].message_type = _POSTRESPONSE
 _GETPOSTLISTBYVESTRESPONSE.fields_by_name['post_list'].message_type = _POSTRESPONSE
+_ESIMATEREQUEST.fields_by_name['transaction'].message_type = prototype_dot_transaction__pb2._SIGNED_TRANSACTION
+_ESIMATERESPONSE.fields_by_name['invoice'].message_type = prototype_dot_transaction__pb2._TRANSACTION_RECEIPT_WITH_INFO
+_STAKEINFO.fields_by_name['account'].message_type = prototype_dot_type__pb2._ACCOUNT_NAME
+_STAKEINFO.fields_by_name['stake_amount'].message_type = prototype_dot_type__pb2._VEST
+_GETMYSTAKERLISTBYNAMEREQUEST.fields_by_name['start'].message_type = prototype_dot_multi__id__pb2._STAKE_RECORD_REVERSE
+_GETMYSTAKERLISTBYNAMEREQUEST.fields_by_name['end'].message_type = prototype_dot_multi__id__pb2._STAKE_RECORD_REVERSE
+_GETMYSTAKERLISTBYNAMERESPONSE.fields_by_name['my_staker_list'].message_type = _STAKEINFO
+_GETMYSTAKELISTBYNAMEREQUEST.fields_by_name['start'].message_type = prototype_dot_multi__id__pb2._STAKE_RECORD
+_GETMYSTAKELISTBYNAMEREQUEST.fields_by_name['end'].message_type = prototype_dot_multi__id__pb2._STAKE_RECORD
+_GETMYSTAKELISTBYNAMERESPONSE.fields_by_name['my_stake_list'].message_type = _STAKEINFO
+_GETACCOUNTLISTBYVESTREQUEST.fields_by_name['start'].message_type = prototype_dot_type__pb2._VEST
+_GETACCOUNTLISTBYVESTREQUEST.fields_by_name['end'].message_type = prototype_dot_type__pb2._VEST
+_GETACCOUNTLISTBYVESTREQUEST.fields_by_name['last_account'].message_type = _ACCOUNTINFO
+_GETBLOCKBFTINFOBYNUMRESPONSE.fields_by_name['vote'].message_type = _BFTVOTEINFO
 DESCRIPTOR.message_types_by_name['GetTableContentRequest'] = _GETTABLECONTENTREQUEST
 DESCRIPTOR.message_types_by_name['TableContentResponse'] = _TABLECONTENTRESPONSE
+DESCRIPTOR.message_types_by_name['GetAccountByPubKeyRequest'] = _GETACCOUNTBYPUBKEYREQUEST
 DESCRIPTOR.message_types_by_name['GetAccountByNameRequest'] = _GETACCOUNTBYNAMEREQUEST
+DESCRIPTOR.message_types_by_name['GetBlockProducerByNameRequest'] = _GETBLOCKPRODUCERBYNAMEREQUEST
 DESCRIPTOR.message_types_by_name['GetAccountCashoutRequest'] = _GETACCOUNTCASHOUTREQUEST
 DESCRIPTOR.message_types_by_name['AccountCashoutResponse'] = _ACCOUNTCASHOUTRESPONSE
 DESCRIPTOR.message_types_by_name['GetBlockCashoutRequest'] = _GETBLOCKCASHOUTREQUEST
@@ -3525,9 +4332,9 @@ DESCRIPTOR.message_types_by_name['FollowingListInfo'] = _FOLLOWINGLISTINFO
 DESCRIPTOR.message_types_by_name['GetFollowingListByNameResponse'] = _GETFOLLOWINGLISTBYNAMERESPONSE
 DESCRIPTOR.message_types_by_name['GetFollowCountByNameRequest'] = _GETFOLLOWCOUNTBYNAMEREQUEST
 DESCRIPTOR.message_types_by_name['GetFollowCountByNameResponse'] = _GETFOLLOWCOUNTBYNAMERESPONSE
-DESCRIPTOR.message_types_by_name['WitnessResponse'] = _WITNESSRESPONSE
-DESCRIPTOR.message_types_by_name['GetWitnessListRequest'] = _GETWITNESSLISTREQUEST
-DESCRIPTOR.message_types_by_name['GetWitnessListResponse'] = _GETWITNESSLISTRESPONSE
+DESCRIPTOR.message_types_by_name['BlockProducerResponse'] = _BLOCKPRODUCERRESPONSE
+DESCRIPTOR.message_types_by_name['GetBlockProducerListRequest'] = _GETBLOCKPRODUCERLISTREQUEST
+DESCRIPTOR.message_types_by_name['GetBlockProducerListResponse'] = _GETBLOCKPRODUCERLISTRESPONSE
 DESCRIPTOR.message_types_by_name['PostResponse'] = _POSTRESPONSE
 DESCRIPTOR.message_types_by_name['GetPostListByCreatedRequest'] = _GETPOSTLISTBYCREATEDREQUEST
 DESCRIPTOR.message_types_by_name['GetPostListByCreatedResponse'] = _GETPOSTLISTBYCREATEDRESPONSE
@@ -3536,6 +4343,8 @@ DESCRIPTOR.message_types_by_name['GetReplyListByPostIdResponse'] = _GETREPLYLIST
 DESCRIPTOR.message_types_by_name['GetBlockTransactionsByNumRequest'] = _GETBLOCKTRANSACTIONSBYNUMREQUEST
 DESCRIPTOR.message_types_by_name['GetBlockTransactionsByNumResponse'] = _GETBLOCKTRANSACTIONSBYNUMRESPONSE
 DESCRIPTOR.message_types_by_name['GetChainStateResponse'] = _GETCHAINSTATERESPONSE
+DESCRIPTOR.message_types_by_name['GetNodeNeighboursResponse'] = _GETNODENEIGHBOURSRESPONSE
+DESCRIPTOR.message_types_by_name['GetNodeRunningVersionResponse'] = _GETNODERUNNINGVERSIONRESPONSE
 DESCRIPTOR.message_types_by_name['BroadcastTrxRequest'] = _BROADCASTTRXREQUEST
 DESCRIPTOR.message_types_by_name['BroadcastTrxResponse'] = _BROADCASTTRXRESPONSE
 DESCRIPTOR.message_types_by_name['NonParamsRequest'] = _NONPARAMSREQUEST
@@ -3578,9 +4387,22 @@ DESCRIPTOR.message_types_by_name['GetDailyStatsResponse'] = _GETDAILYSTATSRESPON
 DESCRIPTOR.message_types_by_name['ContractInfo'] = _CONTRACTINFO
 DESCRIPTOR.message_types_by_name['GetContractListByTimeRequest'] = _GETCONTRACTLISTBYTIMEREQUEST
 DESCRIPTOR.message_types_by_name['GetContractListResponse'] = _GETCONTRACTLISTRESPONSE
-DESCRIPTOR.message_types_by_name['GetWitnessListByVoteCountRequest'] = _GETWITNESSLISTBYVOTECOUNTREQUEST
+DESCRIPTOR.message_types_by_name['GetBlockProducerListByVoteCountRequest'] = _GETBLOCKPRODUCERLISTBYVOTECOUNTREQUEST
 DESCRIPTOR.message_types_by_name['GetPostListByVestRequest'] = _GETPOSTLISTBYVESTREQUEST
 DESCRIPTOR.message_types_by_name['GetPostListByVestResponse'] = _GETPOSTLISTBYVESTRESPONSE
+DESCRIPTOR.message_types_by_name['EsimateRequest'] = _ESIMATEREQUEST
+DESCRIPTOR.message_types_by_name['EsimateResponse'] = _ESIMATERESPONSE
+DESCRIPTOR.message_types_by_name['StakeInfo'] = _STAKEINFO
+DESCRIPTOR.message_types_by_name['GetMyStakerListByNameRequest'] = _GETMYSTAKERLISTBYNAMEREQUEST
+DESCRIPTOR.message_types_by_name['GetMyStakerListByNameResponse'] = _GETMYSTAKERLISTBYNAMERESPONSE
+DESCRIPTOR.message_types_by_name['GetMyStakeListByNameRequest'] = _GETMYSTAKELISTBYNAMEREQUEST
+DESCRIPTOR.message_types_by_name['GetMyStakeListByNameResponse'] = _GETMYSTAKELISTBYNAMERESPONSE
+DESCRIPTOR.message_types_by_name['GetAccountListByVestRequest'] = _GETACCOUNTLISTBYVESTREQUEST
+DESCRIPTOR.message_types_by_name['GetBlockBFTInfoByNumRequest'] = _GETBLOCKBFTINFOBYNUMREQUEST
+DESCRIPTOR.message_types_by_name['BFTVoteInfo'] = _BFTVOTEINFO
+DESCRIPTOR.message_types_by_name['GetBlockBFTInfoByNumResponse'] = _GETBLOCKBFTINFOBYNUMRESPONSE
+DESCRIPTOR.message_types_by_name['GetAppTableRecordRequest'] = _GETAPPTABLERECORDREQUEST
+DESCRIPTOR.message_types_by_name['GetAppTableRecordResponse'] = _GETAPPTABLERECORDRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetTableContentRequest = _reflection.GeneratedProtocolMessageType('GetTableContentRequest', (_message.Message,), {
@@ -3597,12 +4419,26 @@ TableContentResponse = _reflection.GeneratedProtocolMessageType('TableContentRes
   })
 _sym_db.RegisterMessage(TableContentResponse)
 
+GetAccountByPubKeyRequest = _reflection.GeneratedProtocolMessageType('GetAccountByPubKeyRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETACCOUNTBYPUBKEYREQUEST,
+  '__module__' : 'grpc_pb2'
+  # @@protoc_insertion_point(class_scope:grpcpb.GetAccountByPubKeyRequest)
+  })
+_sym_db.RegisterMessage(GetAccountByPubKeyRequest)
+
 GetAccountByNameRequest = _reflection.GeneratedProtocolMessageType('GetAccountByNameRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETACCOUNTBYNAMEREQUEST,
   '__module__' : 'grpc_pb2'
   # @@protoc_insertion_point(class_scope:grpcpb.GetAccountByNameRequest)
   })
 _sym_db.RegisterMessage(GetAccountByNameRequest)
+
+GetBlockProducerByNameRequest = _reflection.GeneratedProtocolMessageType('GetBlockProducerByNameRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETBLOCKPRODUCERBYNAMEREQUEST,
+  '__module__' : 'grpc_pb2'
+  # @@protoc_insertion_point(class_scope:grpcpb.GetBlockProducerByNameRequest)
+  })
+_sym_db.RegisterMessage(GetBlockProducerByNameRequest)
 
 GetAccountCashoutRequest = _reflection.GeneratedProtocolMessageType('GetAccountCashoutRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETACCOUNTCASHOUTREQUEST,
@@ -3716,26 +4552,26 @@ GetFollowCountByNameResponse = _reflection.GeneratedProtocolMessageType('GetFoll
   })
 _sym_db.RegisterMessage(GetFollowCountByNameResponse)
 
-WitnessResponse = _reflection.GeneratedProtocolMessageType('WitnessResponse', (_message.Message,), {
-  'DESCRIPTOR' : _WITNESSRESPONSE,
+BlockProducerResponse = _reflection.GeneratedProtocolMessageType('BlockProducerResponse', (_message.Message,), {
+  'DESCRIPTOR' : _BLOCKPRODUCERRESPONSE,
   '__module__' : 'grpc_pb2'
-  # @@protoc_insertion_point(class_scope:grpcpb.WitnessResponse)
+  # @@protoc_insertion_point(class_scope:grpcpb.BlockProducerResponse)
   })
-_sym_db.RegisterMessage(WitnessResponse)
+_sym_db.RegisterMessage(BlockProducerResponse)
 
-GetWitnessListRequest = _reflection.GeneratedProtocolMessageType('GetWitnessListRequest', (_message.Message,), {
-  'DESCRIPTOR' : _GETWITNESSLISTREQUEST,
+GetBlockProducerListRequest = _reflection.GeneratedProtocolMessageType('GetBlockProducerListRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETBLOCKPRODUCERLISTREQUEST,
   '__module__' : 'grpc_pb2'
-  # @@protoc_insertion_point(class_scope:grpcpb.GetWitnessListRequest)
+  # @@protoc_insertion_point(class_scope:grpcpb.GetBlockProducerListRequest)
   })
-_sym_db.RegisterMessage(GetWitnessListRequest)
+_sym_db.RegisterMessage(GetBlockProducerListRequest)
 
-GetWitnessListResponse = _reflection.GeneratedProtocolMessageType('GetWitnessListResponse', (_message.Message,), {
-  'DESCRIPTOR' : _GETWITNESSLISTRESPONSE,
+GetBlockProducerListResponse = _reflection.GeneratedProtocolMessageType('GetBlockProducerListResponse', (_message.Message,), {
+  'DESCRIPTOR' : _GETBLOCKPRODUCERLISTRESPONSE,
   '__module__' : 'grpc_pb2'
-  # @@protoc_insertion_point(class_scope:grpcpb.GetWitnessListResponse)
+  # @@protoc_insertion_point(class_scope:grpcpb.GetBlockProducerListResponse)
   })
-_sym_db.RegisterMessage(GetWitnessListResponse)
+_sym_db.RegisterMessage(GetBlockProducerListResponse)
 
 PostResponse = _reflection.GeneratedProtocolMessageType('PostResponse', (_message.Message,), {
   'DESCRIPTOR' : _POSTRESPONSE,
@@ -3792,6 +4628,20 @@ GetChainStateResponse = _reflection.GeneratedProtocolMessageType('GetChainStateR
   # @@protoc_insertion_point(class_scope:grpcpb.GetChainStateResponse)
   })
 _sym_db.RegisterMessage(GetChainStateResponse)
+
+GetNodeNeighboursResponse = _reflection.GeneratedProtocolMessageType('GetNodeNeighboursResponse', (_message.Message,), {
+  'DESCRIPTOR' : _GETNODENEIGHBOURSRESPONSE,
+  '__module__' : 'grpc_pb2'
+  # @@protoc_insertion_point(class_scope:grpcpb.GetNodeNeighboursResponse)
+  })
+_sym_db.RegisterMessage(GetNodeNeighboursResponse)
+
+GetNodeRunningVersionResponse = _reflection.GeneratedProtocolMessageType('GetNodeRunningVersionResponse', (_message.Message,), {
+  'DESCRIPTOR' : _GETNODERUNNINGVERSIONRESPONSE,
+  '__module__' : 'grpc_pb2'
+  # @@protoc_insertion_point(class_scope:grpcpb.GetNodeRunningVersionResponse)
+  })
+_sym_db.RegisterMessage(GetNodeRunningVersionResponse)
 
 BroadcastTrxRequest = _reflection.GeneratedProtocolMessageType('BroadcastTrxRequest', (_message.Message,), {
   'DESCRIPTOR' : _BROADCASTTRXREQUEST,
@@ -4087,12 +4937,12 @@ GetContractListResponse = _reflection.GeneratedProtocolMessageType('GetContractL
   })
 _sym_db.RegisterMessage(GetContractListResponse)
 
-GetWitnessListByVoteCountRequest = _reflection.GeneratedProtocolMessageType('GetWitnessListByVoteCountRequest', (_message.Message,), {
-  'DESCRIPTOR' : _GETWITNESSLISTBYVOTECOUNTREQUEST,
+GetBlockProducerListByVoteCountRequest = _reflection.GeneratedProtocolMessageType('GetBlockProducerListByVoteCountRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETBLOCKPRODUCERLISTBYVOTECOUNTREQUEST,
   '__module__' : 'grpc_pb2'
-  # @@protoc_insertion_point(class_scope:grpcpb.GetWitnessListByVoteCountRequest)
+  # @@protoc_insertion_point(class_scope:grpcpb.GetBlockProducerListByVoteCountRequest)
   })
-_sym_db.RegisterMessage(GetWitnessListByVoteCountRequest)
+_sym_db.RegisterMessage(GetBlockProducerListByVoteCountRequest)
 
 GetPostListByVestRequest = _reflection.GeneratedProtocolMessageType('GetPostListByVestRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETPOSTLISTBYVESTREQUEST,
@@ -4108,14 +4958,107 @@ GetPostListByVestResponse = _reflection.GeneratedProtocolMessageType('GetPostLis
   })
 _sym_db.RegisterMessage(GetPostListByVestResponse)
 
+EsimateRequest = _reflection.GeneratedProtocolMessageType('EsimateRequest', (_message.Message,), {
+  'DESCRIPTOR' : _ESIMATEREQUEST,
+  '__module__' : 'grpc_pb2'
+  # @@protoc_insertion_point(class_scope:grpcpb.EsimateRequest)
+  })
+_sym_db.RegisterMessage(EsimateRequest)
+
+EsimateResponse = _reflection.GeneratedProtocolMessageType('EsimateResponse', (_message.Message,), {
+  'DESCRIPTOR' : _ESIMATERESPONSE,
+  '__module__' : 'grpc_pb2'
+  # @@protoc_insertion_point(class_scope:grpcpb.EsimateResponse)
+  })
+_sym_db.RegisterMessage(EsimateResponse)
+
+StakeInfo = _reflection.GeneratedProtocolMessageType('StakeInfo', (_message.Message,), {
+  'DESCRIPTOR' : _STAKEINFO,
+  '__module__' : 'grpc_pb2'
+  # @@protoc_insertion_point(class_scope:grpcpb.StakeInfo)
+  })
+_sym_db.RegisterMessage(StakeInfo)
+
+GetMyStakerListByNameRequest = _reflection.GeneratedProtocolMessageType('GetMyStakerListByNameRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETMYSTAKERLISTBYNAMEREQUEST,
+  '__module__' : 'grpc_pb2'
+  # @@protoc_insertion_point(class_scope:grpcpb.GetMyStakerListByNameRequest)
+  })
+_sym_db.RegisterMessage(GetMyStakerListByNameRequest)
+
+GetMyStakerListByNameResponse = _reflection.GeneratedProtocolMessageType('GetMyStakerListByNameResponse', (_message.Message,), {
+  'DESCRIPTOR' : _GETMYSTAKERLISTBYNAMERESPONSE,
+  '__module__' : 'grpc_pb2'
+  # @@protoc_insertion_point(class_scope:grpcpb.GetMyStakerListByNameResponse)
+  })
+_sym_db.RegisterMessage(GetMyStakerListByNameResponse)
+
+GetMyStakeListByNameRequest = _reflection.GeneratedProtocolMessageType('GetMyStakeListByNameRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETMYSTAKELISTBYNAMEREQUEST,
+  '__module__' : 'grpc_pb2'
+  # @@protoc_insertion_point(class_scope:grpcpb.GetMyStakeListByNameRequest)
+  })
+_sym_db.RegisterMessage(GetMyStakeListByNameRequest)
+
+GetMyStakeListByNameResponse = _reflection.GeneratedProtocolMessageType('GetMyStakeListByNameResponse', (_message.Message,), {
+  'DESCRIPTOR' : _GETMYSTAKELISTBYNAMERESPONSE,
+  '__module__' : 'grpc_pb2'
+  # @@protoc_insertion_point(class_scope:grpcpb.GetMyStakeListByNameResponse)
+  })
+_sym_db.RegisterMessage(GetMyStakeListByNameResponse)
+
+GetAccountListByVestRequest = _reflection.GeneratedProtocolMessageType('GetAccountListByVestRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETACCOUNTLISTBYVESTREQUEST,
+  '__module__' : 'grpc_pb2'
+  # @@protoc_insertion_point(class_scope:grpcpb.GetAccountListByVestRequest)
+  })
+_sym_db.RegisterMessage(GetAccountListByVestRequest)
+
+GetBlockBFTInfoByNumRequest = _reflection.GeneratedProtocolMessageType('GetBlockBFTInfoByNumRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETBLOCKBFTINFOBYNUMREQUEST,
+  '__module__' : 'grpc_pb2'
+  # @@protoc_insertion_point(class_scope:grpcpb.GetBlockBFTInfoByNumRequest)
+  })
+_sym_db.RegisterMessage(GetBlockBFTInfoByNumRequest)
+
+BFTVoteInfo = _reflection.GeneratedProtocolMessageType('BFTVoteInfo', (_message.Message,), {
+  'DESCRIPTOR' : _BFTVOTEINFO,
+  '__module__' : 'grpc_pb2'
+  # @@protoc_insertion_point(class_scope:grpcpb.BFTVoteInfo)
+  })
+_sym_db.RegisterMessage(BFTVoteInfo)
+
+GetBlockBFTInfoByNumResponse = _reflection.GeneratedProtocolMessageType('GetBlockBFTInfoByNumResponse', (_message.Message,), {
+  'DESCRIPTOR' : _GETBLOCKBFTINFOBYNUMRESPONSE,
+  '__module__' : 'grpc_pb2'
+  # @@protoc_insertion_point(class_scope:grpcpb.GetBlockBFTInfoByNumResponse)
+  })
+_sym_db.RegisterMessage(GetBlockBFTInfoByNumResponse)
+
+GetAppTableRecordRequest = _reflection.GeneratedProtocolMessageType('GetAppTableRecordRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETAPPTABLERECORDREQUEST,
+  '__module__' : 'grpc_pb2'
+  # @@protoc_insertion_point(class_scope:grpcpb.GetAppTableRecordRequest)
+  })
+_sym_db.RegisterMessage(GetAppTableRecordRequest)
+
+GetAppTableRecordResponse = _reflection.GeneratedProtocolMessageType('GetAppTableRecordResponse', (_message.Message,), {
+  'DESCRIPTOR' : _GETAPPTABLERECORDRESPONSE,
+  '__module__' : 'grpc_pb2'
+  # @@protoc_insertion_point(class_scope:grpcpb.GetAppTableRecordResponse)
+  })
+_sym_db.RegisterMessage(GetAppTableRecordResponse)
+
 
 DESCRIPTOR._options = None
 _POSTRESPONSE.fields_by_name['post_id']._options = None
 _POSTRESPONSE.fields_by_name['root_id']._options = None
 _POSTRESPONSE.fields_by_name['parent_id']._options = None
+_POSTRESPONSE.fields_by_name['cashout_block_num']._options = None
 _BLOCKINFO.fields_by_name['block_height']._options = None
 _GETPOSTINFOBYIDREQUEST.fields_by_name['post_id']._options = None
 _DAILYSTAT.fields_by_name['amount']._options = None
+_GETBLOCKBFTINFOBYNUMREQUEST.fields_by_name['block_num']._options = None
 
 _APISERVICE = _descriptor.ServiceDescriptor(
   name='ApiService',
@@ -4123,8 +5066,8 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=9132,
-  serialized_end=12029,
+  serialized_start=11233,
+  serialized_end=14897,
   methods=[
   _descriptor.MethodDescriptor(
     name='QueryTableContent',
@@ -4145,27 +5088,9 @@ _APISERVICE = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='GetAccountCashout',
-    full_name='grpcpb.ApiService.GetAccountCashout',
-    index=2,
-    containing_service=None,
-    input_type=_GETACCOUNTCASHOUTREQUEST,
-    output_type=_ACCOUNTCASHOUTRESPONSE,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
-    name='GetBlockCashout',
-    full_name='grpcpb.ApiService.GetBlockCashout',
-    index=3,
-    containing_service=None,
-    input_type=_GETBLOCKCASHOUTREQUEST,
-    output_type=_BLOCKCASHOUTRESPONSE,
-    serialized_options=None,
-  ),
-  _descriptor.MethodDescriptor(
     name='GetFollowerListByName',
     full_name='grpcpb.ApiService.GetFollowerListByName',
-    index=4,
+    index=2,
     containing_service=None,
     input_type=_GETFOLLOWERLISTBYNAMEREQUEST,
     output_type=_GETFOLLOWERLISTBYNAMERESPONSE,
@@ -4174,7 +5099,7 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetFollowingListByName',
     full_name='grpcpb.ApiService.GetFollowingListByName',
-    index=5,
+    index=3,
     containing_service=None,
     input_type=_GETFOLLOWINGLISTBYNAMEREQUEST,
     output_type=_GETFOLLOWINGLISTBYNAMERESPONSE,
@@ -4183,25 +5108,25 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetFollowCountByName',
     full_name='grpcpb.ApiService.GetFollowCountByName',
-    index=6,
+    index=4,
     containing_service=None,
     input_type=_GETFOLLOWCOUNTBYNAMEREQUEST,
     output_type=_GETFOLLOWCOUNTBYNAMERESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='GetWitnessList',
-    full_name='grpcpb.ApiService.GetWitnessList',
-    index=7,
+    name='GetBlockProducerList',
+    full_name='grpcpb.ApiService.GetBlockProducerList',
+    index=5,
     containing_service=None,
-    input_type=_GETWITNESSLISTREQUEST,
-    output_type=_GETWITNESSLISTRESPONSE,
+    input_type=_GETBLOCKPRODUCERLISTREQUEST,
+    output_type=_GETBLOCKPRODUCERLISTRESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
     name='GetPostListByCreated',
     full_name='grpcpb.ApiService.GetPostListByCreated',
-    index=8,
+    index=6,
     containing_service=None,
     input_type=_GETPOSTLISTBYCREATEDREQUEST,
     output_type=_GETPOSTLISTBYCREATEDRESPONSE,
@@ -4210,7 +5135,7 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetReplyListByPostId',
     full_name='grpcpb.ApiService.GetReplyListByPostId',
-    index=9,
+    index=7,
     containing_service=None,
     input_type=_GETREPLYLISTBYPOSTIDREQUEST,
     output_type=_GETREPLYLISTBYPOSTIDRESPONSE,
@@ -4219,7 +5144,7 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetBlockTransactionsByNum',
     full_name='grpcpb.ApiService.GetBlockTransactionsByNum',
-    index=10,
+    index=8,
     containing_service=None,
     input_type=_GETBLOCKTRANSACTIONSBYNUMREQUEST,
     output_type=_GETBLOCKTRANSACTIONSBYNUMRESPONSE,
@@ -4228,7 +5153,7 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetChainState',
     full_name='grpcpb.ApiService.GetChainState',
-    index=11,
+    index=9,
     containing_service=None,
     input_type=_NONPARAMSREQUEST,
     output_type=_GETCHAINSTATERESPONSE,
@@ -4237,7 +5162,7 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='BroadcastTrx',
     full_name='grpcpb.ApiService.BroadcastTrx',
-    index=12,
+    index=10,
     containing_service=None,
     input_type=_BROADCASTTRXREQUEST,
     output_type=_BROADCASTTRXRESPONSE,
@@ -4246,7 +5171,7 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetBlockList',
     full_name='grpcpb.ApiService.GetBlockList',
-    index=13,
+    index=11,
     containing_service=None,
     input_type=_GETBLOCKLISTREQUEST,
     output_type=_GETBLOCKLISTRESPONSE,
@@ -4255,7 +5180,7 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetSignedBlock',
     full_name='grpcpb.ApiService.GetSignedBlock',
-    index=14,
+    index=12,
     containing_service=None,
     input_type=_GETSIGNEDBLOCKREQUEST,
     output_type=_GETSIGNEDBLOCKRESPONSE,
@@ -4264,7 +5189,7 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetAccountListByBalance',
     full_name='grpcpb.ApiService.GetAccountListByBalance',
-    index=15,
+    index=13,
     containing_service=None,
     input_type=_GETACCOUNTLISTBYBALANCEREQUEST,
     output_type=_GETACCOUNTLISTRESPONSE,
@@ -4273,7 +5198,7 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetDailyTotalTrxInfo',
     full_name='grpcpb.ApiService.GetDailyTotalTrxInfo',
-    index=16,
+    index=14,
     containing_service=None,
     input_type=_GETDAILYTOTALTRXREQUEST,
     output_type=_GETDAILYTOTALTRXRESPONSE,
@@ -4282,7 +5207,7 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetTrxInfoById',
     full_name='grpcpb.ApiService.GetTrxInfoById',
-    index=17,
+    index=15,
     containing_service=None,
     input_type=_GETTRXINFOBYIDREQUEST,
     output_type=_GETTRXINFOBYIDRESPONSE,
@@ -4291,7 +5216,7 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetTrxListByTime',
     full_name='grpcpb.ApiService.GetTrxListByTime',
-    index=18,
+    index=16,
     containing_service=None,
     input_type=_GETTRXLISTBYTIMEREQUEST,
     output_type=_GETTRXLISTBYTIMERESPONSE,
@@ -4300,7 +5225,7 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetPostListByCreateTime',
     full_name='grpcpb.ApiService.GetPostListByCreateTime',
-    index=19,
+    index=17,
     containing_service=None,
     input_type=_GETPOSTLISTBYCREATETIMEREQUEST,
     output_type=_GETPOSTLISTBYCREATETIMERESPONSE,
@@ -4309,7 +5234,7 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetPostListByName',
     full_name='grpcpb.ApiService.GetPostListByName',
-    index=20,
+    index=18,
     containing_service=None,
     input_type=_GETPOSTLISTBYNAMEREQUEST,
     output_type=_GETPOSTLISTBYCREATETIMERESPONSE,
@@ -4318,7 +5243,7 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='TrxStatByHour',
     full_name='grpcpb.ApiService.TrxStatByHour',
-    index=21,
+    index=19,
     containing_service=None,
     input_type=_TRXSTATBYHOURREQUEST,
     output_type=_TRXSTATBYHOURRESPONSE,
@@ -4327,7 +5252,7 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetUserTrxListByTime',
     full_name='grpcpb.ApiService.GetUserTrxListByTime',
-    index=22,
+    index=20,
     containing_service=None,
     input_type=_GETUSERTRXLISTBYTIMEREQUEST,
     output_type=_GETUSERTRXLISTBYTIMERESPONSE,
@@ -4336,7 +5261,7 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetPostInfoById',
     full_name='grpcpb.ApiService.GetPostInfoById',
-    index=23,
+    index=21,
     containing_service=None,
     input_type=_GETPOSTINFOBYIDREQUEST,
     output_type=_GETPOSTINFOBYIDRESPONSE,
@@ -4345,7 +5270,7 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetContractInfo',
     full_name='grpcpb.ApiService.GetContractInfo',
-    index=24,
+    index=22,
     containing_service=None,
     input_type=_GETCONTRACTINFOREQUEST,
     output_type=_GETCONTRACTINFORESPONSE,
@@ -4354,7 +5279,7 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetBlkIsIrreversibleByTxId',
     full_name='grpcpb.ApiService.GetBlkIsIrreversibleByTxId',
-    index=25,
+    index=23,
     containing_service=None,
     input_type=_GETBLKISIRREVERSIBLEBYTXIDREQUEST,
     output_type=_GETBLKISIRREVERSIBLEBYTXIDRESPONSE,
@@ -4363,7 +5288,7 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetAccountListByCreTime',
     full_name='grpcpb.ApiService.GetAccountListByCreTime',
-    index=26,
+    index=24,
     containing_service=None,
     input_type=_GETACCOUNTLISTBYCRETIMEREQUEST,
     output_type=_GETACCOUNTLISTRESPONSE,
@@ -4372,7 +5297,7 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetDailyStats',
     full_name='grpcpb.ApiService.GetDailyStats',
-    index=27,
+    index=25,
     containing_service=None,
     input_type=_GETDAILYSTATSREQUEST,
     output_type=_GETDAILYSTATSRESPONSE,
@@ -4381,28 +5306,118 @@ _APISERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='GetContractListByTime',
     full_name='grpcpb.ApiService.GetContractListByTime',
-    index=28,
+    index=26,
     containing_service=None,
     input_type=_GETCONTRACTLISTBYTIMEREQUEST,
     output_type=_GETCONTRACTLISTRESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='GetWitnessListByVoteCount',
-    full_name='grpcpb.ApiService.GetWitnessListByVoteCount',
-    index=29,
+    name='GetBlockProducerListByVoteCount',
+    full_name='grpcpb.ApiService.GetBlockProducerListByVoteCount',
+    index=27,
     containing_service=None,
-    input_type=_GETWITNESSLISTBYVOTECOUNTREQUEST,
-    output_type=_GETWITNESSLISTRESPONSE,
+    input_type=_GETBLOCKPRODUCERLISTBYVOTECOUNTREQUEST,
+    output_type=_GETBLOCKPRODUCERLISTRESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
     name='GetPostListByVest',
     full_name='grpcpb.ApiService.GetPostListByVest',
-    index=30,
+    index=28,
     containing_service=None,
     input_type=_GETPOSTLISTBYVESTREQUEST,
     output_type=_GETPOSTLISTBYVESTRESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='EstimateStamina',
+    full_name='grpcpb.ApiService.EstimateStamina',
+    index=29,
+    containing_service=None,
+    input_type=_ESIMATEREQUEST,
+    output_type=_ESIMATERESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetNodeNeighbours',
+    full_name='grpcpb.ApiService.GetNodeNeighbours',
+    index=30,
+    containing_service=None,
+    input_type=_NONPARAMSREQUEST,
+    output_type=_GETNODENEIGHBOURSRESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetMyStakers',
+    full_name='grpcpb.ApiService.GetMyStakers',
+    index=31,
+    containing_service=None,
+    input_type=_GETMYSTAKERLISTBYNAMEREQUEST,
+    output_type=_GETMYSTAKERLISTBYNAMERESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetMyStakes',
+    full_name='grpcpb.ApiService.GetMyStakes',
+    index=32,
+    containing_service=None,
+    input_type=_GETMYSTAKELISTBYNAMEREQUEST,
+    output_type=_GETMYSTAKELISTBYNAMERESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetNodeRunningVersion',
+    full_name='grpcpb.ApiService.GetNodeRunningVersion',
+    index=33,
+    containing_service=None,
+    input_type=_NONPARAMSREQUEST,
+    output_type=_GETNODERUNNINGVERSIONRESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetAccountListByVest',
+    full_name='grpcpb.ApiService.GetAccountListByVest',
+    index=34,
+    containing_service=None,
+    input_type=_GETACCOUNTLISTBYVESTREQUEST,
+    output_type=_GETACCOUNTLISTRESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetBlockProducerByName',
+    full_name='grpcpb.ApiService.GetBlockProducerByName',
+    index=35,
+    containing_service=None,
+    input_type=_GETBLOCKPRODUCERBYNAMEREQUEST,
+    output_type=_BLOCKPRODUCERRESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetAccountByPubKey',
+    full_name='grpcpb.ApiService.GetAccountByPubKey',
+    index=36,
+    containing_service=None,
+    input_type=_GETACCOUNTBYPUBKEYREQUEST,
+    output_type=_ACCOUNTRESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetBlockBFTInfoByNum',
+    full_name='grpcpb.ApiService.GetBlockBFTInfoByNum',
+    index=37,
+    containing_service=None,
+    input_type=_GETBLOCKBFTINFOBYNUMREQUEST,
+    output_type=_GETBLOCKBFTINFOBYNUMRESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetAppTableRecord',
+    full_name='grpcpb.ApiService.GetAppTableRecord',
+    index=38,
+    containing_service=None,
+    input_type=_GETAPPTABLERECORDREQUEST,
+    output_type=_GETAPPTABLERECORDRESPONSE,
     serialized_options=None,
   ),
 ])
