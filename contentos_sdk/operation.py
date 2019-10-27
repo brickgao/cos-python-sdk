@@ -2,84 +2,23 @@
 # -*- coding: utf-8 -*-
 
 
-from contentos_sdk.grpc_pb2.prototype import operation_pb2
+from contentos_sdk.grpc_pb2.prototype import (operation_pb2, transaction_pb2,
+                                              type_pb2)
 
 
-class AccountCreate(operation_pb2.account_create_operation):
-    pass
+class AccountCreate(object):
 
-
-class AccountUpdate(operation_pb2.account_update_operation):
-    pass
-
-
-class Transfer(operation_pb2.transfer_operation):
-    pass
-
-
-class TransferToVesting(operation_pb2.transfer_to_vesting_operation):
-    pass
-
-
-class Vote(operation_pb2.vote_operation):
-    pass
-
-
-class BPRegister(operation_pb2.bp_register_operation):
-    pass
-
-
-class BPUnregister(operation_pb2.bp_unregister_operation):
-    pass
-
-
-class BPUpdate(operation_pb2.bp_update_operation):
-    pass
-
-
-class BPVote(operation_pb2.bp_vote_operation):
-    pass
-
-
-class Follow(operation_pb2.follow_operation):
-    pass
-
-
-class ContractDeploy(operation_pb2.contract_deploy_operation):
-    pass
-
-
-class ContractApply(operation_pb2.contract_apply_operation):
-    pass
-
-
-class InternalContractApply(operation_pb2.contract_apply_operation):
-    pass
-
-
-class Post(operation_pb2.post_operation):
-    pass
-
-
-class Reply(operation_pb2.reply_operation):
-    pass
-
-
-class ClaimAll(operation_pb2.claim_all_operation):
-    pass
-
-
-class Report(operation_pb2.report_operation):
-    pass
-
-
-class ConvertVesting(operation_pb2.convert_vesting_operation):
-    pass
-
-
-class Stake(operation_pb2.convert_vesting_operation):
-    pass
-
-
-class Unstake(operation_pb2.un_stake_operation):
-    pass
+    def __init__(self, fee, creator, new_account_name,
+                 pub_key, json_metadata):
+        self.fee = fee
+        self.creator, self.new_account_name = creator, new_account_name
+        self.pub_key = pub_key
+        self.json_metadata = json_metadata
+        _operation = operation_pb2.account_create_operation(
+            fee=type_pb2.coin(value=fee),
+            creator=type_pb2.account_name(value=creator),
+            new_account_name=type_pb2.account_name(value=new_account_name),
+            pub_key=type_pb2.public_key_type(data=pub_key.serialize()),
+            json_metadata=json_metadata
+        )
+        self.operation = transaction_pb2.operation(op1=_operation)
