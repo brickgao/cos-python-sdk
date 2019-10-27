@@ -13,7 +13,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from prototype import type_pb2 as prototype_dot_type__pb2
+from contentos_sdk.grpc_pb2.prototype import type_pb2 as prototype_dot_type__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
