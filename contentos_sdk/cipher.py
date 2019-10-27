@@ -51,7 +51,7 @@ class Secp256k1Cipher(object):
 
     @classmethod
     def get_private_key_from_raw(cls, buf):
-        return secp256k1.PrivateKey(raw=buf)
+        return secp256k1.PrivateKey(privkey=buf, raw=True)
 
     @classmethod
     def get_private_key_from_wif(cls, buf):
@@ -64,11 +64,11 @@ class Secp256k1Cipher(object):
         data_hash = SHA256.new(data=SHA256.new(data=data).digest())
         if vinfo != data_hash.digest()[:4]:
             raise CipherException("Couldn't verify private key")
-        return secp256k1.PrivateKey(raw=data)
+        return secp256k1.PrivateKey(privkey=data, raw=True)
 
     @classmethod
     def get_public_key_from_raw(cls, buf):
-        return secp256k1.PublicKey(raw=buf)
+        return secp256k1.PublicKey(pubkey=buf, raw=True)
 
     @classmethod
     def get_public_key_from_wif(cls, buf):
@@ -85,4 +85,4 @@ class Secp256k1Cipher(object):
         data_hash = SHA256.new(data=SHA256.new(data=data).digest())
         if vinfo != data_hash.digest()[:4]:
             raise CipherException("Couldn't verify public key")
-        return secp256k1.PublicKey(raw=data)
+        return secp256k1.PublicKey(pubkey=data, raw=True)
