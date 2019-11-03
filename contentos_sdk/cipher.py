@@ -54,6 +54,18 @@ class Secp256k1Cipher(object):
         return secp256k1.PrivateKey(privkey=buf, raw=True)
 
     @classmethod
+    def get_wif_from_private_key(cls, private_key):
+        data = private_key.serialize()
+        data_hash = SHA256.new(data=SHA256.new(data=data).digest())
+        return base58.b58encode(b"\x01" + data + data_hash.digest()[:4])
+
+    @classmethod
+    def get_wif_from_public_key(cls, public_key):
+        data = public_key.serialize()
+        data_hash = SHA256.new(data=SHA256.new(data=data).digest())
+        return b"COS" + base58.b58encode(data + data_hash.digest()[:4])
+
+    @classmethod
     def get_private_key_from_wif(cls, buf):
         buf = base58.b58decode(buf)
         if len(buf) <= 5:
