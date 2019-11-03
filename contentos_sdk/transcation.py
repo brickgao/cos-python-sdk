@@ -45,7 +45,7 @@ class Transaction(object):
 
     def from_block_id(self, block_id):
         if len(block_id) >= 12:
-            ref_block_num = int.from_bytes(block_id[:8], "little") % 0x7FF
+            ref_block_num = int.from_bytes(block_id[:8], "little") % 0x800
             ref_block_prefix = int.from_bytes(block_id[8:12], "big")
             self._transaction.ref_block_num = ref_block_num
             self._transaction.ref_block_prefix = ref_block_prefix
@@ -68,11 +68,15 @@ class Transaction(object):
         else:
             private_key = Secp256k1Cipher.get_private_key_from_wif(private_key)
         serialized_transcation = self._transaction.SerializeToString()
-        signature = private_key.ecdsa_sign_recoverable(
-            chain_id.to_bytes(4, "big") + serialized_transcation
+        data = chain_id.to_bytes(4, "big") + serialized_transcation
+        signature = private_key.ecdsa_sign_recoverable(data)
+        serialized_signature = private_key.ecdsa_recoverable_serialize(
+            signature
         )
+        serialized_signature = (serialized_signature[0] +
+                                chr(serialized_signature[1]).encode("ascii"))
         sign_transaction = transaction_pb2.signed_transaction(
             trx=self._transaction,
-            signature=type_pb2.signature_type(sig=bytes(signature.data))
+            signature=type_pb2.signature_type(sig=serialized_signature)
         )
         return sign_transaction
