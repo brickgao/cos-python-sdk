@@ -1,3 +1,11 @@
 language: python
 python:
   - 3.7
+install:
+  - python setup.py install
+  - pip install coveralls flake8
+script:
+  - find ./contentos_sdk -iname '*.py' | grep -v grpc_pb2 | xargs flake8 
+  - py.test --cov=contentos_sdk tests/
+after_success:
+  - coveralls
