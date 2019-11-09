@@ -1,6 +1,6 @@
 # Contentos Python SDK
 
-[![Build Status](https://travis-ci.org/brickgao/cos-python-sdk.svg?branch=master)](https://travis-ci.org/brickgao/cos-python-sdk)
+[![Build Status](https://travis-ci.org/brickgao/cos-python-sdk.svg?branch=master)](https://travis-ci.org/brickgao/cos-python-sdk) [![Coverage Status](https://coveralls.io/repos/github/brickgao/cos-python-sdk/badge.svg?branch=master)](https://coveralls.io/github/brickgao/cos-python-sdk?branch=master)
 
 **Notice: it's still under development**
 
