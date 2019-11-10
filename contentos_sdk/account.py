@@ -87,12 +87,27 @@ class Account(object):
         )
         return self.stub.GetFollowCountByName(request)
 
-    def get_block_producer_list(self):
+    def get_block_producer_list(self, account_name_start="",
+                                limit=10000):
         start = type_pb2.account_name(value="")
         request = grpc_pb2.GetBlockProducerListRequest(
-            start=start, limit=1000000
+            start=start, limit=limit
         )
         return self.stub.GetBlockProducerList(request)
+
+    def get_block_producer_list_by_vote_count(self, start=None, end=None,
+                                              last_block_producer=None,
+                                              limit=10000):
+        request = grpc_pb2.GetBlockProducerListByVoteCountRequest(
+            limit=limit
+        )
+        if last_block_producer is not None:
+            request.last_block_producer.CopyFrom(last_block_producer)
+        if start is not None:
+            request.start.CopyFrom(type_pb2.vest(value=start))
+        if end is not None:
+            request.end.CopyFrom(type_pb2.vest(value=end))
+        return self.stub.GetBlockProducerListByVoteCount(request)
 
     def get_post_list_by_created(self, start_ts, end_ts, limit):
         start_ts = type_pb2.time_point_sec(utc_seconds=start_ts)

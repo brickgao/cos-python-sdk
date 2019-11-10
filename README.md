@@ -76,6 +76,13 @@ With private key, the account provides a way to access the blockchain, e.g.:
 rsp = account.get_account_by_name("initminer")
 # Get the state of chain
 rsp = account.get_chain_state()
+# Get the list of block producers
+rsp = account.get_block_producer_list("", 10)
+# Get the list of block producers by vote count
+rsp = account.get_block_producer_list_by_vote_count(limit=10)
+bp = rsp.block_producer_list[0]
+start = bp.bp_vest.vote_vest.value
+rsp = account.get_block_producer_list_by_vote_count(start=start, limit=10)
 ```
 
 ### Transcation
