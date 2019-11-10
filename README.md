@@ -26,7 +26,7 @@ $ python setup.py install
 
 ### Keystore
 
-Keystore is password encrypted private key that is in text format or in file.
+The keystore is password encrypted private key that is in text format or in file.
 
 To create an key store object and manage keys:
 
@@ -55,7 +55,7 @@ key_store.dump_to_file("filename", "badpassword")
 
 ### Wallet
 
-Wallet provides the way to specific the entry of API and chain ID, and you could get accounts from the wallet.
+The wallet provides a way to specific the entry of API and chain ID, and you could get accounts from the wallet.
 
 To set up a wallet and get a account from it:
 
@@ -69,7 +69,7 @@ account = wallet.get_account("4DjYx2KAGh1NP3dai7MZTLUBMMhMBPmwouKE8jhVSESywccpVZ
 
 ### Account
 
-With private key, account provides the way to access the chain, e.g.: 
+With private key, the account provides a way to access the blockchain, e.g.: 
 
 ```python
 # Get the information of account by account name
@@ -82,7 +82,7 @@ rsp = account.get_chain_state()
 
 The transcation hold your operations to the blockchain.
 
-To let it take effect, you must broadcast it with your account. e.g.
+To let it take effect, you must broadcast it with your account, e.g.:
 
 ```python
 from contentos_sdk.cipher import Secp256k1Cipher
