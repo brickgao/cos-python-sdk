@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import binascii
+
 import base58
 import secp256k1
 from Crypto.Cipher import AES
@@ -15,18 +17,15 @@ class AESCipher(object):
 
     BS = AES.block_size
 
-    def __init__(self):
-        pass
-
     @classmethod
     def _pad(cls, buf):
-        pad_ch = chr(cls.BS - len(buf) % cls.bs)
-        pad_cnt = cls.BS - len(buf) % cls.bs
-        return buf + pad_ch * pad_cnt
+        pad_ch = chr(cls.BS - len(buf) % cls.BS)
+        pad_cnt = cls.BS - len(buf) % cls.BS
+        return buf + (pad_ch * pad_cnt).encode("ascii")
 
     @classmethod
     def _unpad(cls, buf):
-        return buf[0:-ord(buf[-1])]
+        return buf[0:-int(buf[-1])]
 
     @classmethod
     def encrypt(cls, key, buf):
@@ -42,9 +41,6 @@ class AESCipher(object):
 
 class Secp256k1Cipher(object):
 
-    def __init__(self):
-        pass
-
     @classmethod
     def generate_private_key(cls):
         return secp256k1.PrivateKey()
@@ -56,6 +52,7 @@ class Secp256k1Cipher(object):
     @classmethod
     def get_wif_from_private_key(cls, private_key):
         data = private_key.serialize()
+        data = binascii.unhexlify(data)
         data_hash = SHA256.new(data=SHA256.new(data=data).digest())
         return base58.b58encode(b"\x01" + data + data_hash.digest()[:4])
 
@@ -87,7 +84,7 @@ class Secp256k1Cipher(object):
         if len(buf) <= 3:
             raise CipherException("The length of buffer should be "
                                   "larger than 3")
-        if buf[:3] == b"COS":
+        if buf[:3] != b"COS":
             raise CipherException("The prefix of buffer should be \'COS\'")
         buf = base58.b58decode(buf[3:])
         if len(buf) <= 4:
